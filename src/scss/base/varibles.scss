@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'Rubrica';
+    src: url(../fonts/RUB_0.TTF);
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IB.TTF);
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBI_0.TTF);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBK_0.TTF);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBIT_0.TTF);
+	font-weight: 400;
+    font-style: italic;
+}
+
+$primary: #fabb00;
+$black: #000000;
+$white: #ffffff;
+$gray: #ededed;
+
+body{
+	font-family: 'Avante', Arial, sans-serif;
+	font-size: 13px;
+}
+
+.--italic{
+	font-style: italic;
+}
+.--rubrica-title{
+	font-family: 'Rubrica', Arial, sans-serif;
+	font-size: 135px;
+	line-height: 125px;
+	font-weight: normal;
+}
+.--avente-subtitle-big{
+	font-size: 19px;
+	line-height: 27px;
+}
+
+.wrapper {
+	width: 1440px;
+	margin: 0 auto;
+}
+.--primary-color{
+	color: $primary;
+}

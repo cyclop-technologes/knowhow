@@ -1,0 +1,54 @@
+.banner{
+	background: #fcfcfc; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 36%, #d3d3d3 83%, #fafafa 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 36%,#d3d3d3 83%,#fafafa 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 36%,#d3d3d3 83%,#fafafa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
+	padding-bottom: 130px;
+}
+
+.banner__wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+.banner__title{
+	margin-left: 88px;
+
+	h1{
+		margin-bottom: 36px;
+		position: relative;
+	}
+	h4{
+		margin-left: 2px;
+		letter-spacing: 5.87px;
+	}
+}
+
+.switcher{
+	position: absolute;
+	cursor: pointer;
+	left: 16px;
+	top: calc(100% - 30px);
+	
+	img{
+		width: 15px;
+	}
+}
+
+
+.banner__head{
+	position: relative;
+}
+.head-img{
+	width: 861px;
+	height: 965px;
+	position: absolute;
+	top: -50px;
+	left: 0;
+	background:transparent url('../img/head.png') center center no-repeat;
+	background-size: contain;
+}
+
+#canvas{
+	width: 855px;
+}

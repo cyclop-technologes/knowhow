@@ -1,0 +1,28 @@
+.header{
+	padding: 41px 0px;
+}
+.header__wrapper{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.header__logo{
+	margin-left: 90px;
+}
+.spacer__text{
+	letter-spacing: 8.21px;
+	font-style: italic;
+	text-transform: uppercase;
+	color: $black;
+	text-decoration: none;
+}
+
+.header__shower-btn{
+	margin-right: 20px;
+	cursor: pointer;
+
+	svg{
+		width: 49px;
+		height: 27px;
+	}
+}
