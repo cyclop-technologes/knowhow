@@ -1,0 +1,141 @@
+.summary{
+	background-color: #fafafa;
+	padding: 40px 0px;
+	text-align: center;
+}
+
+.summary__container{
+	position: relative;
+
+}
+
+.summary__background{
+	position: absolute;
+	width: 100%;
+	top: -150px;
+	left: 0;
+
+	&.--fixed{
+		position: fixed;
+	}
+
+	#summary__bg{
+		width: 100%;
+	}
+}
+.summary__subtitle{
+	text-align: center;
+	font-size: 13px;
+	line-height: 37.5px;
+	letter-spacing: 1.88px;
+	margin: 120px 0px;
+}
+
+
+.summary__top-title{
+	font-size: 36px;
+	font-style: italic;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	line-height: 63.67px;
+	margin: 260px auto;
+	.large{
+		font-size: 64px;
+		letter-spacing: 17.5px;
+		line-height: 81.86px;
+	}
+
+	.filling-line{
+		position: relative;
+		display: inline-block;
+
+		span{
+			position: relative;
+			z-index: 1;
+		}
+
+		i{
+			display: block;
+			position: absolute;
+			z-index: 0;
+			height: 37px;
+			background-color: $primary;
+			top: 19px;
+			left: -10px;
+			width: 0;
+			transition: all 0.6s ease-in-out;
+
+			&.fill{
+				width: calc(100% + 20px);
+			}
+		}
+	}
+}
+
+.summary__mid-title{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 273px auto;
+	p{
+		margin: 0;
+		font-size: 17px;
+		text-transform: uppercase;
+		letter-spacing: 3.33px;
+		padding: 16px 24px;
+		border: 1px solid $black;
+		border-right: none;
+		border-left: none;
+	}
+}
+.--undeline{
+	position: relative;
+
+	&:after{
+		content: '';
+		position: absolute;
+		height: 1px;
+		width: 100%;
+		background-color: $black;
+		left: 0;
+		bottom: 0;
+	}
+}
+
+.summary__footer-title{
+	text-transform: uppercase;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin-top: 467px;
+}
+.footer-title__logo-bg{
+	position: absolute;
+	width: 527px;
+    top: -73px;
+    left: -337px;
+	z-index: 0;
+}
+.footer-title__container{
+	margin-left: 367px;
+	position: relative;
+}
+
+.footer-title__header{
+	position: relative;
+	z-index: 1;
+	font-size: 33px;
+	letter-spacing: 10px;
+	line-height: 45.83px;
+}
+.footer-title__footer{
+	margin-top: 79px;
+	margin-left: 55px;
+	font-size: 17px;
+	line-height: 29.17px;
+	letter-spacing: 3.33px;
+	// text-transform: uppercase;
+}
+.to-bottom-arrows{
+	margin-top: 400px;
+}
