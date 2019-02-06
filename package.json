@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "animejs": "^3.0.1",
+    "aos": "^2.3.4",
     "browser-sync": "^2.24.6",
     "browserify": "^16.2.3",
     "gulp": "^3.9.1",

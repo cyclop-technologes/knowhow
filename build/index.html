@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>KnowHow</title>
 </head>
@@ -12,11 +13,11 @@
 	<section class="banner">
 		<header class="header">
 		    <header class="header__wrapper wrapper">
-		        <div class="header__logo"><a href=""><img width="146px" src="img/logo-head.png" alt=""></a></div>
-		        <div class="header__spacer">
+		        <div data-aos="fade-down" class="header__logo"><a href=""><img width="146px" src="img/logo-head.png" alt=""></a></div>
+		        <div data-aos="fade-down" data-aos-delay="200" class="header__spacer">
 		            <a href="#" class="spacer__text">хочу шедевр</a>
 		        </div>
-		        <div class="header__links">
+		        <div data-aos="fade-down" data-aos-delay="400" class="header__links">
 		            <div class="header__shower-btn">             
 						<svg width="429px" height="232px" viewBox="0 0 429 232" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 						    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -76,17 +77,93 @@
 			</div>
 	
 			<div class="to-bottom-arrows">
-				<svg width="38px" height="48px" viewBox="0 0 103 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g id="arrows" transform="translate(51.500000, 64.500000) rotate(-270.000000) translate(-51.500000, -64.500000) translate(-13.000000, 13.000000)" fill-rule="nonzero">
-				            <polygon id="Shape" fill="#FABB00" points="67.28 38.15 34.71 0 0 0 46.28 51.25 1.98 102.85 35.28 102.85 66.28 65.48 78.97 51.42"></polygon>
-				            <polygon id="Shape" fill="#3A3A3A" points="117.11 38.15 84.54 0 49.83 0 96.11 51.25 51.8 102.85 85.11 102.85 116.11 65.48 128.8 51.42"></polygon>
-				        </g>
-				    </g>
-				</svg>
+				<a href="#">
+					<svg width="38px" height="48px" viewBox="0 0 103 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					        <g id="arrows" transform="translate(51.500000, 64.500000) rotate(-270.000000) translate(-51.500000, -64.500000) translate(-13.000000, 13.000000)" fill-rule="nonzero">
+					            <polygon id="Shape" fill="#FABB00" points="67.28 38.15 34.71 0 0 0 46.28 51.25 1.98 102.85 35.28 102.85 66.28 65.48 78.97 51.42"></polygon>
+					            <polygon id="Shape" fill="#3A3A3A" points="117.11 38.15 84.54 0 49.83 0 96.11 51.25 51.8 102.85 85.11 102.85 116.11 65.48 128.8 51.42"></polygon>
+					        </g>
+					    </g>
+					</svg>
+				</a>
 			</div>
 		</div>
 	
+	</section>
+
+	<section class="video-sect">
+		<div data-aos="fade-right" class="video-sect__container">
+			<div class="video-sect__hand">
+				<img src="img/hand/hand.png" alt="hand" class="img__hand">
+				<img src="img/hand/phone.png" alt="phone" class="img__phone">
+			</div>
+		</div>
+		<div data-aos="fade-right" class="wrapper video-sect__logo"><img src="img/logo-mid.svg" alt=""></div>
+	</section>
+
+	<section class="project">
+		<div class="wrapper project__container">
+			<div class="project__title">анатомия вашей компании</div>
+			<div class="project__body">
+				<div class="project__body-row">
+					<div class="body-row__title">
+						<div class="subtitle">то, что запоминается</div>
+						<div class="main-title --rubrica">БРЕНДИНГ</div>
+					</div>
+					<div class="body-row__img"><img class="sculpture__head" width="189px" src="img/sculpture/head.png" alt="head"></div>
+					<ul class="body-row__description">
+						<li class="description__item">фирменный стиль </li>
+						<li class="description__item">логотип</li>
+						<li class="description__item">дизайн </li>
+						<li class="description__item">брендбук</li>
+						<li class="description__item">нейминг</li>
+						<li class="description__item">копирайтинг</li>
+					</ul>
+				</div>
+				<div class="project__body-row">
+					<div class="body-row__title">
+						<div class="subtitle">то, что цепляет</div>
+						<div class="main-title --rubrica">ПРОДАКШН</div>
+					</div>
+					<div class="body-row__img"><img class="sculpture__torso" width="475px" src="img/sculpture/torso.png" alt="torse"></div>
+					<ul class="body-row__description">
+						<li class="description__item">интеграции</li>
+						<li class="description__item">проморолики</li>
+						<li class="description__item">полноценные сюжеты</li>
+						<li class="description__item">канал под ключ</li>
+					</ul>
+				</div>
+				<div class="project__body-row">
+					<div class="body-row__title">
+						<div class="subtitle">то, что не видно, но важно</div>
+						<div class="main-title --rubrica">IT</div>
+					</div>
+					<div class="body-row__img"><img class="sculpture__hips" width="412px" src="img/sculpture/hips.png" alt="hips"></div>
+					<ul class="body-row__description">
+						<li class="description__item">сайт</li>
+						<li class="description__item">приложение</li>
+						<li class="description__item">crm</li>
+					</ul>
+				</div>
+				<div class="project__body-row">
+					<div class="body-row__title">
+						<div class="subtitle">то, что работает</div>
+						<div class="main-title --rubrica">ИНТЕРНЕТ-МАРКЕТИНГ</div>
+					</div>
+					<div class="body-row__img"><img class="sculpture__legs" width="484px" src="img/sculpture/legs.png" alt="legs"></div>
+					<ul class="body-row__description">
+						<li class="description__item">SMM-продвижение</li>
+						<li class="description__item">SEO-продвижение</li>
+						<li class="description__item">контент-маркетинг</li>
+						<li class="description__item">контекстная реклама</li>
+					</ul>
+				</div>
+			</div>
+	
+		</div>
+	
+		<footer class="project__footer"><img src="img/wave.png" alt=""></footer>
 	</section>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>

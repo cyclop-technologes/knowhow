@@ -1,0 +1,45 @@
+.video-sect{
+	background: $bg-gray;
+	padding: 20px 0px;
+}
+.video-sect__container{
+	display: flex;
+	justify-content: center;
+	margin-top: 230px;
+}
+.video-sect__hand{
+	position: relative;
+	// transform: scale(1.34);
+	.img__phone{
+		width: 40.58vw;
+	}
+
+	.img__hand{
+		position: absolute;
+		width: 39.7vw;
+		top: 3vw;
+    	right: 30.8vw;
+	}
+	
+}
+
+@media screen and (max-width: 1440px) {
+	.video-sect__hand{
+		.img__phone{
+			width: 780px;
+		}
+
+		.img__hand{
+			width: 763px;
+			top: 60px;
+	    	left: -571px;
+		}
+	}
+}
+.video-sect__logo{
+	text-align: right;
+	margin-top: 271px;
+	img{
+		width: 162px;
+	}
+}

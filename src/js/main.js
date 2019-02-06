@@ -2,7 +2,10 @@ const сanvas = require('./canvas.js');
 const head = require('./head.js');
 const anime = require('animejs');
 const $ = require('jquery');
+const AOS = require('aos');
 
+
+AOS.init();
 
 $('#summary__bg').attr({
 	height: window.innerHeight,
