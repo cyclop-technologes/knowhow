@@ -1,0 +1,15 @@
+.footer{
+	background-color: $bg-gray;
+
+}
+
+.footer__container{
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.footer__item{
+	flex-grow: 1;
+	text-align: center;
+}

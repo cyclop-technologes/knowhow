@@ -42,10 +42,10 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    // tunnel: true,
-    // host: 'localhost',
-    // port: 8085,
-    // logPrefix: "knowHow"
+    tunnel: true,
+    host: 'localhost',
+    port: 8085,
+    logPrefix: "knowHow"
 };
 
 gulp.task('html:build', function () {

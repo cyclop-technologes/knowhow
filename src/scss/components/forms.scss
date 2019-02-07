@@ -1,0 +1,133 @@
+.forms{
+	background-color: $bg-gray;
+	padding: 20px 0px;
+	text-align: center;
+}
+
+.forms__title{
+	font-size: 75px;
+	line-height: 125px;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+}
+.forms__subtitle{
+	font-size: 8px;
+	letter-spacing: 4.27px;
+	text-transform: uppercase;
+	line-height: 10.54px;
+	font-weight: 400;
+	margin: 35px 0px;
+}
+
+.inputs{
+	margin: 73px auto 42px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	width: 967px;
+
+}
+
+.inputs__input{
+	width: 353px;
+	height: 71px;
+	@extend %forms;
+}
+.checkboxes__block{
+	margin: 20px;
+}
+.checkboxes__title{
+	margin-bottom: 30px;
+}
+.block__img{
+	width: 58px;
+	height: 58px;
+	background:transparent url('../img/features-sprite.png') no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+
+	&.--branding{
+		width: 55px;
+		background-position-x: -47px;
+	}
+	&.--prodaction{
+		background-position-x: -104px;
+	}
+	&.--it{
+		width: 46px;
+		background-position: left;
+	}
+	&.--im{
+		width: 45px;
+		background-position-x: right;
+	}
+}
+.block__title{
+	font-size: 25px;
+	text-transform: uppercase;
+	margin: 57px 0px 40px;
+}
+
+.block__list{
+	text-align: left;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.block-list__item{
+	letter-spacing: 1.88px;
+	line-height: 25px;
+	font-size: 13px;
+	text-transform: uppercase;
+
+	input{
+		display: inline-block;
+		margin-right: 20px;
+	}
+}
+
+
+.forms__textarea{
+
+	p{
+		padding: 0px 40px;
+		width: 920px;
+		max-width: 100%;
+		box-sizing: border-box;
+		margin: 0 auto;
+	}
+
+	textarea{
+		@extend %forms;
+		margin: 0 auto;
+		resize: none;
+		width: 100%;
+		min-height: 125px;
+	}
+}
+
+
+
+.checkboxes__blocks{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+
+.submit{
+	text-align: center;
+	margin: 65px 0;
+}
+.submit__btn{
+	display: inline-block;
+	letter-spacing: 5.34px;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 10px;
+	padding: 22px 75px;
+	background-color: $primary;
+	border: none;
+	cursor: pointer;
+	border-radius: 10px;
+}
