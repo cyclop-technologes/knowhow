@@ -3,6 +3,7 @@ const head = require('./head.js');
 const anime = require('animejs');
 const $ = require('jquery');
 const AOS = require('aos');
+const IMask = require('imask');
 
 
 AOS.init();
@@ -18,6 +19,13 @@ head();
 
 let $window = $(window);
 let $elem = $(".summary__top-title");
+
+
+var phoneInput = document.getElementById('phone');
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+var mask = new IMask(phoneInput, maskOptions);
 
 
 
@@ -42,4 +50,21 @@ $(document).on("scroll", function () {
     		}, i * 200)
     	})
     }
+});
+
+let cross = document.getElementById('cross__img');
+let crossRotation = anime({
+	targets: cross,
+	rotate: 90,
+	easing: 'linear',
+	loop: true,
+	autoplay: false
+})
+
+
+
+$('#cross__img').hover(function() {
+	crossRotation.play()
+}, function() {
+	crossRotation.pause()
 });

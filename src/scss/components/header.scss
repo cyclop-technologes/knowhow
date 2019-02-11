@@ -26,3 +26,26 @@
 		height: 27px;
 	}
 }
+
+
+
+@media screen and (max-width: 425px){
+	.header{
+		padding: 30px 0px;
+	}
+	.header__logo{
+		margin: 0 0 0 20px;
+		img{
+			width: 133px;
+		}
+	}
+	.header__spacer{
+		display: none;
+	}
+	.header__shower-btn{
+		margin: 0;
+		svg{
+			width: 55px;
+		}
+	}
+}

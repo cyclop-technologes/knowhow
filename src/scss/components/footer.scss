@@ -3,13 +3,51 @@
 
 }
 
+.mail-link{
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 6.2px;
+
+}
+
 .footer__container{
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 20px 0px 80px;
 
 }
 
 .footer__item{
-	flex-grow: 1;
-	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.links__item{
+	width: 37px;
+	height: 32px;
+	background:transparent url('../img/sprite-socmedia.png') left top no-repeat;
+	background-size: cover;
+	margin: 0 20px;
+
+
+	&.--instagram{
+		width: 31px;
+		background-position-x: 0;
+	}
+	&.--facebook{
+		width: 16px;
+		background-position-x: -32px;
+	}
+	&.--youtube{
+		width: 33px;
+		background-position-x: -50px;
+	}
+	&.--behance{
+		width: 37px;
+		background-position-x: right;
+	}
+
 }

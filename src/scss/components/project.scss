@@ -7,17 +7,10 @@
 }
 .project{
 	// background: $bg-gray;
-	padding: 20px 0px 100px;
+	padding: 20px 0px 230px;
 	position: relative;
 }
 
-
-
-.project__body-row{
-	display: grid;
-	grid-auto-columns: 1fr;
-	grid-template: "a b c"
-}
 
 .project__title{
 	text-align: center;
@@ -30,41 +23,21 @@
 	text-transform: uppercase;
 	margin-bottom: 250px;
 }
-
-.body-row__title{
-	text-align: center;
-	align-self: center;
-	.subtitle{
-		font-size: 17px;
-		font-style: italic;
-		line-height: 27px;
-		letter-spacing: 2.5px;
-		margin-bottom: 75px;
-	}
-	.main-title{
-		color: $primary;
-		font-size: 67px;
-		font-weight: 400;
-		line-height: 58.33px;
+.project__body{
+	
+	svg{
+		display: block;
+		margin: 0 auto;
 	}
 }
-.body-row__img{
-	position: relative;
+.sculpture{
+	display: block;
+	margin: 0 auto;
 }
 
-.body-row__description{
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-
-	.description__item{
-		font-size: 17px;
-		line-height: 25px;
-		text-transform: uppercase;
-		letter-spacing: 2.5px;
-	}
+.title__main{
+	cursor: pointer;
 }
-
 
 
 .project__footer{
@@ -75,4 +48,29 @@
 		width: 100%;
 		display: block;
 	}
+}
+
+.title__main{
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	fill: $black;
+
+	&:hover{
+		fill: $primary;
+	}
+}
+@keyframes rotation {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(90deg); }
+}
+#cross__img{
+	// transition: 0.6s linear;
+	cursor: pointer;
+	transform-origin: 78.5px 78.5px;
+
+
+// 	&:hover{
+// // 
+// 		animation: rotation 0.6s linear infinite;
+// 	}
 }
