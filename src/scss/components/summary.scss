@@ -77,15 +77,45 @@
 	justify-content: center;
 	align-items: center;
 	margin: 273px auto;
+
+	&.active p:before,
+	&.active p:after{
+		width: 100%;
+	}
+	
+
+
 	p{
 		margin: 0;
 		font-size: 17px;
 		text-transform: uppercase;
 		letter-spacing: 3.33px;
 		padding: 16px 24px;
-		border: 1px solid $black;
+		// border: 1px solid $black;
 		border-right: none;
 		border-left: none;
+		position: relative;
+
+
+		
+
+		&:before, &:after{
+			position: absolute;
+			content: '';
+			height: 1px;
+			width: 0;
+			background: $black;
+			transition: all 0.8s ease-in-out;
+		}
+
+		&:before{
+			top: 0;
+			left: 0;
+		}
+		&:after{
+			bottom: 0;
+			right: 0;
+		}
 	}
 }
 .--undeline{

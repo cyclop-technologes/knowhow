@@ -16075,11 +16075,6 @@ const headBg = сanvas('canvas', 50);
 const summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
 head();
 
-
-let $window = $(window);
-let $elem = $(".summary__top-title");
-
-
 var phoneInput = document.getElementById('phone');
 var maskOptions = {
   mask: '+{7}(000)000-00-00'
@@ -16087,6 +16082,9 @@ var maskOptions = {
 var mask = new IMask(phoneInput, maskOptions);
 
 
+let $window = $(window);
+let $topTitle = $(".summary__top-title");
+let $midTitle = $('.summary__mid-title')
 
 function isScrolledIntoView($elem, $window) {
     var docViewTop = $window.scrollTop();
@@ -16100,7 +16098,7 @@ function isScrolledIntoView($elem, $window) {
 
 
 $(document).on("scroll", function () {
-    if (isScrolledIntoView($elem, $window)) {
+    if (isScrolledIntoView($topTitle, $window)) {
 
     	$('.summary__top-title i').each(function(i, el){
 
@@ -16108,6 +16106,8 @@ $(document).on("scroll", function () {
     			el.classList.add('fill')
     		}, i * 200)
     	})
+    }else if (isScrolledIntoView($midTitle, $window)) {
+    	$midTitle.addClass('active')
     }
 });
 
