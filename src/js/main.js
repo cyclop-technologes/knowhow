@@ -1,7 +1,8 @@
+const $ = require('jquery');
+const anime = require('animejs');
 const сanvas = require('./canvas.js');
 const head = require('./head.js');
-const anime = require('animejs');
-const $ = require('jquery');
+const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
 
@@ -12,8 +13,28 @@ $('#summary__bg').attr({
 	height: window.innerHeight,
 });
 
-const headBg = сanvas('canvas', 50);
-const summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+
+const vw = $(window).width();
+
+if (vw <= 1440 && vw > 475) {
+	$('#canvas').attr('height', 400);
+
+	let headBg = сanvas('canvas', 50);
+	let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+
+
+}else if (vw <= 475) {
+	
+	$('#canvas').attr('height', 400);
+
+	let headBg = сanvas('canvas', 25);
+	let summaryBg = сanvas('summary__bg', 50, '#d3d3d3', 2, 0.2);
+}
+
+
+
+
+
 head();
 
 var phoneInput = document.getElementById('phone');
@@ -23,34 +44,6 @@ var maskOptions = {
 var mask = new IMask(phoneInput, maskOptions);
 
 
-let $window = $(window);
-let $topTitle = $(".summary__top-title");
-let $midTitle = $('.summary__mid-title')
-
-function isScrolledIntoView($elem, $window) {
-    var docViewTop = $window.scrollTop();
-    var docViewBottom = docViewTop + $window.height();
-
-    var elemTop = $elem.offset().top;
-    var elemBottom = elemTop + $elem.height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
-
-
-$(document).on("scroll", function () {
-    if (isScrolledIntoView($topTitle, $window)) {
-
-    	$('.summary__top-title i').each(function(i, el){
-
-    		setTimeout(function(){
-    			el.classList.add('fill')
-    		}, i * 200)
-    	})
-    }else if (isScrolledIntoView($midTitle, $window)) {
-    	$midTitle.addClass('active')
-    }
-});
 
 let cross = document.getElementById('cross__img');
 let crossRotation = anime({

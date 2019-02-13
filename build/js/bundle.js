@@ -16057,10 +16057,11 @@ function image() {
 
 module.exports = image
 },{}],7:[function(require,module,exports){
+const $ = require('jquery');
+const anime = require('animejs');
 const сanvas = require('./canvas.js');
 const head = require('./head.js');
-const anime = require('animejs');
-const $ = require('jquery');
+const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
 
@@ -16071,8 +16072,28 @@ $('#summary__bg').attr({
 	height: window.innerHeight,
 });
 
-const headBg = сanvas('canvas', 50);
-const summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+
+const vw = $(window).width();
+
+if (vw <= 1440 && vw > 475) {
+	$('#canvas').attr('height', 400);
+
+	let headBg = сanvas('canvas', 50);
+	let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+
+
+}else if (vw <= 475) {
+	
+	$('#canvas').attr('height', 400);
+
+	let headBg = сanvas('canvas', 25);
+	let summaryBg = сanvas('summary__bg', 50, '#d3d3d3', 2, 0.2);
+}
+
+
+
+
+
 head();
 
 var phoneInput = document.getElementById('phone');
@@ -16082,34 +16103,6 @@ var maskOptions = {
 var mask = new IMask(phoneInput, maskOptions);
 
 
-let $window = $(window);
-let $topTitle = $(".summary__top-title");
-let $midTitle = $('.summary__mid-title')
-
-function isScrolledIntoView($elem, $window) {
-    var docViewTop = $window.scrollTop();
-    var docViewBottom = docViewTop + $window.height();
-
-    var elemTop = $elem.offset().top;
-    var elemBottom = elemTop + $elem.height();
-
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
-
-
-$(document).on("scroll", function () {
-    if (isScrolledIntoView($topTitle, $window)) {
-
-    	$('.summary__top-title i').each(function(i, el){
-
-    		setTimeout(function(){
-    			el.classList.add('fill')
-    		}, i * 200)
-    	})
-    }else if (isScrolledIntoView($midTitle, $window)) {
-    	$midTitle.addClass('active')
-    }
-});
 
 let cross = document.getElementById('cross__img');
 let crossRotation = anime({
@@ -16127,4 +16120,67 @@ $('#cross__img').hover(function() {
 }, function() {
 	crossRotation.pause()
 });
-},{"./canvas.js":5,"./head.js":6,"animejs":1,"aos":2,"imask":3,"jquery":4}]},{},[7]);
+},{"./canvas.js":5,"./head.js":6,"./scroll.js":8,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
+const anime = require('animejs');
+
+
+let $topTitle = $(".summary__top-title");
+let $midTitle = $('.summary__mid-title')
+
+let $sculpture = {
+    head: $('#head'),
+    torso: $('#torso'),
+    hips: $('#hips'),
+    legs: $('#legs'),
+    all: $('.sctulpture__block')
+}
+
+function isScrolledIntoView($elem) {
+    let $window = $(window);
+    let docViewTop = $window.scrollTop();
+    let docViewBottom = docViewTop + $window.height();
+
+    let elemTop = $elem.offset().top;
+    let elemBottom = elemTop + $elem.height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+
+let onScroll = $(document).on("scroll", function () {
+    if (isScrolledIntoView($topTitle)) {
+
+    	$('.summary__top-title i').each(function(i, el){
+
+    		setTimeout(function(){
+    			el.classList.add('fill')
+    		}, i * 200)
+    	})
+    }
+    else if (isScrolledIntoView($midTitle)) {
+        console.log(isScrolledIntoView($midTitle));
+    	$midTitle.addClass('active')
+    }
+    else if (isScrolledIntoView($sculpture.head)) {
+        $sculpture.head.find('.sculpture__description').css('opacity', 1);
+        $sculpture.torso.attr('transform', 'translate(79, 218)');
+        $sculpture.hips.attr('transform', 'translate(12, 532)');
+        $sculpture.legs.attr('transform', 'translate(0, 906)');
+    }
+    else if (isScrolledIntoView($sculpture.torso)) {
+        $sculpture.torso.find('.sculpture__description').css('opacity', 1);
+        $sculpture.hips.attr('transform', 'translate(12, 599)');
+        $sculpture.legs.attr('transform', 'translate(0, 974)');
+    }
+    else if (isScrolledIntoView($sculpture.hips)) {
+        $sculpture.hips.find('.sculpture__description').css('opacity', 1);
+        $sculpture.legs.attr('transform', 'translate(0, 1025)');
+    }
+    else if (isScrolledIntoView($sculpture.legs)) {
+        $sculpture.legs.find('.sculpture__description').css('opacity', 1);
+    }
+});
+
+
+module.exports = onScroll;
+},{"animejs":1}]},{},[7]);

@@ -8,6 +8,7 @@
 	min-height: 100vh;
 	display: grid;
 	box-sizing: border-box;
+	overflow: hidden;
 }
 
 .banner__wrapper{
@@ -79,22 +80,134 @@
 	background-size: contain;
 	transition: transform 0.5s;
 }
-
 #canvas{
 	width: 855px;
 }
 
+.banner__mob-contnent{
+	display: none;
+}
+
+@media screen and (max-width: 1440px){
+	.head-img{
+		top: -110px;
+		left: 180px;
+		width: 515px;
+		height: 680px;
+	}
+	.banner__title{
+		margin-left: 0;
+
+		h1{
+			margin-bottom: 36px;
+			position: relative;
+			margin-top: 13px;
+			font-size: 102px;
+			line-height: 93.23px;
+		}
+		h4{
+			margin-left: 2px;
+			letter-spacing: 5.87px;
+			font-size: 14px;
+		}
+	}
+
+	.switcher{
+		top: calc(100% - 23px);
+		img{
+			width: 11px;
+		}
+	}
+}
 
 @media screen and (max-width: 425px) {
+	.banner{
+		padding-bottom: 75px;
+	}
+	.banner__wrapper{
+		position: relative;
+	}
 	.banner__title{
-		margin: 0 0 0 12px;
+		margin: 45px 0 125px 12px;
 		h1{
 			margin-top: 0px;
+			margin-bottom: 0;
 			font-size: 80px;
 			line-height: 75px;
 		}
+		h4{
+		    letter-spacing: 3.17px;
+			font-size: 12px;
+		}
+	}
+	.switcher{
+		left: 12px;
+		top: calc(100% - 19px);
+		img{
+			width: 9px;
+		}
 	}
 	.banner__head{
-		display: none;
+		// display: none;
+		position: absolute;
+		position: absolute;
+		right: -50px;
+		top: 30px;
+
+		.head-img{
+			display: none;
+		}
+
+		#canvas{
+			width: 200px;
+		}
+	}
+	.banner__mob-contnent{
+		display: block;
+	}
+	.toform-btn__btn{
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 7.57px;
+		font-weight: bold;
+		line-height: 15.62px;
+		padding: 13px;
+		display: inline-block;
+		position: relative;
+
+
+		&:before,&:after{
+			content: '';
+			position: absolute;
+			right: 0;
+			height: 1px;
+			width: 300px;
+			background-color: $black;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+
+	}
+	.banner__mob-description{
+		margin: 130px 0px;
+		position: relative;
+	}
+	.banner__mob-text{
+		margin: 0;
+		padding: 13px;
+		line-height: 2;
+		letter-spacing: 0.8px;
+	}
+	.headbg--mob-contnent{
+		position: absolute;
+	    bottom: -126px;
+		left: 170px;
+		img{
+			width: 380px;
+		}
 	}
 }

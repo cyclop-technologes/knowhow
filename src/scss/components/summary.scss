@@ -169,3 +169,12 @@
 .to-bottom-arrows{
 	margin-top: 400px;
 }
+
+@media screen and (max-width: 425px){
+	.summary__subtitle{
+		display: none;
+	}
+	.summary__top-title{
+		margin: 0;
+	}
+}
