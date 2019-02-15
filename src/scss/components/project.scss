@@ -28,6 +28,8 @@
 	svg{
 		display: block;
 		margin: 0 auto;
+		max-width: 100%;
+		height: auto;
 	}
 }
 .sculpture{
@@ -43,7 +45,6 @@
 .project__footer{
 	position: absolute;
 	bottom: 0;
-
 	img{
 		width: 100%;
 		display: block;
@@ -89,7 +90,28 @@
 
 
 @media screen and (max-width: 425px){
-	.project__body{
-		display: none;
+	.project{
+		padding-bottom: 35px;
 	}
+	.project__title{
+		font-size: 12px;
+		letter-spacing: 5px;
+		margin-bottom: 135px;
+	}
+	.project__container{
+		overflow: hidden;
+	}
+	.project__body{
+		position: relative;
+		width: 100%;
+		height: 870px;
+		.sculpture{
+			position: absolute;
+			top: 0;
+			width: 900px;
+			max-width: 700px
+		}
+
+	}
+
 }

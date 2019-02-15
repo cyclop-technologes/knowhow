@@ -42,3 +42,9 @@
 		width: 162px;
 	}
 }
+
+@media screen and (max-width: 425px) {
+	.video-sect{
+		display: none;
+	}
+}

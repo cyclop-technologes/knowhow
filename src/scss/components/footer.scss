@@ -51,3 +51,14 @@
 	}
 
 }
+
+@media screen and (max-width: 425px){
+	.footer__container{
+		grid-template-columns: 1fr;
+		padding-bottom: 20px;
+	}
+
+	.footer__item{
+		margin: 20px 0px;
+	}
+}

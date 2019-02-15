@@ -1,6 +1,3 @@
-const anime = require('animejs');
-
-
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')
 
@@ -9,7 +6,9 @@ let $sculpture = {
     torso: $('#torso'),
     hips: $('#hips'),
     legs: $('#legs'),
-    all: $('.sctulpture__block')
+    all: $('.sctulpture__block'),
+    parent: $('#sculpture'),
+    isClose: true,
 }
 
 function isScrolledIntoView($elem) {
@@ -38,22 +37,29 @@ let onScroll = $(document).on("scroll", function () {
         console.log(isScrolledIntoView($midTitle));
     	$midTitle.addClass('active')
     }
-    else if (isScrolledIntoView($sculpture.head)) {
+    // else if (!isScrolledIntoView($sculpture.parent)) {
+    //     $sculpture.legs.attr('transform', 'translate(0, 865)');
+    //     $sculpture.hips.attr('transform', 'translate(12, 490)');
+    //     $sculpture.torso.attr('transform', 'translate(79, 177)');
+    //     $sculpture.head.attr('transform', 'translate(40, 0)');
+    // }
+    else if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
         $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.attr('transform', 'translate(79, 218)');
         $sculpture.hips.attr('transform', 'translate(12, 532)');
         $sculpture.legs.attr('transform', 'translate(0, 906)');
     }
-    else if (isScrolledIntoView($sculpture.torso)) {
+    else if (isScrolledIntoView($sculpture.torso) && $sculpture.isClose) {
         $sculpture.torso.find('.sculpture__description').css('opacity', 1);
         $sculpture.hips.attr('transform', 'translate(12, 599)');
         $sculpture.legs.attr('transform', 'translate(0, 974)');
     }
-    else if (isScrolledIntoView($sculpture.hips)) {
+    else if (isScrolledIntoView($sculpture.hips) && $sculpture.isClose) {
         $sculpture.hips.find('.sculpture__description').css('opacity', 1);
         $sculpture.legs.attr('transform', 'translate(0, 1025)');
     }
     else if (isScrolledIntoView($sculpture.legs)) {
+        $sculpture.isClose = false;
         $sculpture.legs.find('.sculpture__description').css('opacity', 1);
     }
 });

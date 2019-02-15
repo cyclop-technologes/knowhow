@@ -1,7 +1,6 @@
 const $ = require('jquery');
 const anime = require('animejs');
-const сanvas = require('./canvas.js');
-const head = require('./head.js');
+const viewport = require('./viewport.js')
 const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
@@ -9,33 +8,15 @@ const IMask = require('imask');
 
 AOS.init();
 
-$('#summary__bg').attr({
-	height: window.innerHeight,
+viewport()
+
+//nav 
+
+$('.header__shower-btn').click(function(event) {
+	$('.links__list').toggleClass('active');
 });
 
-
-const vw = $(window).width();
-
-if (vw <= 1440 && vw > 475) {
-	$('#canvas').attr('height', 400);
-
-	let headBg = сanvas('canvas', 50);
-	let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
-
-
-}else if (vw <= 475) {
-	
-	$('#canvas').attr('height', 400);
-
-	let headBg = сanvas('canvas', 25);
-	let summaryBg = сanvas('summary__bg', 50, '#d3d3d3', 2, 0.2);
-}
-
-
-
-
-
-head();
+// phone number input
 
 var phoneInput = document.getElementById('phone');
 var maskOptions = {
@@ -44,6 +25,8 @@ var maskOptions = {
 var mask = new IMask(phoneInput, maskOptions);
 
 
+
+// cross rotate
 
 let cross = document.getElementById('cross__img');
 let crossRotation = anime({
@@ -54,10 +37,40 @@ let crossRotation = anime({
 	autoplay: false
 })
 
-
-
 $('#cross__img').hover(function() {
 	crossRotation.play()
 }, function() {
 	crossRotation.pause()
 });
+
+
+
+// progressbar;
+
+let sum = 0;
+$('.checkbox-item').each(function(){
+	console.log($(this).attr('data-price'))
+	sum += Number($(this).attr('data-price'))
+});
+
+$('.checkbox-item').click(function(event) {
+	let price = 0;
+	let checked = $('.checkbox-item').filter(function(index) {
+		return $(this).is(':checked');
+	});
+
+	checked.each(function(){
+		price += Number($(this).attr('data-price'));
+	})
+
+	let k = sum / price;
+	let progress = 100 / k;
+
+	$('.progressfill').css({
+		left: progress.toString() + '%',
+		transform: 'translateX(-' + progress.toString() + '%)'
+	});
+
+	$('.progressbar__amount').html(price + '$')
+});
+

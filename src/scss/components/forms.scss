@@ -134,3 +134,134 @@
 	border-radius: 10px;
 	outline: none;
 }
+
+.progressbar__title{
+	margin-bottom: 32px;
+}
+.progressbar{
+	width: 715px;
+	max-width: 100%;
+	position: relative;
+	box-sizing: border-box;
+	background: $gray;
+	box-shadow: inset -3px -2px 0 rgba(0, 0, 0, 0.04);
+	height: 32px;
+	border-radius: 16px;
+	margin: 0 auto;
+}
+
+.progressfill{
+	width: 27px;
+	height: 27px;
+	background-color: #fff;
+	border-radius: 100%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	transition: all 0.3s ease-in-out;
+}
+
+.progressbar__amount{
+	margin-top: 20px;
+}
+
+
+@media screen and (max-width: 425px) {
+	.forms__title{
+		font-size: 44px;
+		line-height: normal;
+		margin: 60px 0;
+	}
+	.forms__subtitle{
+		margin: 20px;
+		font-size: 10px;
+		line-height: 1.3;
+		letter-spacing: 0.1rem;
+	}
+	.inputs{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.inputs__input{
+		font-size: 8px;
+		width: 215px;
+		padding: 18px 17px;
+		height: auto;
+		letter-spacing: 0.1rem;
+		margin-bottom: 5px;
+	}
+	.checkboxes__block{
+		display: grid;
+		grid-template-columns: 40px 1fr 2fr;
+		margin: 20px 0 15px;
+		width: 100%;
+	}
+	
+	.forms__subtitle{
+		margin: 25px 0px 15px;
+	}
+	.block__img{
+		width: 38px;
+		height: 35px;
+		background:transparent url('../img/features-sprite.png') no-repeat;
+		background-size: cover;
+		margin: 10px auto;
+		position: relative;
+
+		&:after, &:before{
+			content: '';
+			position: absolute;
+			right: -85px;
+			height: 1px;
+			width: 200px;
+			background-color: $black;
+		}
+
+		&:after{
+			top: -10px;
+		}
+		&:before{
+			bottom: -10px;
+		}
+
+		&.--branding{
+			width: 33px;
+			background-position-x: -29px;
+		}
+		&.--prodaction{
+			width: 37px;
+			background-position-x: -62px;
+		}
+		&.--it{
+			width: 28px;
+			background-position: left;
+		}
+		&.--im{
+			width: 28px;
+			background-position-x: right;
+			margin-top: 23px;
+		}
+	}
+	.block__title{
+		margin: 17px 0;
+		font-size: 22px;
+		font-weight: normal;
+	}
+
+	.block-list__item{
+		line-height: 1.8;
+		letter-spacing: 1px;
+		input{
+			margin: 0;
+		}
+	}
+	.forms__textarea{
+
+		textarea{
+			letter-spacing: 1px;
+			text-transform: none;
+		}
+	}
+
+}

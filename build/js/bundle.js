@@ -16048,6 +16048,7 @@ function image() {
     inner.style.oTransform = style;
   };
 
+
   //-----------------------------------------
 
   container.onmouseenter = onMouseEnterHandler;
@@ -16059,8 +16060,7 @@ module.exports = image
 },{}],7:[function(require,module,exports){
 const $ = require('jquery');
 const anime = require('animejs');
-const сanvas = require('./canvas.js');
-const head = require('./head.js');
+const viewport = require('./viewport.js')
 const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
@@ -16068,33 +16068,15 @@ const IMask = require('imask');
 
 AOS.init();
 
-$('#summary__bg').attr({
-	height: window.innerHeight,
+viewport()
+
+//nav 
+
+$('.header__shower-btn').click(function(event) {
+	$('.links__list').toggleClass('active');
 });
 
-
-const vw = $(window).width();
-
-if (vw <= 1440 && vw > 475) {
-	$('#canvas').attr('height', 400);
-
-	let headBg = сanvas('canvas', 50);
-	let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
-
-
-}else if (vw <= 475) {
-	
-	$('#canvas').attr('height', 400);
-
-	let headBg = сanvas('canvas', 25);
-	let summaryBg = сanvas('summary__bg', 50, '#d3d3d3', 2, 0.2);
-}
-
-
-
-
-
-head();
+// phone number input
 
 var phoneInput = document.getElementById('phone');
 var maskOptions = {
@@ -16103,6 +16085,8 @@ var maskOptions = {
 var mask = new IMask(phoneInput, maskOptions);
 
 
+
+// cross rotate
 
 let cross = document.getElementById('cross__img');
 let crossRotation = anime({
@@ -16113,17 +16097,45 @@ let crossRotation = anime({
 	autoplay: false
 })
 
-
-
 $('#cross__img').hover(function() {
 	crossRotation.play()
 }, function() {
 	crossRotation.pause()
 });
-},{"./canvas.js":5,"./head.js":6,"./scroll.js":8,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
-const anime = require('animejs');
 
 
+
+// progressbar;
+
+let sum = 0;
+$('.checkbox-item').each(function(){
+	console.log($(this).attr('data-price'))
+	sum += Number($(this).attr('data-price'))
+});
+
+$('.checkbox-item').click(function(event) {
+	let price = 0;
+	let checked = $('.checkbox-item').filter(function(index) {
+		return $(this).is(':checked');
+	});
+
+	checked.each(function(){
+		price += Number($(this).attr('data-price'));
+	})
+
+	let k = sum / price;
+	let progress = 100 / k;
+
+	$('.progressfill').css({
+		left: progress.toString() + '%',
+		transform: 'translateX(-' + progress.toString() + '%)'
+	});
+
+	$('.progressbar__amount').html(price + '$')
+});
+
+
+},{"./scroll.js":8,"./viewport.js":9,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')
 
@@ -16132,7 +16144,9 @@ let $sculpture = {
     torso: $('#torso'),
     hips: $('#hips'),
     legs: $('#legs'),
-    all: $('.sctulpture__block')
+    all: $('.sctulpture__block'),
+    parent: $('#sculpture'),
+    isClose: true,
 }
 
 function isScrolledIntoView($elem) {
@@ -16161,26 +16175,67 @@ let onScroll = $(document).on("scroll", function () {
         console.log(isScrolledIntoView($midTitle));
     	$midTitle.addClass('active')
     }
-    else if (isScrolledIntoView($sculpture.head)) {
+    // else if (!isScrolledIntoView($sculpture.parent)) {
+    //     $sculpture.legs.attr('transform', 'translate(0, 865)');
+    //     $sculpture.hips.attr('transform', 'translate(12, 490)');
+    //     $sculpture.torso.attr('transform', 'translate(79, 177)');
+    //     $sculpture.head.attr('transform', 'translate(40, 0)');
+    // }
+    else if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
         $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.attr('transform', 'translate(79, 218)');
         $sculpture.hips.attr('transform', 'translate(12, 532)');
         $sculpture.legs.attr('transform', 'translate(0, 906)');
     }
-    else if (isScrolledIntoView($sculpture.torso)) {
+    else if (isScrolledIntoView($sculpture.torso) && $sculpture.isClose) {
         $sculpture.torso.find('.sculpture__description').css('opacity', 1);
         $sculpture.hips.attr('transform', 'translate(12, 599)');
         $sculpture.legs.attr('transform', 'translate(0, 974)');
     }
-    else if (isScrolledIntoView($sculpture.hips)) {
+    else if (isScrolledIntoView($sculpture.hips) && $sculpture.isClose) {
         $sculpture.hips.find('.sculpture__description').css('opacity', 1);
         $sculpture.legs.attr('transform', 'translate(0, 1025)');
     }
     else if (isScrolledIntoView($sculpture.legs)) {
+        $sculpture.isClose = false;
         $sculpture.legs.find('.sculpture__description').css('opacity', 1);
     }
 });
 
 
 module.exports = onScroll;
-},{"animejs":1}]},{},[7]);
+},{}],9:[function(require,module,exports){
+const сanvas = require('./canvas.js');
+const head = require('./head.js');
+
+module.exports = () => {
+	$('#summary__bg').attr({
+		height: window.innerHeight,
+	});
+
+
+	const vw = $(window).width();
+
+	if (vw > 1440) {
+		let headBg = сanvas('canvas', 50);
+		let summaryBg = сanvas('summary__bg', 250, '#d3d3d3', 2, 0.2);
+	}else if (vw <= 1440 && vw > 475) {
+
+		$('#canvas').attr('height', 400);
+
+		let headBg = сanvas('canvas', 50);
+		let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+
+
+	}else if (vw <= 475) {
+		
+		$('#canvas').attr('height', 400);
+
+		let headBg = сanvas('canvas', 20);
+		let summaryBg = сanvas('summary__bg', 30, '#d3d3d3', 2, 0.2);
+	}
+
+
+	head();
+}
+},{"./canvas.js":5,"./head.js":6}]},{},[7]);
