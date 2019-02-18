@@ -74,3 +74,17 @@ $('.checkbox-item').click(function(event) {
 	$('.progressbar__amount').html(price + '$')
 });
 
+
+
+// dark mode 
+
+var switcher = anime({
+	targets: '.switcher',
+	translateY: [15, 0],
+	autoplay: false
+})
+
+$('.switcher').click(function(event) {
+	switcher.play();
+	$('.mode').toggleClass('--dark');
+});

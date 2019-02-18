@@ -16135,6 +16135,20 @@ $('.checkbox-item').click(function(event) {
 });
 
 
+
+// dark mode 
+
+var switcher = anime({
+	targets: '.switcher',
+	translateY: [15, 0],
+	autoplay: false
+})
+
+$('.switcher').click(function(event) {
+	switcher.play();
+	$('.mode').toggleClass('--dark');
+});
+
 },{"./scroll.js":8,"./viewport.js":9,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')
@@ -16149,8 +16163,9 @@ let $sculpture = {
     isClose: true,
 }
 
+let $window = $(window);
+
 function isScrolledIntoView($elem) {
-    let $window = $(window);
     let docViewTop = $window.scrollTop();
     let docViewBottom = docViewTop + $window.height();
 
@@ -16160,9 +16175,25 @@ function isScrolledIntoView($elem) {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
+// let $canvas = $('.summary__container');
+// let canvasTop = $canvas.offset().top - $window.height() - 100;
+// let footer = $('.project__footer').offset().top + $('.project__footer').height() - $window.height() - 100;
 
 let onScroll = $(document).on("scroll", function () {
+
+    // let st = $window.scrollTop();
+    // let sb = st + $window.height();
+
+    // if ((st >= canvasTop) && (sb <= footer)) {
+    //     $('.summary__background').addClass('--fixed').css('top', 0);
+    // }else {
+    //     $('.summary__background').removeClass('--fixed').css('top', footer - canvasTop *2);
+    // }
+
+
     if (isScrolledIntoView($topTitle)) {
+
+
 
     	$('.summary__top-title i').each(function(i, el){
 
@@ -16172,15 +16203,10 @@ let onScroll = $(document).on("scroll", function () {
     	})
     }
     else if (isScrolledIntoView($midTitle)) {
-        console.log(isScrolledIntoView($midTitle));
+        
     	$midTitle.addClass('active')
     }
-    // else if (!isScrolledIntoView($sculpture.parent)) {
-    //     $sculpture.legs.attr('transform', 'translate(0, 865)');
-    //     $sculpture.hips.attr('transform', 'translate(12, 490)');
-    //     $sculpture.torso.attr('transform', 'translate(79, 177)');
-    //     $sculpture.head.attr('transform', 'translate(40, 0)');
-    // }
+
     else if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
         $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.attr('transform', 'translate(79, 218)');

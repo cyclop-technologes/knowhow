@@ -29,11 +29,14 @@
     font-style: italic;
 }
 
+
+
 $primary: #fabb00;
 $black: #000000;
 $white: #ffffff;
 $gray: #ededed;
 $bg-gray: #fafafa;
+$primary-dark: #4840ff;
 
 body{
 	font-family: 'Avante', Arial, sans-serif;
@@ -67,6 +70,13 @@ body{
 }
 .--primary-color{
 	color: $primary;
+}
+
+
+.--dark {
+	.--primary-color{
+	color: $primary-dark;
+}
 }
 
 
