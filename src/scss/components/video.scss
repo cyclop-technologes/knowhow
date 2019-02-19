@@ -15,12 +15,34 @@
 
 	.img__hand{
 		position: absolute;
+		background:transparent url('../img/hand/hand.png') left top no-repeat;
+		background-size: cover;
 		width: 39.7vw;
+		height: 30vw;
 		top: 3vw;
     	right: 30.8vw;
 	}
 	
 }
+
+
+.--dark{
+	.video-sect__hand{
+		.img__hand{
+			background:transparent url('../img/hand/hand-dark.png') left top no-repeat;
+			background-size: contain;
+		}
+	}
+	#logo-mid__text{
+		fill: $white;
+	}
+	#logo-mid__icon{
+		fill: $primary-dark;
+	}
+
+}
+
+
 
 @media screen and (max-width: 1440px) {
 	.video-sect__hand{
@@ -30,6 +52,7 @@
 
 		.img__hand{
 			width: 763px;
+			height: 575px;
 			top: 60px;
 	    	left: -571px;
 		}

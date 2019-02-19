@@ -52,6 +52,43 @@
 
 }
 
+.--dark{
+	.footer{
+		background-color: $black;
+	}
+	.mail-link{
+		color: $white;
+	}
+
+	#footer-logo__icon{
+		fill: $primary-dark;
+	}
+	#footer-logo__text{
+		fill: $white;
+	}
+
+	.links__item{
+		background:transparent url('../img/sprite-socmedia-white.png') left top no-repeat;
+		background-size: cover;
+		&.--instagram{
+			width: 31px;
+			background-position-x: 0;
+		}
+		&.--facebook{
+			width: 16px;
+			background-position-x: -32px;
+		}
+		&.--youtube{
+			width: 33px;
+			background-position-x: -50px;
+		}
+		&.--behance{
+			width: 37px;
+			background-position-x: right;
+		}
+	}
+}
+
 @media screen and (max-width: 425px){
 	.footer__container{
 		grid-template-columns: 1fr;

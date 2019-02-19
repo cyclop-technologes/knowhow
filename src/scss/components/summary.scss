@@ -6,12 +6,13 @@
 
 .summary__container{
 	position: relative;
+	padding: 130px 0 200px;
 
 }
 
 .summary__background{
 	position: absolute;
-	width: 100%;
+	width: 100vw;
 	top: -150px;
 	left: 0;
 
@@ -39,7 +40,7 @@
 	text-transform: uppercase;
 	letter-spacing: 10px;
 	line-height: 63.67px;
-	margin: 260px auto;
+	margin: 130px auto 260px;
 	.large{
 		font-size: 64px;
 		letter-spacing: 17.5px;
@@ -169,6 +170,58 @@
 }
 .to-bottom-arrows{
 	margin-top: 400px;
+}
+
+.cls-1, .cls-2{
+	fill: $primary;
+}
+
+.--dark{
+	.summary__top-title .filling-line i{
+		background-color: $primary-dark;
+	}
+
+	.summary__background{
+		#summary__bg{
+			visibility: hidden;
+		}
+
+	}
+
+	.summary__subtitle{
+
+	}
+
+	.summary{
+		background: linear-gradient(to bottom, #0d0d0d 0%,#1b1b1b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0d0d0d', endColorstr='#1b1b1b',GradientType=0 );
+	}
+	.summary__mid-title p{
+		&:before, &:after{
+			background: $white;
+		}
+	}
+
+	.--undeline:after{
+		background: $white;
+	}
+
+	.summary__container{
+		background:transparent url('../img/summary_bg--dark.png') center top no-repeat;
+		background-size: cover;
+	}
+
+
+	#arrows-top{
+		fill: $primary-dark;
+	}
+	#arrows-bottom{
+		 fill: $white;
+	}
+	.cls-1, .cls-2{
+		fill: $primary-dark;
+	}
+
 }
 
 @media screen and (max-width: 425px){

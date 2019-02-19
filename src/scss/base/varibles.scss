@@ -65,6 +65,7 @@ body{
 
 .wrapper {
 	max-width: 1440px;
+	width: 100%;
 	box-sizing: border-box;
 	margin: 0 auto;
 }
@@ -74,9 +75,15 @@ body{
 
 
 .--dark {
+	background: #0a0a0a;
 	.--primary-color{
-	color: $primary-dark;
-}
+		color: $primary-dark;
+	}
+
+	%forms{
+		background-color: #5d5d5d;
+		color: #d2d2d2;
+	}
 }
 
 

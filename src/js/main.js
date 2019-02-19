@@ -4,6 +4,7 @@ const viewport = require('./viewport.js')
 const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
+const anchors = require('./smooth-scroll.js')
 
 
 AOS.init();

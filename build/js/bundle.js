@@ -16064,6 +16064,7 @@ const viewport = require('./viewport.js')
 const onscroll = require('./scroll.js')
 const AOS = require('aos');
 const IMask = require('imask');
+const anchors = require('./smooth-scroll.js')
 
 
 AOS.init();
@@ -16149,65 +16150,73 @@ $('.switcher').click(function(event) {
 	$('.mode').toggleClass('--dark');
 });
 
-},{"./scroll.js":8,"./viewport.js":9,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
+},{"./scroll.js":8,"./smooth-scroll.js":9,"./viewport.js":10,"animejs":1,"aos":2,"imask":3,"jquery":4}],8:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')
-
-let $sculpture = {
-    head: $('#head'),
-    torso: $('#torso'),
-    hips: $('#hips'),
-    legs: $('#legs'),
-    all: $('.sctulpture__block'),
-    parent: $('#sculpture'),
-    isClose: true,
-}
-
+let $sculpture;
 let $window = $(window);
+let darkMode = $('.mode').is('.--dark');
+
+$('.switcher').click(function() {
+    darkMode = !darkMode;
+    sculptureMode();
+});
+
+
+function sculptureMode() {
+    if (darkMode) {
+        $sculpture = {
+            head: $('.sculpture-dark #head'),
+            torso: $('.sculpture-dark #torso'),
+            hips: $('.sculpture-dark #hips'),
+            legs: $('.sculpture-dark #legs'),
+            all: $('.sculpture-dark .sctulpture__block'),
+            parent: $('.sculpture-dark #sculpture'),
+            isClose: true,
+        }
+    }else{
+        $sculpture = {
+            head: $('.sculpture #head'),
+            torso: $('.sculpture #torso'),
+            hips: $('.sculpture #hips'),
+            legs: $('.sculpture #legs'),
+            all: $('.sculpture .sctulpture__block'),
+            parent: $('.sculpture #sculpture'),
+            isClose: true,
+        }
+    }
+}
 
 function isScrolledIntoView($elem) {
     let docViewTop = $window.scrollTop();
     let docViewBottom = docViewTop + $window.height();
-
     let elemTop = $elem.offset().top;
     let elemBottom = elemTop + $elem.height();
-
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
-// let $canvas = $('.summary__container');
-// let canvasTop = $canvas.offset().top - $window.height() - 100;
-// let footer = $('.project__footer').offset().top + $('.project__footer').height() - $window.height() - 100;
+sculptureMode();
 
 let onScroll = $(document).on("scroll", function () {
-
-    // let st = $window.scrollTop();
-    // let sb = st + $window.height();
-
-    // if ((st >= canvasTop) && (sb <= footer)) {
-    //     $('.summary__background').addClass('--fixed').css('top', 0);
-    // }else {
-    //     $('.summary__background').removeClass('--fixed').css('top', footer - canvasTop *2);
-    // }
-
-
     if (isScrolledIntoView($topTitle)) {
-
-
-
     	$('.summary__top-title i').each(function(i, el){
-
     		setTimeout(function(){
     			el.classList.add('fill')
     		}, i * 200)
     	})
-    }
-    else if (isScrolledIntoView($midTitle)) {
-        
+    }else{
+        $('.summary__top-title i').each(function(i, el){
+            setTimeout(function(){
+                el.classList.remove('fill')
+            }, i * 200)
+        })
+    };
+    if (isScrolledIntoView($midTitle)) {
     	$midTitle.addClass('active')
-    }
-
-    else if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
+    }else{
+        $midTitle.removeClass('active')
+    };
+    if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
         $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.attr('transform', 'translate(79, 218)');
         $sculpture.hips.attr('transform', 'translate(12, 532)');
@@ -16231,6 +16240,42 @@ let onScroll = $(document).on("scroll", function () {
 
 module.exports = onScroll;
 },{}],9:[function(require,module,exports){
+module.exports = $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+},{}],10:[function(require,module,exports){
 const сanvas = require('./canvas.js');
 const head = require('./head.js');
 

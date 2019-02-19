@@ -90,6 +90,7 @@
 	display: none;
 }
 
+
 .--dark {
 	
 	color: $white;
@@ -98,10 +99,20 @@
 		background-size: cover;
 	}
 	.head-img{
-		background: transparent url('../img/head-dark.png') center center no-repeat;
+		background: transparent url('../img/head-dark.png') center top no-repeat;
+		background-size: contain;
 	}
 	#canvas{
-		display: none;
+		visibility: hidden;
+	}
+	.toform-btn__btn{
+
+		a{
+			color: $white;
+		}
+		&:before, &:after{
+			background-color: $white;
+		}
 	}
 }
 
@@ -141,6 +152,8 @@
 		}
 	}
 
+	
+
 }
 
 
@@ -176,7 +189,6 @@
 	.banner__head{
 		// display: none;
 		position: absolute;
-		position: absolute;
 		right: -50px;
 		top: 30px;
 
@@ -187,6 +199,11 @@
 		#canvas{
 			width: 200px;
 		}
+	}
+	.canvas-bg{
+		position: absolute;
+		top: 30vh;
+		right: 50px;
 	}
 	.banner__mob-contnent{
 		display: block;
@@ -200,6 +217,11 @@
 		padding: 13px;
 		display: inline-block;
 		position: relative;
+
+		a{
+			color: $black;
+			text-decoration: none;
+		}
 
 
 		&:before,&:after{

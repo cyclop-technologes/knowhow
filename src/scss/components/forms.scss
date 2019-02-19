@@ -165,6 +165,49 @@
 	margin-top: 20px;
 }
 
+.forms__textarea{
+
+	textarea{
+		letter-spacing: 1px;
+		text-transform: none;
+	}
+}
+
+.--dark{
+	.forms{
+		background: linear-gradient(to bottom, #030303 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030303', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	}
+	.progressbar{
+		background-color: #5d5d5d;
+		box-shadow: inset -3px -2px 0 rgba(0, 0, 0, 0.11);
+	}
+	.submit__btn{
+		background-color: $primary-dark;
+	}
+	.block__img{
+		background:transparent url('../img/features-sprite-white.png') left top no-repeat;
+		&.--branding{
+			width: 55px;
+			background-position-x: left;
+		}
+		&.--prodaction{
+			background-position-x: -266px;
+		}
+		&.--it{
+			width: 46px;
+			background-position: -548px;
+		}
+		&.--im{
+			width: 45px;
+			background-position-x: right;
+		}
+	}
+	.block__title{
+		color: #858585;
+	}
+}
+
 
 @media screen and (max-width: 425px) {
 	.forms__title{
@@ -256,12 +299,6 @@
 			margin: 0;
 		}
 	}
-	.forms__textarea{
-
-		textarea{
-			letter-spacing: 1px;
-			text-transform: none;
-		}
-	}
+	
 
 }
