@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		{{#with first_slide}}
+		<title>{{header}}</title>
+
+
+		
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" href="/assets/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:100,200" rel="stylesheet">
+		<style type="text/css"></style>
+	</head>
+	<body>
+
+		{{/with}}
+		{{!-- intro --}}
+
+
+		<main class="mode">
+		{{>banner}}
+
+		{{>summary}}
+
+
+		<section class="--gray-gradient">
+
+			{{>video}}
+
+			{{>project}}
+
+		</section>
+
+
+			{{>form}}
+
+
+			{{>footer}}
+	</main>
+
+		
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+		<script src="assets/js/bundle.js"></script>
+
+	</body>
+
+</html>
