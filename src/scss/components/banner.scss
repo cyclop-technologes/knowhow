@@ -8,6 +8,7 @@
 	padding-bottom: 130px;
 	min-height: 100vh;
 	display: grid;
+	grid-template-rows: 135px 1fr;
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -25,6 +26,9 @@
 	h4{
 		margin-left: 2px;
 		letter-spacing: 5.87px;
+	}
+	a{
+		text-decoration: none;
 	}
 }
 
@@ -69,6 +73,7 @@
 .banner__head{
 	position: relative;
 	perspective: 35px;
+	z-index: 2;
 }
 .head-img{
 	width: 861px;
@@ -86,8 +91,11 @@
 	z-index: -1;
 }
 
-.banner__mob-contnent{
+.banner__mob-content{
 	display: none;
+	background: url(../img/head.png) top right no-repeat;
+	background-size: 384px;
+	background-position: 170px -50px;
 }
 
 
@@ -101,6 +109,8 @@
 	.head-img{
 		background: transparent url('../img/head-dark.png') center top no-repeat;
 		background-size: contain;
+		background-position: 166px 25px;
+		height: 895px;
 	}
 	#canvas{
 		visibility: hidden;
@@ -113,6 +123,11 @@
 		&:before, &:after{
 			background-color: $white;
 		}
+	}
+	.banner__mob-content{
+		background: url(../img/head-dark.png) top right no-repeat;
+		background-size: 345px;
+		background-position: 205px -5px;
 	}
 }
 
@@ -127,6 +142,8 @@
 	}
 	.banner__title{
 
+
+
 		h1{
 			margin-bottom: 36px;
 			position: relative;
@@ -138,6 +155,7 @@
 			margin-left: 2px;
 			letter-spacing: 5.87px;
 			font-size: 14px;
+
 		}
 	}
 
@@ -205,8 +223,9 @@
 		top: 30vh;
 		right: 50px;
 	}
-	.banner__mob-contnent{
+	.banner__mob-content{
 		display: block;
+		
 	}
 	.toform-btn__btn{
 		font-size: 12px;
@@ -241,21 +260,13 @@
 
 	}
 	.banner__mob-description{
-		margin: 130px 0px;
+		
 		position: relative;
 	}
 	.banner__mob-text{
-		margin: 0;
+		margin: 130px 0px;
 		padding: 13px;
 		line-height: 2;
 		letter-spacing: 0.8px;
-	}
-	.headbg--mob-contnent{
-		position: absolute;
-	    bottom: -126px;
-		left: 170px;
-		img{
-			width: 380px;
-		}
 	}
 }

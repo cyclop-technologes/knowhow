@@ -37,6 +37,20 @@
 .sculpture{
 	display: block;
 	margin: 0 auto;
+
+
+	#legs, #legs-dark{
+		transform: translate(0px, 865px)
+	}
+	#hips, #hips-dark{
+		transform: translate(12px, 490px)
+	}
+	#torso, #torso-dark{
+		transform: translate(79px, 177px)
+	}
+	#head, #head-dark{
+		transform: translate(40px, 0px)
+	}
 }
 
 .title__main{

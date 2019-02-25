@@ -42,6 +42,10 @@ body{
 	font-family: 'Avante', Arial, sans-serif;
 	font-size: 13px;
 	overflow-x: hidden;
+
+	*{
+		outline: none;
+	}
 }
 
 .--italic{

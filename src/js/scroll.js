@@ -7,16 +7,17 @@ let darkMode = $('.mode').is('.--dark');
 $('.switcher').click(function() {
     darkMode = !darkMode;
     sculptureMode();
+    $sculpture.all.removeAttr('style');
 });
 
 
 function sculptureMode() {
     if (darkMode) {
         $sculpture = {
-            head: $('.sculpture-dark #head'),
-            torso: $('.sculpture-dark #torso'),
-            hips: $('.sculpture-dark #hips'),
-            legs: $('.sculpture-dark #legs'),
+            head: $('.sculpture-dark #head-dark'),
+            torso: $('.sculpture-dark #torso-dark'),
+            hips: $('.sculpture-dark #hips-dark'),
+            legs: $('.sculpture-dark #legs-dark'),
             all: $('.sculpture-dark .sctulpture__block'),
             parent: $('.sculpture-dark #sculpture'),
             isClose: true,
@@ -42,6 +43,17 @@ function isScrolledIntoView($elem) {
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
+function isSculptureIntoView(part){
+    let docViewTop = $window.scrollTop();
+    let docViewBottom = docViewTop + $window.height();
+    let sculptureHeight = $('.sculpture').height();
+    let sculptureTop = $('.sculpture').offset().top;
+    let sculpturePart = sculptureHeight / 4;
+    let elemBottom = sculptureTop + (sculpturePart * part);
+    let elemTop = elemBottom - sculpturePart;
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 sculptureMode();
 
 let onScroll = $(document).on("scroll", function () {
@@ -63,22 +75,22 @@ let onScroll = $(document).on("scroll", function () {
     }else{
         $midTitle.removeClass('active')
     };
-    if (isScrolledIntoView($sculpture.head) && $sculpture.isClose) {
+    if (isSculptureIntoView(1) && $sculpture.isClose) {
         $sculpture.head.find('.sculpture__description').css('opacity', 1);
-        $sculpture.torso.attr('transform', 'translate(79, 218)');
-        $sculpture.hips.attr('transform', 'translate(12, 532)');
-        $sculpture.legs.attr('transform', 'translate(0, 906)');
+        $sculpture.torso.css('transform', 'translate(79px, 218px)');
+        $sculpture.hips.css('transform', 'translate(12px, 532px)');
+        $sculpture.legs.css('transform', 'translate(0px, 906px)');
     }
-    else if (isScrolledIntoView($sculpture.torso) && $sculpture.isClose) {
+    else if (isSculptureIntoView(2) && $sculpture.isClose) {
         $sculpture.torso.find('.sculpture__description').css('opacity', 1);
-        $sculpture.hips.attr('transform', 'translate(12, 599)');
-        $sculpture.legs.attr('transform', 'translate(0, 974)');
+        $sculpture.hips.css('transform', 'translate(12px, 599px)');
+        $sculpture.legs.css('transform', 'translate(0px, 974px)');
     }
-    else if (isScrolledIntoView($sculpture.hips) && $sculpture.isClose) {
+    else if (isSculptureIntoView(3) && $sculpture.isClose) {
         $sculpture.hips.find('.sculpture__description').css('opacity', 1);
-        $sculpture.legs.attr('transform', 'translate(0, 1025)');
+        $sculpture.legs.css('transform', 'translate(0px, 1025px)');
     }
-    else if (isScrolledIntoView($sculpture.legs)) {
+    else if (isSculptureIntoView(4)) {
         $sculpture.isClose = false;
         $sculpture.legs.find('.sculpture__description').css('opacity', 1);
     }
