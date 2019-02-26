@@ -54,7 +54,7 @@
 
 .--dark{
 	.footer{
-		background-color: $black;
+		background-color: $gray-darknest;
 	}
 	.mail-link{
 		color: $white;
@@ -97,5 +97,11 @@
 
 	.footer__item{
 		margin: 20px 0px;
+	}
+	.mail-link{
+		font-size: 10px;
+	}
+	.footer__mail{
+		order: 3;
 	}
 }

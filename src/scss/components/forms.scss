@@ -175,8 +175,7 @@
 
 .--dark{
 	.forms{
-		background: linear-gradient(to bottom, #030303 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030303', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+		background: $gray-darknest;
 	}
 	.progressbar{
 		background-color: #5d5d5d;
@@ -252,22 +251,6 @@
 		height: 35px;
 		margin: 10px auto;
 		position: relative;
-
-		&:after, &:before{
-			content: '';
-			position: absolute;
-			right: -85px;
-			height: 1px;
-			width: 200px;
-			background-color: $black;
-		}
-
-		&:after{
-			top: -10px;
-		}
-		&:before{
-			bottom: -10px;
-		}
 
 		&.--branding{
 			width: 33px !important;

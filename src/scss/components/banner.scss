@@ -98,6 +98,14 @@
 	background-position: 170px -50px;
 }
 
+@keyframes smooth-rotate{
+	0% { 
+		transform: rotate(0deg);
+	}
+	100% {  
+		transform: rotate(360deg);
+	}
+}
 
 .--dark {
 	
@@ -105,6 +113,24 @@
 	.banner{
 		background:transparent url('../img/banner-background--dark.jpg') center top no-repeat;
 		background-size: cover;
+	}
+	.banner__head{
+		position: relative;
+		z-index: 2;
+
+		&:before{
+			content: '';
+			position: absolute;
+			background:transparent url('../../img/planets.png') left top no-repeat;
+			background-size: contain;
+			width: 846px;
+			height: 944px;
+			top: 0;
+			left: 0;
+			transform: translate(-50%, -50%);
+			transform-origin: 50% 50%;
+			animation: smooth-rotate 300s linear infinite;
+		}
 	}
 	.head-img{
 		background: transparent url('../img/head-dark.png') center top no-repeat;

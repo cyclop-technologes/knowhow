@@ -63,7 +63,6 @@
 	bottom: 0;
 	img{
 		width: 100%;
-		display: block;
 	}
 }
 
@@ -104,17 +103,27 @@
 // 	}
 }
 
+.--bright-wave{
+	display: block;
+}
+.--dark-wave{
+	display: none;
+}
 
 .--dark{
+
+	.--bright-wave{
+		display: none;
+	}
+	.--dark-wave{
+		display: block;
+	}
 	.--gray-gradient{
 		background: #1b1b1b; /* Old browsers */
 		background: -moz-linear-gradient(top, #1b1b1b 0%, #030303 100%); /* FF3.6-15 */
 		background: -webkit-linear-gradient(top, #1b1b1b 0%,#030303 100%); /* Chrome10-25,Safari5.1-6 */
 		background: linear-gradient(to bottom, #1b1b1b 0%,#030303 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b1b1b', endColorstr='#030303',GradientType=0 ); /* IE6-9 */
-	}
-	.project__footer{
-		display: none;
 	}
 	.sculpture{
 		display: none;
