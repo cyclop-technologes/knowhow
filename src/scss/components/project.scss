@@ -63,6 +63,7 @@
 	bottom: 0;
 	img{
 		width: 100%;
+		max-height: 500px;
 	}
 }
 
@@ -126,11 +127,25 @@
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b1b1b', endColorstr='#030303',GradientType=0 ); /* IE6-9 */
 	}
 	.sculpture{
-		display: none;
+		// display: none;
 	}
 	.sculpture-dark{
-		display: block;
+		// display: block;
 	}
+	.sculpture__description,
+	.dots
+	.sculpture__subtitle{
+		fill: $white !important;
+	}
+
+	.line{
+		stroke: $white;
+	}
+
+	#cross{
+		fill: $primary-dark;
+	}
+
 
 	.title__main{
 		fill: $white;

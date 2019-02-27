@@ -72,20 +72,35 @@ $('.checkbox-item').click(function(event) {
 		transform: 'translateX(-' + progress.toString() + '%)'
 	});
 
-	$('.progressbar__amount').html(price + '$')
+	$('.progressbar__amount').html(`$${price}`)
 });
 
 
 
 // dark mode 
 
-var switcher = anime({
-	targets: '.switcher',
-	translateY: [15, 0],
-	autoplay: false
-})
-
 $('.switcher').click(function(event) {
 	switcher.play();
 	$('.mode').toggleClass('--dark');
 });
+
+
+let wobbleSwitcher = setInterval(()=> {
+	wobble.play();
+}, 10000)
+
+let wobble = anime({
+	targets: '.switcher',
+	rotate: [6, '-4', 2, '-1', 1],
+	duration: 1000,
+	easing: 'linear',
+	autoplay: false
+})
+
+let switcher = anime({
+	targets: '.switcher',
+	translateY: 15,
+	duration: 200,
+ 	direction: 'alternate',
+	autoplay: false
+})
