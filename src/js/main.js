@@ -50,7 +50,6 @@ $('#cross__img').hover(function() {
 
 let sum = 0;
 $('.checkbox-item').each(function(){
-	console.log($(this).attr('data-price'))
 	sum += Number($(this).attr('data-price'))
 });
 
@@ -87,7 +86,7 @@ $('.switcher').click(function(event) {
 
 let wobbleSwitcher = setInterval(()=> {
 	wobble.play();
-}, 10000)
+}, 8000)
 
 let wobble = anime({
 	targets: '.switcher',

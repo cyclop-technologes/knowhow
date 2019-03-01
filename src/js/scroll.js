@@ -108,6 +108,8 @@ $('.title__main').hover(function() {
 })
 
 $('.title__main').click(function(event) {
+    const id = $(this).attr('data-index');
+    $(`.item-index[data-index="${id}"]`).addClass('active')
     $(this).addClass('visible').parent().siblings('.sculpture__description').css('opacity', '1');
 });;
 

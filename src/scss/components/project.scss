@@ -6,7 +6,6 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
 }
 .project{
-	// background: $bg-gray;
 	padding: 20px 0px 230px;
 	position: relative;
 }
@@ -104,6 +103,55 @@
 // 	}
 }
 
+
+.project__body{
+	position: relative;
+}
+
+
+.project__navbar{
+	position: absolute;
+	top: 162px;
+	right: -85px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 1110px;
+
+}
+.project__navbar__item{
+	position: relative;
+	&:not(:last-child):after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 253px;
+		top: 65px;
+		left: 23px;
+		background-color: $black;
+	}
+	
+}
+.item-index{
+	transform-origin: 50% 50%;
+	transform: rotate(90deg);
+	font-size: 17px;
+	letter-spacing: 13.33px;
+	cursor: pointer;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+
+	&.active{
+		font-family: 'Rubrica', Arial, sans-serif;
+		font-size: 38px;
+		letter-spacing: 2px;
+	}
+}
+
+
 .--bright-wave{
 	display: block;
 }
@@ -112,6 +160,16 @@
 }
 
 .--dark{
+
+	.project__navbar__item{
+		&:not(:last-child):after{
+			background-color: $white;
+		}
+		
+	}
+	.item-index{
+		color: $white;		
+	}
 
 	.--bright-wave{
 		display: none;
