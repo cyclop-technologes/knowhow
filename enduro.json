@@ -1,8 +1,4 @@
 {
 	"project_name": "enduro_intro",
-	"project_slug": "ei",
-	"babel": {
-        "presets": ["es2015"]
-    },
-    "watchify": "assets/js/main.js -o _generated/assets/bundle.js"
+	"project_slug": "ei"
 }

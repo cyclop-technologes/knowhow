@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "assets/vendor/enduro/index.js",
 	"scripts": {
-		"start": "node_modules/.bin/enduro start && watchify assets/js/main.js -o _generated/assets/bundle.js"
+		"start": "node_modules/.bin/enduro start && watchify assets/js/main.js -o _generated/assets/js/bundle.js"
 	},
 	"author": "author goes here",
 	"license": "MIT",
