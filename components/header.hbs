@@ -1,5 +1,7 @@
 <header class="header">
-	{{#with first_slide}}
+
+	{{#with header}}
+
 	<div class="header__wrapper wrapper">
 		<div data-aos="fade-down" class="header__logo"><a href="">
 			<svg width="146px" height="45px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292.01 88.98">
@@ -41,13 +43,13 @@
 				</svg>
 			</div>
 			<ul class="links__list">
-				<li class="list__item"><a href="">behance</a></li>
-				<li class="list__item"><a href="">youtube</a></li>
-				<li class="list__item"><a href="">facebook</a></li>
-				<li class="list__item"><a href="">instagram</a></li>
+				{{#each media_links}}
+				<li class="list__item"><a target="_blank" href="{{link}}">{{name}}</a></li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>
 
 	{{/with}}
+
 </header>

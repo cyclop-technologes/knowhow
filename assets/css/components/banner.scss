@@ -8,6 +8,7 @@
 	padding-bottom: 130px;
 	min-height: 100vh;
 	display: grid;
+	grid-template-rows: 135px 1fr;
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -26,6 +27,9 @@
 		margin-left: 2px;
 		letter-spacing: 5.87px;
 	}
+	a{
+		text-decoration: none;
+	}
 }
 
 .switcher{
@@ -33,42 +37,47 @@
 	cursor: pointer;
 	left: 16px;
 	top: calc(100% - 30px);
-
-	// animation: wobble-horizontal 0.2s infinite;
+	transform-origin: 50% 0;
+	// animation: wobble-horizontal 10s infinite;
 	img{
 		width: 15px;
 	}
 }
 
 @keyframes wobble-horizontal {
-	12.5% {
-		transform: translateX(8px);
+
+	2% {
+		transform: rotate(8deg);
 	}
 
-	25% {
-		transform: translateX(-6px);
+	4% {
+		transform: rotate(-6deg);
 	}
 
-	37.5% {
-		transform: translateX(4px);
+	6% {
+		transform: rotate(4deg);
 	}
 
-	50% {
-		transform: translateX(-2px);
+	8% {
+		transform: rotate(-2deg);
 	}
 
-	62.5% {
-		transform: translateX(1px);
+	10% {
+		transform: rotate(1deg);
 	}
 
-	100% {
-		transform: translateX(0);
+	12% {
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(0deg);
 	}
 }
 
 .banner__head{
 	position: relative;
 	perspective: 35px;
+	z-index: 2;
 }
 .head-img{
 	width: 861px;
@@ -86,10 +95,21 @@
 	z-index: -1;
 }
 
-.banner__mob-contnent{
+.banner__mob-content{
 	display: none;
+	background: url(../img/head.png) top right no-repeat;
+	background-size: 384px;
+	background-position: 170px -50px;
 }
 
+@keyframes smooth-rotate{
+	0% { 
+		transform: rotate(0deg);
+	}
+	100% {  
+		transform: rotate(360deg);
+	}
+}
 
 .--dark {
 	
@@ -97,10 +117,31 @@
 	.banner{
 		background:transparent url('../img/banner-background--dark.jpg') center top no-repeat;
 		background-size: cover;
+		background-attachment: fixed;
+	}
+	.banner__head{
+		position: relative;
+		z-index: 2;
+
+		&:before{
+			content: '';
+			position: absolute;
+			background:transparent url('../img/planets.png') left top no-repeat;
+			background-size: contain;
+			width: 846px;
+			height: 944px;
+			top: 0;
+			left: 0;
+			transform: translate(-50%, -50%);
+			transform-origin: 50% 50%;
+			animation: smooth-rotate 300s linear infinite;
+		}
 	}
 	.head-img{
 		background: transparent url('../img/head-dark.png') center top no-repeat;
 		background-size: contain;
+		background-position: 166px 25px;
+		height: 895px;
 	}
 	#canvas{
 		visibility: hidden;
@@ -113,6 +154,11 @@
 		&:before, &:after{
 			background-color: $white;
 		}
+	}
+	.banner__mob-content{
+		background: url(../img/head-dark.png) top right no-repeat;
+		background-size: 345px;
+		background-position: 205px -5px;
 	}
 }
 
@@ -127,6 +173,8 @@
 	}
 	.banner__title{
 
+
+
 		h1{
 			margin-bottom: 36px;
 			position: relative;
@@ -138,6 +186,7 @@
 			margin-left: 2px;
 			letter-spacing: 5.87px;
 			font-size: 14px;
+
 		}
 	}
 
@@ -205,8 +254,9 @@
 		top: 30vh;
 		right: 50px;
 	}
-	.banner__mob-contnent{
+	.banner__mob-content{
 		display: block;
+		
 	}
 	.toform-btn__btn{
 		font-size: 12px;
@@ -241,21 +291,13 @@
 
 	}
 	.banner__mob-description{
-		margin: 130px 0px;
+		
 		position: relative;
 	}
 	.banner__mob-text{
-		margin: 0;
+		margin: 130px 0px;
 		padding: 13px;
 		line-height: 2;
 		letter-spacing: 0.8px;
-	}
-	.headbg--mob-contnent{
-		position: absolute;
-	    bottom: -126px;
-		left: 170px;
-		img{
-			width: 380px;
-		}
 	}
 }

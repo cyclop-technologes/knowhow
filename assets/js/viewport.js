@@ -11,13 +11,13 @@ module.exports = () => {
 
 	if (vw > 1440) {
 		let headBg = сanvas('canvas', 50);
-		let summaryBg = сanvas('summary__bg', 250, '#d3d3d3', 2, 0.2);
+		let summaryBg = сanvas('summary__bg', 250, 2, 0.2);
 	}else if (vw <= 1440 && vw > 475) {
 
 		$('#canvas').attr('height', 400);
 
 		let headBg = сanvas('canvas', 50);
-		let summaryBg = сanvas('summary__bg', 200, '#d3d3d3', 2, 0.2);
+		let summaryBg = сanvas('summary__bg', 200, 2, 0.2);
 
 
 	}else if (vw <= 475) {
@@ -25,7 +25,7 @@ module.exports = () => {
 		$('#canvas').attr('height', 400);
 
 		let headBg = сanvas('canvas', 20);
-		let summaryBg = сanvas('summary__bg', 30, '#d3d3d3', 2, 0.2);
+		let summaryBg = сanvas('summary__bg', 30, 2, 0.2);
 	}
 
 

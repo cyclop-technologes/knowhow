@@ -37,11 +37,17 @@ $white: #ffffff;
 $gray: #ededed;
 $bg-gray: #fafafa;
 $primary-dark: #4840ff;
+$gray-dark: #85858D;
+$gray-darknest: #1c1c1c;
 
 body{
 	font-family: 'Avante', Arial, sans-serif;
 	font-size: 13px;
 	overflow-x: hidden;
+
+	*{
+		outline: none;
+	}
 }
 
 .--italic{

@@ -23,6 +23,7 @@
 
 	#summary__bg{
 		width: 100%;
+		opacity: 0.7;
 	}
 }
 .summary__subtitle{
@@ -169,7 +170,7 @@
 	// text-transform: uppercase;
 }
 .to-bottom-arrows{
-	margin-top: 200px;
+	margin-top: 400px;
 }
 
 .cls-1, .cls-2{
@@ -208,6 +209,7 @@
 
 	.summary__container{
 		background:transparent url('../img/summary_bg--dark.png') center top no-repeat;
+		background-attachment: fixed;
 		background-size: cover;
 	}
 
@@ -286,7 +288,7 @@
 	}
 	.footer-title__logo-bg {
 		width: 210px;
-		top: 37px;
+		top: 41px;
 		left: -140px;
 	}
 	.footer-title__footer{
@@ -299,7 +301,8 @@
     	font-weight: bold;
 	}
 	.to-bottom-arrows{
-		margin-top: 180px;
+		margin-top: 0px;
+		display: none;
 
 		svg{
 			width: 23px;

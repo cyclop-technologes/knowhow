@@ -175,8 +175,7 @@
 
 .--dark{
 	.forms{
-		background: linear-gradient(to bottom, #030303 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030303', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+		background: $gray-darknest;
 	}
 	.progressbar{
 		background-color: #5d5d5d;
@@ -184,24 +183,27 @@
 	}
 	.submit__btn{
 		background-color: $primary-dark;
+		color: $white;
 	}
 	.block__img{
 		background:transparent url('../img/features-sprite-white.png') left top no-repeat;
+		background-size: cover;
 		&.--branding{
 			width: 55px;
 			background-position-x: left;
 		}
 		&.--prodaction{
-			background-position-x: -266px;
+			background-position-x: -261px;
 		}
 		&.--it{
 			width: 46px;
-			background-position: -548px;
+			background-position: -539px;
 		}
 		&.--im{
 			width: 45px;
 			background-position-x: right;
 		}
+
 	}
 	.block__title{
 		color: #858585;
@@ -247,41 +249,23 @@
 	.block__img{
 		width: 38px;
 		height: 35px;
-		background:transparent url('../img/features-sprite.png') no-repeat;
-		background-size: cover;
 		margin: 10px auto;
 		position: relative;
 
-		&:after, &:before{
-			content: '';
-			position: absolute;
-			right: -85px;
-			height: 1px;
-			width: 200px;
-			background-color: $black;
-		}
-
-		&:after{
-			top: -10px;
-		}
-		&:before{
-			bottom: -10px;
-		}
-
 		&.--branding{
-			width: 33px;
+			width: 33px !important;
 			background-position-x: -29px;
 		}
 		&.--prodaction{
-			width: 37px;
+			width: 37px !important;
 			background-position-x: -62px;
 		}
 		&.--it{
-			width: 28px;
+			width: 28px !important;
 			background-position: left;
 		}
 		&.--im{
-			width: 28px;
+			width: 28px !important;
 			background-position-x: right;
 			margin-top: 23px;
 		}
@@ -300,5 +284,22 @@
 		}
 	}
 	
+
+	.--dark{
+		.block__img{
+			&.--branding{
+				background-position-x: left;
+			}
+			&.--prodaction{
+				background-position-x: -158px;
+			}
+			&.--it{
+				background-position: -325px;
+			}
+			&.--im{
+				background-position-x: right;
+			}
+		}
+	}
 
 }
