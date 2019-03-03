@@ -6,7 +6,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
 }
 .project{
-	padding: 20px 0px 230px;
+	padding: 20px 0px 8vw;
 	position: relative;
 }
 
@@ -59,7 +59,7 @@
 
 .project__footer{
 	position: absolute;
-	bottom: 0;
+	bottom: -2px;
 	img{
 		width: 100%;
 		max-height: 500px;
