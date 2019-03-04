@@ -8,11 +8,13 @@ module.exports = function (canvasID, starsAmount, color = '#000000', radius = 1,
   var stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
     x = starsAmount, // Number of stars
+    // x = canvas.width * canvas.height / 6000,
     mouse = {
       x: 0,
       y: 0
     }; // mouse location
 
+  console.log(x)
   // Push stars to array
 
   for (var i = 0; i < x; i++) {

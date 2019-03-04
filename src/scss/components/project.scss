@@ -39,7 +39,7 @@
 
 
 	#legs, #legs-dark{
-		transform: translate(0px, 865px)
+		transform: translate(0px, 863px)
 	}
 	#hips, #hips-dark{
 		transform: translate(12px, 490px)
@@ -213,6 +213,12 @@
 	}
 }
 
+
+@media screen and (max-width: 768px) {
+	.project__navbar{
+		display: none;
+	}
+}
 
 @media screen and (max-width: 425px){
 	.project{

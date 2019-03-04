@@ -15875,11 +15875,13 @@ module.exports = function (canvasID, starsAmount, color = '#000000', radius = 1,
   var stars = [], // Array that contains the stars
     FPS = 60, // Frames per second
     x = starsAmount, // Number of stars
+    // x = canvas.width * canvas.height / 6000,
     mouse = {
       x: 0,
       y: 0
     }; // mouse location
 
+  console.log(x)
   // Push stars to array
 
   for (var i = 0; i < x; i++) {
@@ -16333,7 +16335,7 @@ module.exports = () => {
 	if (vw > 1440) {
 		let headBg = сanvas('canvas', 50);
 		let summaryBg = сanvas('summary__bg', 250, 2, 0.2);
-	}else if (vw <= 1440 && vw > 475) {
+	}else if (vw <= 1440 && vw > 768) {
 
 		$('#canvas').attr('height', 400);
 
@@ -16341,6 +16343,12 @@ module.exports = () => {
 		let summaryBg = сanvas('summary__bg', 200, 2, 0.2);
 
 
+	}else if (vw <= 768 && vw > 475) {
+		
+		$('#canvas').attr('height', 400);
+
+		let headBg = сanvas('canvas', 20);
+		let summaryBg = сanvas('summary__bg', 30, 2, 0.2);
 	}else if (vw <= 475) {
 		
 		$('#canvas').attr('height', 400);

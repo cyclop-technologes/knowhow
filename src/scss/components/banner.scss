@@ -8,7 +8,7 @@
 	padding-bottom: 130px;
 	min-height: 100vh;
 	display: grid;
-	grid-template-rows: 135px 1fr;
+	grid-template-rows: 50px 1fr;
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -138,10 +138,8 @@
 		}
 	}
 	.head-img{
-		background: transparent url('../img/head-dark.png') center top no-repeat;
-		background-size: contain;
-		background-position: 166px 25px;
-		height: 895px;
+		background: transparent url('../img/head-dark.png') 166px 60px no-repeat;
+		background-size: 586px;
 	}
 	#canvas{
 		visibility: hidden;
@@ -165,9 +163,23 @@
 
 
 @media screen and (max-width: 1440px){
+
+
+	.--dark{
+		.head-img{		
+		    background-size: 410px;
+			background-position: 75px 42px;
+			height: 680px;
+		}
+	}
+
+	.banner{
+		grid-template-rows: 70px 1fr;
+	}
 	.head-img{
-		top: -110px;
-		left: 180px;
+		position: relative;
+		top: -52px;
+		left: -41px;
 		width: 515px;
 		height: 680px;
 	}
@@ -191,7 +203,8 @@
 	}
 
 	#canvas{
-		width: 500px;
+		width: 1000px;
+		left: 130px;
 	}
 
 	.switcher{
@@ -206,15 +219,22 @@
 }
 
 
+@media screen and (max-width: 768px) {
 
-
-@media screen and (max-width: 425px) {
-
+	.banner{
+		grid-template-rows: 110px 1fr;
+	}
 	.--dark{
 		.banner{
 			background-size: auto;
 		}
 	}
+}
+
+
+
+@media screen and (max-width: 425px) {
+
 	.banner{
 		padding-bottom: 75px;
 	}
@@ -253,6 +273,7 @@
 
 		#canvas{
 			width: 200px;
+			left: -20px;
 		}
 	}
 	.canvas-bg{
