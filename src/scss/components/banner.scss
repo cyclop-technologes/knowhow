@@ -209,6 +209,12 @@
 
 
 @media screen and (max-width: 425px) {
+
+	.--dark{
+		.banner{
+			background-size: auto;
+		}
+	}
 	.banner{
 		padding-bottom: 75px;
 	}
