@@ -170,7 +170,7 @@
 	// text-transform: uppercase;
 }
 .to-bottom-arrows{
-	margin-top: 400px;
+	margin-top: 200px;
 }
 
 .cls-1, .cls-2{
@@ -224,6 +224,14 @@
 		fill: $primary-dark;
 	}
 
+}
+
+@media screen and (max-width: 876px) {
+	.--dark{
+		.summary__container{
+			background-size: auto;
+		}
+	}
 }
 
 @media screen and (max-width: 425px){

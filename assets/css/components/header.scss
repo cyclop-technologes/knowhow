@@ -1,5 +1,7 @@
 .header{
 	padding: 41px 0px;
+	position: relative;
+	z-index: 4;
 }
 .header__wrapper{
 	display: flex;
@@ -72,8 +74,6 @@
 		color: $white;
 	}
 }
-
-
 
 
 @media screen and (max-width: 425px){

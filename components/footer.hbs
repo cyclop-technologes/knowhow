@@ -1,7 +1,8 @@
 <section class="footer">
+	{{#with header}}
 	<div class="footer__container wrapper">
 		<div class="footer__item footer__mail">
-			<a href="mailto:hello@knowhow" class="mail-link">hello@knowhow</a>
+			<a href="mailto:{{email}}" class="mail-link">{{email}}</a>
 		</div>
 		<div class="footer__item footer__logo"><a href="">
 			<svg width="126px" height="53px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 528.99 222.14">
@@ -31,10 +32,11 @@
 			</svg>
 		</a></div>
 		<div class="footer__item footer__links">
-			<a href="" class="links__item --instagram"></a>
-			<a href="" class="links__item --facebook"></a>
-			<a href="" class="links__item --youtube"></a>
-			<a href="" class="links__item --behance"></a>
+			{{#each media_links}}
+			<a href="{{link}}" class="links__item --{{name}}"></a>
+			{{/each}}
 		</div>
 	</div>
+
+	{{/with}}
 </section>
