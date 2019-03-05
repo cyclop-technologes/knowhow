@@ -109,8 +109,17 @@ let switcher = anime({
 
 
 const video = document.getElementById('popup-video');
+$('body').css('overflow', 'hidden');
 
-video.onended = function (e) {
-	$('.banner__popup').fadeOut('600');
+video.onended = function() {
+	$('body').removeAttr('style');
+	$('.banner__popup').fadeOut(600);
 }
+
+$('.close-btn').click(function(event) {
+	$('body').removeAttr('style');
+	$('.banner__popup').fadeOut(600);
+	video.pause();
+});
+
 

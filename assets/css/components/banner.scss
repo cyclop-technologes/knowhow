@@ -14,7 +14,17 @@
 }
 
 
+.close-btn{
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	border: none;
+	background: none;
 
+	img{
+		width: 30px;
+	}
+}
 .banner__popup{
 	position: absolute;
 	top: 0;

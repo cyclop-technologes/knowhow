@@ -303,10 +303,19 @@ let switcher = anime({
 
 
 const video = document.getElementById('popup-video');
+$('body').css('overflow', 'hidden');
 
-video.onended = function (e) {
-	$('.banner__popup').fadeOut('600');
+video.onended = function() {
+	$('body').removeAttr('style');
+	$('.banner__popup').fadeOut(600);
 }
+
+$('.close-btn').click(function(event) {
+	$('body').removeAttr('style');
+	$('.banner__popup').fadeOut(600);
+	video.pause();
+});
+
 
 
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":10}],4:[function(require,module,exports){
@@ -396,12 +405,12 @@ let onScroll = $(document).on("scroll", function () {
         // $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.css('transform', 'translate(79px, 218px)');
         $sculpture.hips.css('transform', 'translate(12px, 532px)');
-        $sculpture.legs.css('transform', 'translate(0px, 906px)');
+        $sculpture.legs.css('transform', 'translate(0px, 904px)');
     }
     else if (isSculptureIntoView(2) && $sculpture.isClose) {
         // $sculpture.torso.find('.sculpture__description').css('opacity', 1);
         $sculpture.hips.css('transform', 'translate(12px, 599px)');
-        $sculpture.legs.css('transform', 'translate(0px, 974px)');
+        $sculpture.legs.css('transform', 'translate(0px, 972px)');
     }
     else if (isSculptureIntoView(3) && $sculpture.isClose) {
         // $sculpture.hips.find('.sculpture__description').css('opacity', 1);
@@ -421,8 +430,8 @@ $('.title__main').hover(function() {
 
 $('.title__main').click(function(event) {
     const id = $(this).attr('data-index');
-    $(`.item-index[data-index="${id}"]`).addClass('active')
-    $(this).addClass('visible').parent().siblings('.sculpture__description').css('opacity', '1');
+    $(`.item-index[data-index="${id}"]`).addClass('active').parent().siblings().find('.item-index').removeClass('active');
+    $(this).addClass('visible').parent().siblings('.sculpture__description').css('opacity', '1').parent().siblings().find('.sculpture__description').css('opacity', '0');
 });;
 
 

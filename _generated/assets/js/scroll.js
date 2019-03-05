@@ -84,12 +84,12 @@ let onScroll = $(document).on("scroll", function () {
         // $sculpture.head.find('.sculpture__description').css('opacity', 1);
         $sculpture.torso.css('transform', 'translate(79px, 218px)');
         $sculpture.hips.css('transform', 'translate(12px, 532px)');
-        $sculpture.legs.css('transform', 'translate(0px, 906px)');
+        $sculpture.legs.css('transform', 'translate(0px, 904px)');
     }
     else if (isSculptureIntoView(2) && $sculpture.isClose) {
         // $sculpture.torso.find('.sculpture__description').css('opacity', 1);
         $sculpture.hips.css('transform', 'translate(12px, 599px)');
-        $sculpture.legs.css('transform', 'translate(0px, 974px)');
+        $sculpture.legs.css('transform', 'translate(0px, 972px)');
     }
     else if (isSculptureIntoView(3) && $sculpture.isClose) {
         // $sculpture.hips.find('.sculpture__description').css('opacity', 1);
@@ -109,8 +109,8 @@ $('.title__main').hover(function() {
 
 $('.title__main').click(function(event) {
     const id = $(this).attr('data-index');
-    $(`.item-index[data-index="${id}"]`).addClass('active')
-    $(this).addClass('visible').parent().siblings('.sculpture__description').css('opacity', '1');
+    $(`.item-index[data-index="${id}"]`).addClass('active').parent().siblings().find('.item-index').removeClass('active');
+    $(this).addClass('visible').parent().siblings('.sculpture__description').css('opacity', '1').parent().siblings().find('.sculpture__description').css('opacity', '0');
 });;
 
 
