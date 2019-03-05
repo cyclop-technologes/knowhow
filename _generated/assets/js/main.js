@@ -103,3 +103,14 @@ let switcher = anime({
  	direction: 'alternate',
 	autoplay: false
 })
+
+
+// pop up
+
+
+const video = document.getElementById('popup-video');
+
+video.onended = function (e) {
+	$('.banner__popup').fadeOut('600');
+}
+

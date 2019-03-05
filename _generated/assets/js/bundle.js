@@ -298,6 +298,17 @@ let switcher = anime({
 	autoplay: false
 })
 
+
+// pop up
+
+
+const video = document.getElementById('popup-video');
+
+video.onended = function (e) {
+	$('.banner__popup').fadeOut('600');
+}
+
+
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":10}],4:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')

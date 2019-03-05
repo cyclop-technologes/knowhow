@@ -12,6 +12,32 @@
 	box-sizing: border-box;
 	overflow: hidden;
 }
+
+
+
+.banner__popup{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: $black;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+
+.popup__container{
+	max-width: 100%;
+
+	video{
+		max-width: 100%;
+	}
+}
+
+
 .banner__wrapper{
 	display: flex;
 	justify-content: space-between;
