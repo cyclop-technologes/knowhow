@@ -278,11 +278,11 @@ $('.switcher').click(function(event) {
 });
 
 
-let wobbleSwitcher = setInterval(()=> {
+const wobbleSwitcher = setInterval(()=> {
 	wobble.play();
 }, 8000)
 
-let wobble = anime({
+const wobble = anime({
 	targets: '.switcher',
 	rotate: [6, '-4', 2, '-1', 1],
 	duration: 1000,
@@ -290,7 +290,7 @@ let wobble = anime({
 	autoplay: false
 })
 
-let switcher = anime({
+const switcher = anime({
 	targets: '.switcher',
 	translateY: 15,
 	duration: 200,
@@ -302,17 +302,21 @@ let switcher = anime({
 // pop up
 
 
-const video = document.getElementById('popup-video');
+let video = document.getElementById('popup-video');
+
 $('body').css('overflow', 'hidden');
 
-video.oncanplay = function() {
-    video.play();
-};
+// if(video.played.length == 0) 
+// 	{	
+// 		video.play();
+// 	}
+// console.log(video);
 
 video.onended = function() {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
 }
+
 
 $('.close-btn').click(function(event) {
 	$('body').removeAttr('style');
