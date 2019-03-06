@@ -306,10 +306,10 @@ let video = document.getElementById('popup-video');
 
 $('body').css('overflow', 'hidden');
 
-// if(video.played.length == 0) 
-// 	{	
-// 		video.play();
-// 	}
+// if(video.played.length == 0){
+// 	video = document.getElementById('popup-video');
+// 	video.play();
+// }
 // console.log(video);
 
 video.onended = function() {
