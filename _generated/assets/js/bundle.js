@@ -305,6 +305,10 @@ let switcher = anime({
 const video = document.getElementById('popup-video');
 $('body').css('overflow', 'hidden');
 
+video.oncanplay = function() {
+    video.play();
+};
+
 video.onended = function() {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
