@@ -3,7 +3,10 @@
 		header_title: 'knowhow',
 		description: '',
 		keywords: '',
-		to_form_btn: 'хочу шедевр',
+		$image_type: 'image',
+		type: '',
+		url: '',
+		image: '',
 		media_links: [
 			{
 				name: 'behance',
