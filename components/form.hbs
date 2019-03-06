@@ -1,0 +1,62 @@
+<section id="forms-block" class="forms">
+	{{#with forms}}
+	<div class="forms__container wrapper">
+		<h1 class="forms__title --rubrica">{{title}}</h1>
+		<h3 class="forms__subtitle">{{subtitle}}</h3>
+
+		<form action="" class="forms__inputs">
+			<div class="inputs">
+				<input class="inputs__input" placeholder="имя" type="text">
+				<input class="inputs__input" placeholder="E-mail" type="email">
+				<input id="phone" class="inputs__input" placeholder="номер телефона" type="tel">
+				<input class="inputs__input" placeholder="название компании" type="text">
+			</div>
+
+			<div class="forms__checkboxes">
+
+				<div class="checkboxes__title forms__subtitle">отметьте необходимое</div>
+
+				<div class="checkboxes__blocks">
+					{{#each items}}
+					<div class="checkboxes__block">
+						<div class="block__img --{{id}}"></div>
+						<div class="block__title --rubrica">{{name}}</div>
+						<ul class="block__list">
+							{{#each subitems}}
+							<li class="block-list__item md-checkbox">
+								<label class="pure-material-checkbox">
+									<input class="checkbox-item" data-price="{{price}}" type="checkbox">
+									<span> {{name}}</span>
+								</label>
+							</li>
+							{{/each}}		
+						</ul>
+					</div>
+					{{/each}}
+				</div>
+
+
+			</div>
+			
+			<div class="forms__progressbar">
+				<div class="forms__subtitle progressbar__title">примерный бюджет</div>
+				<div class="progressbar wrapper">
+					<div class="progressfill"></div>
+				</div>
+				<p class="wrapper progressbar__amount">0$</p>
+			</div>
+
+			<div class="forms__textarea">
+				<div class="forms__subtitle textarea__title">опишите проект</div>
+				<p><textarea name="text"></textarea></p>
+			</div>
+
+			<div class="submit">
+				<input class="submit__btn" value="отправить" type="submit">
+			</div>
+		</form>
+
+	</div>
+
+	{{/with}}
+</section>

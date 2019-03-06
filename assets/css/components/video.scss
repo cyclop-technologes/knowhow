@@ -1,0 +1,104 @@
+.video-sect{
+	padding: 20px 0px;
+}
+.video-sect__container{
+	display: flex;
+	justify-content: center;
+	margin-top: 230px;
+}
+.video-sect__hand{
+	position: relative;
+	// transform: scale(1.34);
+	.img__phone{
+		width: 40.58vw;
+		position: relative;
+		img{
+			width: 100%;
+			display: block;
+			position: relative;
+		}
+		
+		.video-container{
+		    width: 36.7vw;
+			height: 17.1vw;
+			position: absolute;
+			top: 2.1vw;
+			left: 2.3vw;
+			overflow: hidden;
+			border-radius: 1.7vw;
+		}
+		video{
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+
+	}
+
+	.img__hand{
+		position: absolute;
+		background:transparent url('../img/hand/hand.png') left top no-repeat;
+		background-size: cover;
+		width: 39.7vw;
+		height: 30vw;
+		top: 3vw;
+    	right: 30.8vw;
+	}
+	
+}
+
+
+.--dark{
+	.video-sect__hand{
+		.img__hand{
+			background:transparent url('../img/hand/hand-dark.png') left top no-repeat;
+			background-size: contain;
+		}
+	}
+	#logo-mid__text{
+		fill: $white;
+	}
+	#logo-mid__icon{
+		fill: $primary-dark;
+	}
+
+}
+
+
+
+@media screen and (max-width: 1440px) {
+	.video-sect__hand{
+		.img__phone{
+			width: 780px;
+			.video-container{
+				width: 707px;
+				height: 330px;
+				top: 40px;
+				left: 43px;
+				border-radius: 35px;
+			}
+		}
+
+		.img__hand{
+			width: 763px;
+			height: 575px;
+			top: 60px;
+	    	left: -571px;
+		}
+	}
+}
+.video-sect__logo{
+	text-align: right;
+	margin-top: 271px;
+	img{
+		width: 162px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.video-sect{
+		display: none;
+	}
+}

@@ -1,0 +1,132 @@
+@font-face {
+	font-family: 'Rubrica';
+    src: url(../fonts/RUB_0.TTF);
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IB.TTF);
+    font-weight: bold;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBI_0.TTF);
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBK_0.TTF);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Avante';
+    src: url(../fonts/AVA_IBIT_0.TTF);
+	font-weight: 400;
+    font-style: italic;
+}
+
+
+
+$primary: #fabb00;
+$black: #000000;
+$white: #ffffff;
+$gray: #ededed;
+$bg-gray: #fafafa;
+$primary-dark: #4840ff;
+$gray-dark: #85858D;
+$gray-darknest: #1c1c1c;
+
+body{
+	font-family: 'Avante', Arial, sans-serif;
+	font-size: 13px;
+	overflow-x: hidden;
+
+	*{
+		outline: none;
+	}
+}
+
+.--italic{
+	font-style: italic;
+}
+.--rubrica-title{
+	font-family: 'Rubrica', Arial, sans-serif;
+	font-size: 135px;
+	line-height: 125px;
+	font-weight: normal;
+}
+
+.--rubrica{
+	font-family: 'Rubrica', Arial, sans-serif;
+	font-weight: normal;
+}
+.--avente-subtitle-big{
+	font-size: 19px;
+	line-height: 27px;
+}
+
+.wrapper {
+	max-width: 1440px;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.--primary-color{
+	color: $primary;
+}
+
+
+.--dark {
+	background: #0a0a0a;
+	.--primary-color{
+		color: $primary-dark;
+	}
+
+	%forms{
+		background-color: #5d5d5d;
+		color: #d2d2d2;
+	}
+}
+
+
+%forms{
+	box-shadow: inset -3px -2px 3px 1px rgba(0, 0, 0, 0.11);
+	background-color: $gray;
+	box-sizing: border-box;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	padding: 30px 20px;
+	text-transform: uppercase;
+	margin: 20px 40px;
+	font-size: 11px;
+	font-weight: 400;
+	font-style: italic;
+	line-height: 10.54px;
+	letter-spacing: 5.47px;
+	text-align: left;
+	display: block;
+
+	&::placeholder{
+		color: #d2d2d2;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.wrapper{
+		max-width: 1260px;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin: 0 auto;
+	}
+}
+@media screen and (max-width: 425px) {
+	.wrapper{
+		width: 100%;
+		padding: 0px 20px;
+	}
+}

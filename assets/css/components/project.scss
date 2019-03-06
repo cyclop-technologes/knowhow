@@ -1,0 +1,248 @@
+.--gray-gradient{
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top, #fafafa 0%, #e4e4e4 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #fafafa 0%,#e4e4e4 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #fafafa 0%,#e4e4e4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e4e4e4',GradientType=0 ); /* IE6-9 */
+}
+.project{
+	padding: 20px 0px 8vw;
+	position: relative;
+}
+
+
+.project__title{
+	text-align: center;
+	margin-top: 150px;
+	margin-left: 10px;
+	word-spacing: 3px;
+	font-size: 17px;
+	letter-spacing: 12.85px;
+	line-height: 16.44px;
+	text-transform: uppercase;
+	margin-bottom: 250px;
+}
+.project__body{
+	svg{
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
+		height: auto;
+	}
+	.sculpture-dark{
+		display: none;
+	}	
+}
+.sculpture{
+	display: block;
+	margin: 0 auto;
+
+
+	#legs, #legs-dark{
+		transform: translate(0px, 863px)
+	}
+	#hips, #hips-dark{
+		transform: translate(12px, 490px)
+	}
+	#torso, #torso-dark{
+		transform: translate(79px, 177px)
+	}
+	#head, #head-dark{
+		transform: translate(40px, 0px)
+	}
+}
+
+.title__main{
+	cursor: pointer;
+}
+
+
+.project__footer{
+	position: absolute;
+	bottom: -2px;
+	img{
+		width: 100%;
+		max-height: 500px;
+	}
+}
+
+
+.sctulpture__block{
+	transition: 0.5s ease-in-out;
+	
+}
+
+.sculpture__description{
+	transition: 0.3s ease-in-out;
+	opacity: 0;
+}
+
+
+.title__main{
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+	fill: $black;
+
+	&:hover{
+		fill: $primary;
+	}
+}
+@keyframes rotation {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(90deg); }
+}
+#cross__img{
+	// transition: 0.6s linear;
+	cursor: pointer;
+	transform-origin: 78.5px 78.5px;
+
+
+// 	&:hover{
+// // 
+// 		animation: rotation 0.6s linear infinite;
+// 	}
+}
+
+
+.project__body{
+	position: relative;
+}
+
+
+.project__navbar{
+	position: absolute;
+	top: 162px;
+	right: -85px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 1110px;
+
+}
+.project__navbar__item{
+	position: relative;
+	&:not(:last-child):after{
+		content: '';
+		position: absolute;
+		width: 1px;
+		height: 253px;
+		top: 65px;
+		left: 23px;
+		background-color: $black;
+	}
+	
+}
+.item-index{
+	transform-origin: 50% 50%;
+	transform: rotate(90deg);
+	font-size: 17px;
+	letter-spacing: 13.33px;
+	cursor: pointer;
+	display: flex;
+	width: 50px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+
+	&.active{
+		font-family: 'Rubrica', Arial, sans-serif;
+		font-size: 38px;
+		letter-spacing: 2px;
+	}
+}
+
+
+.--bright-wave{
+	display: block;
+}
+.--dark-wave{
+	display: none;
+}
+
+.--dark{
+
+	.project__navbar__item{
+		&:not(:last-child):after{
+			background-color: $white;
+		}
+		
+	}
+	.item-index{
+		color: $white;		
+	}
+
+	.--bright-wave{
+		display: none;
+	}
+	.--dark-wave{
+		display: block;
+	}
+	.--gray-gradient{
+		background: #1b1b1b; /* Old browsers */
+		background: -moz-linear-gradient(top, #1b1b1b 0%, #030303 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top, #1b1b1b 0%,#030303 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom, #1b1b1b 0%,#030303 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b1b1b', endColorstr='#030303',GradientType=0 ); /* IE6-9 */
+	}
+	.sculpture{
+		// display: none;
+	}
+	.sculpture-dark{
+		// display: block;
+	}
+	.sculpture__description,
+	.dots,
+	.sculpture__subtitle{
+		fill: $white !important;
+	}
+
+	.line{
+		stroke: $white;
+	}
+
+	#cross{
+		fill: $primary-dark;
+	}
+
+
+	.title__main{
+		fill: $white;
+		&:hover{
+			fill: $primary-dark;
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.project__navbar{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 425px){
+	.project{
+		padding-bottom: 35px;
+	}
+	.project__title{
+		font-size: 12px;
+		letter-spacing: 5px;
+		margin-bottom: 135px;
+	}
+	.project__container{
+		overflow: hidden;
+	}
+	.project__body{
+		position: relative;
+		width: 100%;
+		height: 870px;
+		.sculpture, .sculpture-dark{
+			position: absolute;
+			top: 0;
+			width: 900px;
+			max-width: 700px
+		}
+
+	}
+
+}

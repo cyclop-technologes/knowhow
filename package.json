@@ -1,39 +1,26 @@
 {
-  "name": "base-core.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "dependencies": {
-    "animejs": "^3.0.1",
-    "aos": "^2.3.4",
-    "browser-sync": "^2.24.6",
-    "browserify": "^16.2.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^5.0.0",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-rigger": "^0.5.8",
-    "gulp-sass": "^4.0.1",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-watch": "^5.0.1",
-    "imask": "^4.1.5",
-    "jquery": "^3.3.1",
-    "natives": "^1.1.6",
-    "normalize-scss": "^7.0.1",
-    "rimraf": "^2.6.2",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/base-core/base-core.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/base-core/base-core.github.io/issues"
-  },
-  "homepage": "https://github.com/base-core/base-core.github.io#readme"
+	"name": "enduro_new_project",
+	"version": "1.0.0",
+	"description": "",
+	"main": "assets/vendor/enduro/index.js",
+	"scripts": {
+		"start": "node_modules/.bin/enduro start && watchify assets/js/main.js -o _generated/assets/js/bundle.js",
+		"bundle": "watchify assets/js/main.js -o _generated/assets/js/bundle.js"
+	},
+	"author": "author goes here",
+	"license": "MIT",
+	"dependencies": {
+		"animejs": "^3.0.1",
+		"aos": "^2.3.4",
+		"browserify": "^16.2.3",
+		"enduro": "*",
+		"imask": "^4.1.5",
+		"jquery": "^3.3.1",
+		"normalize-scss": "^7.0.1",
+		"vinyl-source-stream": "^2.0.0",
+		"watchify": "^3.11.1"
+	},
+	"devDependencies": {
+		"babel-preset-es2015": "^6.24.1"
+	}
 }
