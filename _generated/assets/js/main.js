@@ -108,9 +108,13 @@ const switcher = anime({
 // pop up
 
 
+$(window).scrollTop(0);
+
 let video = document.getElementById('popup-video');
 
 $('body').css('overflow', 'hidden');
+
+
 
 if(video.played.length == 0){
 	video = document.getElementById('popup-video');
@@ -124,6 +128,8 @@ video.onended = function() {
 }
 
 
+$('.close-btn').hide().delay(4000).fadeIn(400);
+
 $('.close-btn').click(function(event) {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
@@ -133,14 +139,20 @@ $('.close-btn').click(function(event) {
 
 //video 
 
+const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
 let videoState = false;
 let promoVideo = document.getElementById('promovideo');
+
+if (isSafari) $('.play-btn').hide();
+
 $('.img__phone').click(function(event) {
 	if (videoState) {
 		promoVideo.pause()
+		if (!isSafari) $('.play-btn').fadeIn(300);
 	}else{
 		promoVideo.play()
+		if (!isSafari) $('.play-btn').fadeOut(300);
 	}
 	videoState = !videoState
 });
