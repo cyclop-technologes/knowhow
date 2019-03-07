@@ -14,6 +14,37 @@
 	text-transform: uppercase;
 	color: $black;
 	text-decoration: none;
+	padding: 10px 20px;
+	position: relative;
+	display: block;
+	transition: all 0.3s;
+
+	&:before, &:after{
+		content: '';
+		height: 1px;
+		width: 0;
+		transition: all 0.5s ease-in-out;
+		position: absolute;
+		background-color: $black;
+	}
+
+	&:before{
+		left: 0;
+		top: 0;
+	}
+	&:after{
+		right: 0;
+		bottom: 0;
+	}
+
+	&:hover, &:focus{
+		color: $primary;
+		&:before, &:after{
+			width: 100%;
+			background-color: $primary;
+		}
+	}
+
 }
 
 .header__shower-btn{
@@ -57,6 +88,17 @@
 
 
 .--dark{
+	.spacer__text{
+		&:before, &:after{
+			background-color: $white;
+		}
+		&:hover, &:focus{
+			color: $primary-dark;
+			&:before, &:after{
+				background-color: $primary-dark;
+			}
+		}
+	}
 
 	#logo-header{
 		fill: $primary-dark;

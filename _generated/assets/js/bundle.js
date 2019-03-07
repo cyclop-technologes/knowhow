@@ -325,6 +325,20 @@ $('.close-btn').click(function(event) {
 });
 
 
+//video 
+
+
+let videoState = false;
+let promoVideo = document.getElementById('promovideo');
+$('.img__phone').click(function(event) {
+	if (videoState) {
+		promoVideo.pause()
+	}else{
+		promoVideo.play()
+	}
+	videoState = !videoState
+});
+
 
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":10}],4:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");

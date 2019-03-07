@@ -131,3 +131,17 @@ $('.close-btn').click(function(event) {
 });
 
 
+//video 
+
+
+let videoState = false;
+let promoVideo = document.getElementById('promovideo');
+$('.img__phone').click(function(event) {
+	if (videoState) {
+		promoVideo.pause()
+	}else{
+		promoVideo.play()
+	}
+	videoState = !videoState
+});
+
