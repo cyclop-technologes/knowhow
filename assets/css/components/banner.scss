@@ -42,7 +42,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
 }
 
 .popup__container{
@@ -123,7 +122,7 @@
 }
 .head-img{
 	width: 861px;
-	height: 965px;	
+	height: 965px;
 	background: transparent url('../img/head.png') center center no-repeat;
 	background-size: contain;
 	transition: transform 0.5s;
@@ -145,16 +144,16 @@
 }
 
 @keyframes smooth-rotate{
-	0% { 
+	0% {
 		transform: rotate(0deg);
 	}
-	100% {  
+	100% {
 		transform: rotate(360deg);
 	}
 }
 
 .--dark {
-	
+
 	color: $white;
 	.banner{
 		background:transparent url('../img/banner-background--dark.jpg') center top no-repeat;
@@ -204,11 +203,15 @@
 
 
 
+#popup-video-mob{
+	display: none;
+}
+
 @media screen and (max-width: 1440px){
 
 
 	.--dark{
-		.head-img{		
+		.head-img{
 		    background-size: 410px;
 			background-position: 75px 42px;
 			height: 680px;
@@ -256,7 +259,7 @@
 		}
 	}
 
-	
+
 
 }
 
@@ -277,6 +280,12 @@
 
 @media screen and (max-width: 425px) {
 
+	#popup-video{
+		display: none;
+	}
+	#popup-video-mob{
+		display: block;
+	}
 	.banner{
 		padding-bottom: 75px;
 	}
@@ -325,7 +334,7 @@
 	}
 	.banner__mob-content{
 		display: block;
-		
+
 	}
 	.toform-btn__btn{
 		font-size: 12px;
@@ -360,7 +369,7 @@
 
 	}
 	.banner__mob-description{
-		
+
 		position: relative;
 	}
 	.banner__mob-text{
