@@ -1,11 +1,11 @@
 ({
 	header: {
-		header_title: 'knowhow',
-		description: '',
+		header_title: 'KnowHow Digital Agency',
+		description: 'Как минимум вторая твоя победа в жизни',
 		keywords: '',
 		$image_type: 'image',
-		type: '',
-		url: '',
+		type: 'web-site',
+		url: 'https://www.kh.agency',
 		image: '',
 		media_links: [
 			{
@@ -18,7 +18,7 @@
 			},
 			{
 				name: 'instagram',
-				link: 'https://instagram.com'
+				link: 'https://instagram.com/knowhow.agency/'
 			},
 			{
 				name: 'facebook',
@@ -37,50 +37,47 @@
 				name: 'брендинг',
 				subitems: [
 					{
-						name: 'ФИРМЕННЫЙ СТИЛЬ',
-						price: 20
-					},
-					{
 						name: 'ЛОГОТИП',
-						price: 20
-					},
-					{
-						name: 'ДИЗАЙН',
-						price: 20
+						price: '80000'
 					},
 					{
 						name: 'БРЕНДБУК',
-						price: 20
+						price: '120000'
+					},
+					{
+						name: 'ГАЙДЛАЙН',
+						price: 100000
 					},
 					{
 						name: 'НЕЙМИНГ',
-						price: 20
+						price: 50000
 					},
 					{
 						name: 'КОПИРАЙТИНГ',
-						price: 20
+						price: 500
 					}
 				]
 			},
 			{
+
 				id: 'prodaction',
 				name: 'продакшн',
 				subitems: [
 					{
 						name: 'ИНТЕГРАЦИИ',
-						price: 20
+						price: 50000
 					},
 					{
 						name: 'ПРОМОРОЛИКИ',
-						price: 20
+						price: 20000
 					},
 					{
 						name: 'ПОЛНОЦЕННЫЕ СЮЖЕТЫ',
-						price: 20
+						price: 200000
 					},
 					{
 						name: 'КАНАЛ ПОД КЛЮЧ',
-						price: 20
+						price: 320000
 					}
 				]
 			},
@@ -90,15 +87,15 @@
 				subitems: [
 					{
 						name: 'САЙТ',
-						price: 20
+						price: 30000
 					},
 					{
 						name: 'ПРИЛОЖЕНИЕ',
-						price: 20
+						price: 300000
 					},
 					{
 						name: 'CRM',
-						price: 20
+						price: 150000
 					}
 				]
 			},
@@ -108,19 +105,19 @@
 				subitems: [
 					{
 						name: 'SMM-ПРОДВИЖЕНИЕ',
-						price: 20
+						price: 10000
 					},
 					{
 						name: 'SEO-ПРОДВИЖЕНИЕ',
-						price: 20
+						price: 30000
 					},
 					{
 						name: 'КОНТЕНТ-МАРКЕТИНГ',
-						price: 20
+						price: 50000
 					},
 					{
 						name: 'КОНТЕКСТНАЯ РЕКЛАМА',
-						price: 20
+						price: 30000
 					}
 				]
 			}
