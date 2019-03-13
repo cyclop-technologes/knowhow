@@ -205,7 +205,7 @@ AOS.init();
 
 viewport()
 
-//nav 
+//nav
 
 $('.header__shower-btn').click(function(event) {
 	$('.links__list').toggleClass('active');
@@ -265,12 +265,12 @@ $('.checkbox-item').click(function(event) {
 		transform: 'translateX(-' + progress.toString() + '%)'
 	});
 
-	$('.progressbar__amount').html(`$${price}`)
+	$('.progressbar__amount').html(`${price}&#8381;`)
 });
 
 
 
-// dark mode 
+// dark mode
 
 $('.switcher').click(function(event) {
 	switcher.play();
@@ -331,7 +331,7 @@ $('.close-btn').click(function(event) {
 });
 
 
-//video 
+//video
 
 const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
@@ -350,7 +350,6 @@ $('.img__phone').click(function(event) {
 	}
 	videoState = !videoState
 });
-
 
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":10}],4:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");

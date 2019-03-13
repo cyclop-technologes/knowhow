@@ -7,7 +7,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + alias4(((helper = (helper = helpers.subtitle || (depth0 != null ? depth0.subtitle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"subtitle","hash":{},"data":data}) : helper)))
     + "</h3>\n\n		<form action=\"\" class=\"forms__inputs\">\n			<div class=\"inputs\">\n				<input class=\"inputs__input\" placeholder=\"имя\" type=\"text\">\n				<input class=\"inputs__input\" placeholder=\"E-mail\" type=\"email\">\n				<input id=\"phone\" class=\"inputs__input\" placeholder=\"номер телефона\" type=\"tel\">\n				<input class=\"inputs__input\" placeholder=\"название компании\" type=\"text\">\n			</div>\n\n			<div class=\"forms__checkboxes\">\n\n				<div class=\"checkboxes__title forms__subtitle\">отметьте необходимое</div>\n\n				<div class=\"checkboxes__blocks\">\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "				</div>\n\n\n			</div>\n			\n			<div class=\"forms__progressbar\">\n				<div class=\"forms__subtitle progressbar__title\">примерный бюджет</div>\n				<div class=\"progressbar wrapper\">\n					<div class=\"progressfill\"></div>\n				</div>\n				<p class=\"wrapper progressbar__amount\">0$</p>\n			</div>\n\n			<div class=\"forms__textarea\">\n				<div class=\"forms__subtitle textarea__title\">опишите проект</div>\n				<p><textarea name=\"text\"></textarea></p>\n			</div>\n\n			<div class=\"submit\">\n				<input class=\"submit__btn\" value=\"отправить\" type=\"submit\">\n			</div>\n		</form>\n\n	</div>\n\n";
+    + "				</div>\n\n\n			</div>\n\n			<div class=\"forms__progressbar\">\n				<div class=\"forms__subtitle progressbar__title\">примерный бюджет</div>\n				<div class=\"progressbar wrapper\">\n					<div class=\"progressfill\"></div>\n				</div>\n				<p class=\"wrapper progressbar__amount\">0&#8381;</p>\n			</div>\n\n			<div class=\"forms__textarea\">\n				<div class=\"forms__subtitle textarea__title\">опишите проект</div>\n				<p><textarea name=\"text\"></textarea></p>\n			</div>\n\n			<div class=\"submit\">\n				<input class=\"submit__btn\" value=\"отправить\" type=\"submit\">\n			</div>\n		</form>\n\n	</div>\n\n";
 },"2":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
@@ -31,5 +31,5 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
 
   return "<section id=\"forms-block\" class=\"forms\">\n"
     + ((stack1 = helpers["with"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.forms : depth0),{"name":"with","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "</section>";
+    + "</section>\n";
 },"useData":true}); });
