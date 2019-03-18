@@ -6,15 +6,15 @@
 		$image_type: 'image',
 		type: 'web-site',
 		url: 'https://www.kh.agency',
-		image: '',
+		image: '/remote/direct_uploads/1552653682_image.png',
 		media_links: [
 			{
 				name: 'behance',
-				link: 'https://www.behance.net/'
+				link: 'https://www.behance.net/knowhow_agency'
 			},
 			{
 				name: 'youtube',
-				link: 'https://youtube.com'
+				link: 'https://www.youtube.com/channel/UCoiQ60XWelq-9zlJeT3r46Q'
 			},
 			{
 				name: 'instagram',
@@ -22,10 +22,11 @@
 			},
 			{
 				name: 'facebook',
-				link: 'https://facebook.com'
+				link: 'https://www.facebook.com/agency.knowhow'
 			}
 		],
-		email: 'hello@kh.agency'
+		email: 'hello@kh.agency',
+		phone: '+7 918 99 77 000'
 	},
 	forms: {
 		title: 'Начать проект',
@@ -59,7 +60,6 @@
 				]
 			},
 			{
-
 				id: 'prodaction',
 				name: 'продакшн',
 				subitems: [

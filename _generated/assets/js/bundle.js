@@ -265,9 +265,48 @@ $('.checkbox-item').click(function(event) {
 		transform: 'translateX(-' + progress.toString() + '%)'
 	});
 
-	$('.progressbar__amount').html(`${price}&#8381;`)
+	$('.progressbar__totalamount').html(price)
 });
 
+
+// formsPush
+
+$('.submit__btn').click(function(event) {
+	event.preventDefault();
+
+	let items = '';
+	let checked = $('.checkbox-item').filter(function(index) {
+		return $(this).is(':checked');
+	});
+
+	checked.each(function(index, el) {
+      items += `- ${$(el).siblings().text().toLowerCase()}; \x0A `;
+	});
+
+
+	$.post('/api/lead', {
+		name: $('#user-name').val(),
+		email: $('#user-email').val(),
+		phone: $('#phone').val(),
+		company: $('#company-name').val(),
+		description: $('#description').val(),
+		items: items,
+		price: $('.progressbar__totalamount').text(),
+	}, function(data, textStatus, xhr) {
+		console.log(textStatus)
+		alert('Отправлено');
+
+		$('.form-input').each(function(index, el) {
+			$(el).val('');
+		});
+
+		$('.checkbox-item').prop("checked", false);
+
+	});
+
+
+
+});
 
 
 // dark mode
@@ -298,6 +337,25 @@ const switcher = anime({
 	autoplay: false
 })
 
+//video
+
+const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+
+let videoState = false;
+let promoVideo = document.getElementById('promovideo');
+
+if (isSafari) $('.play-btn').hide();
+
+$('.img__phone').click(function(event) {
+	if (videoState) {
+		promoVideo.pause()
+		if (!isSafari) $('.play-btn').fadeIn(300);
+	}else{
+		promoVideo.play()
+		if (!isSafari) $('.play-btn').fadeOut(300);
+	}
+	videoState = !videoState
+});
 
 // pop up
 
@@ -328,27 +386,6 @@ $('.close-btn').click(function(event) {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
 	video.pause();
-});
-
-
-//video
-
-const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-
-let videoState = false;
-let promoVideo = document.getElementById('promovideo');
-
-if (isSafari) $('.play-btn').hide();
-
-$('.img__phone').click(function(event) {
-	if (videoState) {
-		promoVideo.pause()
-		if (!isSafari) $('.play-btn').fadeIn(300);
-	}else{
-		promoVideo.play()
-		if (!isSafari) $('.play-btn').fadeOut(300);
-	}
-	videoState = !videoState
 });
 
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":10}],4:[function(require,module,exports){

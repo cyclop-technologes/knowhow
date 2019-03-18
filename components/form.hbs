@@ -6,10 +6,10 @@
 
 		<form action="" class="forms__inputs">
 			<div class="inputs">
-				<input class="inputs__input" placeholder="имя" type="text">
-				<input class="inputs__input" placeholder="E-mail" type="email">
-				<input id="phone" class="inputs__input" placeholder="номер телефона" type="tel">
-				<input class="inputs__input" placeholder="название компании" type="text">
+				<input id="user-name" class="inputs__input form-input" placeholder="имя" type="text">
+				<input id="user-email" class="inputs__input form-input" placeholder="E-mail" type="email">
+				<input id="phone" class="inputs__input form-input" placeholder="номер телефона" type="tel">
+				<input id="company-name" class="inputs__input form-input" placeholder="название компании" type="text">
 			</div>
 
 			<div class="forms__checkboxes">
@@ -26,7 +26,7 @@
 							<li class="block-list__item md-checkbox">
 								<label class="pure-material-checkbox">
 									<input class="checkbox-item" data-price="{{price}}" type="checkbox">
-									<span> {{name}}</span>
+									<span class="checkbox-label"> {{name}}</span>
 								</label>
 							</li>
 							{{/each}}
@@ -43,12 +43,12 @@
 				<div class="progressbar wrapper">
 					<div class="progressfill"></div>
 				</div>
-				<p class="wrapper progressbar__amount">0&#8381;</p>
+				<p class="wrapper progressbar__amount">от <span class="progressbar__totalamount">0</span>&#8381;</p>
 			</div>
 
 			<div class="forms__textarea">
 				<div class="forms__subtitle textarea__title">опишите проект</div>
-				<p><textarea name="text"></textarea></p>
+				<p><textarea class="form-input" id="description" name="text"></textarea></p>
 			</div>
 
 			<div class="submit">
