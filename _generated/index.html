@@ -105,7 +105,8 @@
 			 <div class="banner__wrapper wrapper">
 			 	<div class="banner__title">
 			 		<h1 class="--rubrica-title">
-						<span class="--italic">ПЛЕВАТЬ<br/>НА ЛОГИКУ</span><br/>ШЕДЕВР<br/>СОЗДАЮТ<br/>ЭМОЦИИ
+						<span class="bright-title"><span class="--italic">ПЛЕВАТЬ<br/>НА ЛОГИКУ</span><br/>ШЕДЕВР<br/>СОЗДАЮТ<br/>ЭМОЦИИ</span>
+						<span class="dark-title"><span class="--italic">ПЛЕВАТЬ<br/>НА ЛОГИКУ</span><br/>МИРОМ<br/>ПРАВЯТ<br/>ЭМОЦИИ</span>
 						<span class="switcher">
 							<img src="assets/img/switcher.png" alt="switcher">
 						</span>
@@ -185,15 +186,20 @@
 				<div data-aos="fade-right" class="video-sect__container">
 					<div class="video-sect__hand">
 						<div class="img__phone">
-							<div class="video-container"><video id="promovideo" src="assets/img/promo.mp4"></video></div>
+			
+							<div class="video-container">
+								<!-- <video id="promovideo" src="https://youtu.be/k9SKe2iYdNU"></video> -->
+								<iframe class="yt-video" src="https://www.youtube.com/embed/k9SKe2iYdNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							</div>
 							<img src="assets/img/hand/phone.png" alt="phone">
-							<div class="play-btn"><img src="assets/img/play-button.svg" alt="play-btn"></div>
+							<!-- <div class="play-btn"><img src="assets/img/play-button.svg" alt="play-btn"></div>
+							<div class="fullscreen-btn"><img src="assets/img/switch-to-full-screen-button.svg" alt="fullscreen"></div> -->
 						</div>
 						<div class="img__hand"></div>
 					</div>
 				</div>
 				<div class="video-sect__container-mob">
-					<video id="promovideo-mob" controls src="assets/img/promo.mp4">
+					<iframe class="yt-video-mob" src="https://www.youtube.com/embed/k9SKe2iYdNU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 				<div data-aos="fade-right" class="wrapper video-sect__logo">
 					<?xml version="1.0" encoding="UTF-8"?>
@@ -743,12 +749,12 @@
 					<h3 class="forms__subtitle">Cпасибо за проявленный интерес к нашей работе. 
 			Пожалуйста, заполните форму ниже, и мы свяжемся с вами для уточнения деталей в течение одного рабочего дня.</h3>
 			
-					<form action="" class="forms__inputs">
+					<form  class="forms__inputs">
 						<div class="inputs">
-							<input id="user-name" class="inputs__input form-input" placeholder="имя" type="text">
-							<input id="user-email" class="inputs__input form-input" placeholder="E-mail" type="email">
-							<input id="phone" class="inputs__input form-input" placeholder="номер телефона" type="tel">
-							<input id="company-name" class="inputs__input form-input" placeholder="название компании" type="text">
+							<input required id="user-name" class="inputs__input form-input" placeholder="имя" type="text">
+							<input required id="user-email" class="inputs__input form-input" placeholder="E-mail" type="email">
+							<input required id="phone" class="inputs__input form-input" placeholder="номер телефона" type="tel">
+							<input required id="company-name" class="inputs__input form-input" placeholder="название компании" type="text">
 						</div>
 			
 						<div class="forms__checkboxes">

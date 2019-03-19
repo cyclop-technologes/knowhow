@@ -1,4 +1,5 @@
 const $ = require('jquery');
+require('jquery-validation')($);
 const anime = require('animejs');
 const viewport = require('./viewport.js')
 const onscroll = require('./scroll.js')
@@ -80,38 +81,53 @@ $('.checkbox-item').click(function(event) {
 $('.submit__btn').click(function(event) {
 	event.preventDefault();
 
+	let isInvalid = [];
 	let items = '';
 	let checked = $('.checkbox-item').filter(function(index) {
 		return $(this).is(':checked');
 	});
-
-	checked.each(function(index, el) {
-      items += `- ${$(el).siblings().text().toLowerCase()}; \x0A `;
-	});
-
-
-	$.post('/api/lead', {
-		name: $('#user-name').val(),
-		email: $('#user-email').val(),
-		phone: $('#phone').val(),
-		company: $('#company-name').val(),
-		description: $('#description').val(),
-		items: items,
-		price: $('.progressbar__totalamount').text(),
-	}, function(data, textStatus, xhr) {
-		console.log(textStatus)
-		alert('Отправлено');
-
-		$('.form-input').each(function(index, el) {
-			$(el).val('');
+	if (checked) {
+		checked.each(function(index, el) {
+			items += `- ${$(el).siblings().text().toLowerCase()}; \x0A `;
 		});
-
-		$('.checkbox-item').prop("checked", false);
-
+	}
+	$('.inputs__input').each(function(index, el) {
+		if ($(el).val() == '') {
+			$(el).css('border', '1px solid red');
+		} else {
+			$(el).removeAttr('style');
+		}
+	});
+	isInvalid = $('.inputs__input').filter(function(i, el) {
+		return $(el).val() == ''
 	});
 
+	function submit() {
+		$.post('/api/lead', {
+			name: $('#user-name').val(),
+			email: $('#user-email').val(),
+			phone: $('#phone').val(),
+			company: $('#company-name').val(),
+			description: $('#description').val(),
+			items: items,
+			price: $('.progressbar__totalamount').text(),
+		}, function(data, textStatus, xhr) {
+			console.log(textStatus)
+			alert('Отправлено');
+			$('.form-input').each(function(index, el) {
+				$(el).val('');
+			});
+			$('.checkbox-item').prop("checked", false);
 
+		});
+		$('.submit__btn').attr('disabled', 'true');c
+	}
 
+	if (isInvalid.length === 0) {
+		submit();
+	}else {
+		$(window).scrollTop($('#forms-block').offset().top)
+	}
 });
 
 
@@ -145,23 +161,27 @@ const switcher = anime({
 
 //video
 
-const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-
-let videoState = false;
-let promoVideo = document.getElementById('promovideo');
-
-if (isSafari) $('.play-btn').hide();
-
-$('.img__phone').click(function(event) {
-	if (videoState) {
-		promoVideo.pause()
-		if (!isSafari) $('.play-btn').fadeIn(300);
-	}else{
-		promoVideo.play()
-		if (!isSafari) $('.play-btn').fadeOut(300);
-	}
-	videoState = !videoState
-});
+// const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+//
+// let videoState = false;
+// let promoVideo = document.getElementById('promovideo');
+//
+// if (isSafari) $('.play-btn').hide();
+//
+// $('.img__phone').click(function(event) {
+// 	if (videoState) {
+// 		promoVideo.pause()
+// 		if (!isSafari) $('.play-btn').fadeIn(300);
+// 	}else{
+// 		promoVideo.play()
+// 		if (!isSafari) $('.play-btn').fadeOut(300);
+// 	}
+// 	videoState = !videoState
+// });
+//
+// $('.fullscreen-btn').click(function() {
+// 	promoVideo.requestFullscreen();
+// });
 
 // pop up
 

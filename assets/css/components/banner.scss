@@ -152,8 +152,19 @@
 	}
 }
 
+
+.dark-title{
+	display: none;
+}
+
 .--dark {
 
+	.bright-title{
+		display: none;
+	}
+	.dark-title{
+		display: inline;	
+	}
 	color: $white;
 	.banner{
 		background:transparent url('../img/banner-background--dark.jpg') center top no-repeat;

@@ -17,7 +17,7 @@
 			display: block;
 			position: relative;
 		}
-		
+
 		.video-container{
 		    width: 36.8vw;
 			height: 17.1vw;
@@ -39,6 +39,7 @@
 
 	.img__hand{
 		position: absolute;
+		z-index: 3;
 		background:transparent url('../img/hand/hand.png') left top no-repeat;
 		background-size: cover;
 		width: 39.7vw;
@@ -46,7 +47,7 @@
 		top: 3vw;
     	right: 30.8vw;
 	}
-	
+
 }
 .play-btn{
 	position: absolute;
@@ -58,8 +59,33 @@
 
 	img{
 		width: 80px !important;
-		opacity: 0.5;
+		opacity: 0.8;
 	}
+}
+
+.fullscreen-btn{
+	position: absolute;
+	bottom: 50px;
+	right: 60px;
+	z-index: 5;
+	cursor: pointer;
+
+	img{
+		opacity: 0.8;
+		width: 25px !important;
+	}
+}
+
+.yt-video{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+};
+
+.yt-video-mob {
+  width: 100%;
+  height: 13rem;
 }
 
 .video-sect__container-mob{
