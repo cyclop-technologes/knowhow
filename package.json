@@ -19,10 +19,10 @@
 		"jquery-validation": "^1.19.0",
 		"normalize-scss": "^7.0.1",
 		"vinyl-source-stream": "^2.0.0",
-		"watchify": "^3.11.1"
+		"watchify": "^3.11.1",
+		"trello": "^0.9.1"
 	},
 	"devDependencies": {
 		"babel-preset-es2015": "^6.24.1",
-		"trello": "^0.9.1"
 	}
 }
