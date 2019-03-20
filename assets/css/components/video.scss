@@ -27,13 +27,6 @@
 			overflow: hidden;
 			border-radius: 1.7vw;
 		}
-		video{
-			width: 100%;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			transform: translateY(-50%);
-		}
 
 	}
 
@@ -49,6 +42,8 @@
 	}
 
 }
+
+
 .play-btn{
 	width: 150px;
 	height: auto;
@@ -76,6 +71,29 @@
 	a{
 		text-decoration: none;
 	}
+}
+
+@keyframes upanddown {
+	0%{
+		box-shadow: 1px 1px 1px rgba($black, 0.7);
+	}
+	50%{
+		box-shadow: 5px 5px 10px rgba($black, 0.7);
+		transform: scale(1.1);
+	}
+	100%{
+		box-shadow: 1px 1px 1px rgba($black, 0.7);
+	}
+}
+
+.link-to-video{
+	display: inline-block;
+	border-radius: 100%;
+	animation: upanddown 3s ease-in-out infinite;
+	svg{
+		display: block;
+	}
+
 }
 
 
