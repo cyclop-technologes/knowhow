@@ -23,6 +23,6 @@
 		"trello": "^0.9.1"
 	},
 	"devDependencies": {
-		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-es2015": "^6.24.1"
 	}
 }
