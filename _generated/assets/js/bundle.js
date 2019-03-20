@@ -358,60 +358,43 @@ const switcher = anime({
 	autoplay: false
 })
 
-//video
-
-// const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
-//
-// let videoState = false;
-// let promoVideo = document.getElementById('promovideo');
-//
-// if (isSafari) $('.play-btn').hide();
-//
-// $('.img__phone').click(function(event) {
-// 	if (videoState) {
-// 		promoVideo.pause()
-// 		if (!isSafari) $('.play-btn').fadeIn(300);
-// 	}else{
-// 		promoVideo.play()
-// 		if (!isSafari) $('.play-btn').fadeOut(300);
-// 	}
-// 	videoState = !videoState
-// });
-//
-// $('.fullscreen-btn').click(function() {
-// 	promoVideo.requestFullscreen();
-// });
-
 // pop up
 
+const isVideoShowed = window.localStorage.getItem('isVideoShowed');
+const video = document.getElementById('popup-video');
 
-$(window).scrollTop(0);
-
-let video = document.getElementById('popup-video');
-
-$('body').css('overflow', 'hidden');
-
-
-
-if(video.played.length == 0){
-	video = document.getElementById('popup-video');
-	video.play();
+if (isVideoShowed) {
+	$('.banner__popup').fadeOut(400);
+	video.pause();
+}else {
+	$('body').css('overflow', 'hidden');
+	$('.close-btn').hide().delay(4000).fadeIn(400);
+	$('.close-btn').click(function(event) {
+		$('body').removeAttr('style');
+		$('.banner__popup').fadeOut(600);
+		video.pause();
+		window.localStorage.setItem('isVideoShowed', true);
+	});
 }
-// console.log(video);
 
 video.onended = function() {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
+	window.localStorage.setItem('isVideoShowed', true);
 }
 
 
-$('.close-btn').hide().delay(4000).fadeIn(400);
+// coockies alert
 
-$('.close-btn').click(function(event) {
-	$('body').removeAttr('style');
-	$('.banner__popup').fadeOut(600);
-	video.pause();
-});
+const isAlertShowed = window.localStorage.getItem('isAlertShowed');
+
+if (!isAlertShowed) {
+	window.localStorage.setItem('isAlertShowed', true);
+	$('.coockies-alert').slideToggle(500);
+	$('.close-coockies-alert-btn').click(function(event) {
+		$('.coockies-alert').slideToggle(500);
+	});
+}
 
 },{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":11,"jquery-validation":10}],4:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
