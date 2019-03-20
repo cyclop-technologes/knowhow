@@ -120,7 +120,7 @@ $('.submit__btn').click(function(event) {
 			$('.checkbox-item').prop("checked", false);
 
 		});
-		$('.submit__btn').attr('disabled', 'true');c
+		$('.submit__btn').attr('disabled', 'true');
 	}
 
 	if (isInvalid.length === 0) {
