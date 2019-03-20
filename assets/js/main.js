@@ -174,14 +174,13 @@ if (isVideoShowed) {
 		$('body').removeAttr('style');
 		$('.banner__popup').fadeOut(600);
 		video.pause();
-		window.localStorage.setItem('isVideoShowed', true);
 	});
+	window.localStorage.setItem('isVideoShowed', true);
 }
 
 video.onended = function() {
 	$('body').removeAttr('style');
 	$('.banner__popup').fadeOut(600);
-	window.localStorage.setItem('isVideoShowed', true);
 }
 
 
