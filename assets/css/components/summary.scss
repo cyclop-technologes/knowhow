@@ -85,7 +85,7 @@
 	&.active p:after{
 		width: 100%;
 	}
-	
+
 
 
 	p{
@@ -100,7 +100,7 @@
 		position: relative;
 
 
-		
+
 
 		&:before, &:after{
 			position: absolute;
@@ -237,6 +237,9 @@
 @media screen and (max-width: 425px){
 	.summary{
 		padding-top: 47px;
+	}
+	.summary__container{
+		padding-bottom: 100px;
 	}
 	.summary__background{
 		display: none;

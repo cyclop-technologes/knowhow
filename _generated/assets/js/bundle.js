@@ -111,19 +111,20 @@ module.exports = function (canvasID, starsAmount, color = '#000000', radius = 1,
 
 
 },{}],2:[function(require,module,exports){
+const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 function image() {
   // Init
-  var container = document.querySelector(".banner"),
+  const container = document.querySelector(".banner"),
     inner = document.querySelector(".head-img");
 
   // Mouse
-  var mouse = {
+  let mouse = {
     _x: 0,
     _y: 0,
     x: 0,
     y: 0,
     updatePosition: function(event) {
-      var e = event || window.event;
+      let e = event || window.event;
       this.x = e.clientX - this._x;
       this.y = (e.clientY - this._y) * -1;
     },
@@ -141,23 +142,23 @@ function image() {
 
   //-----------------------------------------
 
-  var counter = 0;
-  var updateRate = 10;
-  var isTimeToUpdate = function() {
+  let counter = 0;
+  let updateRate = 10;
+  const isTimeToUpdate = function() {
     return counter++ % updateRate === 0;
   };
 
   //-----------------------------------------
 
-  var onMouseEnterHandler = function(event) {
+  const onMouseEnterHandler = function(event) {
     update(event);
   };
 
-  var onMouseLeaveHandler = function() {
+  const onMouseLeaveHandler = function() {
     inner.style = "";
   };
 
-  var onMouseMoveHandler = function(event) {
+  const onMouseMoveHandler = function(event) {
     if (isTimeToUpdate()) {
       update(event);
     }
@@ -165,7 +166,7 @@ function image() {
 
   //-----------------------------------------
 
-  var update = function(event) {
+  const update = function(event) {
     mouse.updatePosition(event);
     updateTransformStyle(
       (mouse.y / inner.offsetHeight / 2).toFixed(2),
@@ -173,8 +174,8 @@ function image() {
     );
   };
 
-  var updateTransformStyle = function(x, y) {
-    var style = `rotateY(${y / 5}deg) rotateX(${x / 5}deg) translateX(${0 - y * 50}px) translateY(${x * 50}px)`;
+  const updateTransformStyle = function(x, y) {
+    let style = `rotateY(${(y / 5).toFixed(4)}deg) rotateX(${((x / 5).toFixed(4))}deg) translateX(${(0 - y * 50).toFixed(4)}px) translateY(${(x * 50).toFixed(4)}px)`;
     inner.style.transform = style;
     inner.style.webkitTransform = style;
     inner.style.mozTransform = style;
@@ -185,12 +186,16 @@ function image() {
 
   //-----------------------------------------
 
-  container.onmouseenter = onMouseEnterHandler;
-  container.onmouseleave = onMouseLeaveHandler;
-  container.onmousemove = onMouseMoveHandler;
+  if (!isSafari) {
+    container.onmouseenter = onMouseEnterHandler;
+    container.onmouseleave = onMouseLeaveHandler;
+    container.onmousemove = onMouseMoveHandler;
+  }
+
 }
 
 module.exports = image
+
 },{}],3:[function(require,module,exports){
 const $ = require('jquery');
 require('jquery-validation')($);
