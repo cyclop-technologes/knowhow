@@ -33,10 +33,11 @@ local_app.prototype.init = function (app) {
         res.send(trelloCard);
       }
     });
-  })
-
-
+  });
 }
+
+
+
 
 
 module.exports = new local_app()
