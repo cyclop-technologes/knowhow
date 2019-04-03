@@ -10,7 +10,6 @@
 		media_links: {
 			behance: 'https://www.behance.net/knowhow_agency',
 			youtube: 'https://www.youtube.com/channel/UCoiQ60XWelq-9zlJeT3r46Q',
-			vk: 'https://vk.com/agency.knowhow',
 			instagram: 'https://instagram.com/knowhow.agency/',
 			facebook: 'https://www.facebook.com/agency.knowhow',
 		},

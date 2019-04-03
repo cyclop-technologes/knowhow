@@ -2,7 +2,7 @@
 	{{#with forms}}
 	<div class="forms__container wrapper">
 		<h1 class="forms__title --rubrica">{{title}}</h1>
-		<h3 class="forms__subtitle">{{subtitle}}</h3>
+		<h3 class="forms__subtitle">Cпасибо за проявленный интерес к нашей работе. Пожалуйста, заполните форму ниже, <br>и мы свяжемся с вами для уточнения деталей в течение одного рабочего дня.</h3>
 
 		<form  class="forms__inputs">
 			<div class="inputs">
@@ -50,9 +50,12 @@
 				<div class="forms__subtitle textarea__title">опишите проект</div>
 				<p><textarea class="form-input" id="description" name="text"></textarea></p>
 			</div>
-
+			<div class="forms__privacy">
+				<p>Нажимая кнопку «Отправить», вы соглашаетесь (вам просто некуда деваться) <br> с длинным текстом, который вы не собираетесь читать</p>
+				<p><a href="#">Политика конфиденциальности НОУ ХАУ</a>.</p>
+			</div>
 			<div class="submit">
-				<input disabled class="submit__btn" value="отправить" type="submit">
+				<input class="submit__btn" value="отправить" type="submit">
 			</div>
 		</form>
 

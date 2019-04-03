@@ -1,8 +1,8 @@
 {
 	"project_name": "knowhow",
 	"project_slug": "ei",
-	"cultures": [
-		"ru",
-		"en"
-	]
+	"bricks": {
+		"enduro_quill": {}
+	},
+	"juicebox_enabled": true
 }

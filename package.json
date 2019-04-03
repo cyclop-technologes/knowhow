@@ -14,13 +14,14 @@
 		"aos": "^2.3.4",
 		"browserify": "^16.2.3",
 		"enduro": "*",
+		"enduro_quill": "^1.0.6",
 		"imask": "^4.1.5",
 		"jquery": "^3.3.1",
 		"jquery-validation": "^1.19.0",
 		"normalize-scss": "^7.0.1",
+		"trello": "^0.9.1",
 		"vinyl-source-stream": "^2.0.0",
-		"watchify": "^3.11.1",
-		"trello": "^0.9.1"
+		"watchify": "^3.11.1"
 	},
 	"devDependencies": {
 		"babel-preset-es2015": "^6.24.1"

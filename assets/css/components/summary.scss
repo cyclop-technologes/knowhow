@@ -6,14 +6,14 @@
 
 .summary__container{
 	position: relative;
-	padding: 130px 0 200px;
+	padding: 110px 0 200px;
 
 }
 
 .summary__background{
 	position: absolute;
 	width: 100vw;
-	top: -150px;
+	top: 0;
 	left: 0;
 
 	&.--fixed{
@@ -30,8 +30,8 @@
 	text-align: center;
 	font-size: 13px;
 	line-height: 37.5px;
-	letter-spacing: 1.88px;
-	margin: 120px 0px;
+	letter-spacing: 0.2rem;
+	margin: 120px 0px 0;
 }
 
 

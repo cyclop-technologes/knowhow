@@ -1,1 +1,1 @@
-var brick_admin_settings = {}
+var brick_admin_settings = {"enduro_quill":{}}
