@@ -8,6 +8,10 @@
 	justify-content: space-between;
 	align-items: center;
 }
+
+.header__spacer{
+	display: flex;
+}
 .spacer__text{
 	letter-spacing: 8.21px;
 	font-style: italic;
@@ -36,12 +40,19 @@
 		right: 0;
 		bottom: 0;
 	}
-
+	&:last-child{
+		&:before{
+			left: auto;
+			right: 0;
+		}
+		&:after{
+			right: auto;
+			left: 0;
+		}
+	}
 	&:hover, &:focus{
-		color: $primary;
 		&:before, &:after{
 			width: 100%;
-			background-color: $primary;
 		}
 	}
 
@@ -67,8 +78,9 @@
 	transform: rotate(-90deg);
 	position: absolute;
 	left: -330px;
-	top: -50vh;
+	top: -60vh;
 	transition: 0.6s ease-in-out;
+	opacity: 0.4;
 	&.active{
 		top: 60vh;
 	}
@@ -86,17 +98,31 @@
 	}
 }
 
+.header__langswitcher{
+	font-size: 8px;
+	letter-spacing: 2.05px;
+	color: #8f8f8f;
+
+	.active{
+		color: $primary;
+	}
+
+	.langswich-item:not(:last-child){
+		margin-right: 10px;
+	}
+	a{
+		color: #8f8f8f;
+		text-decoration: none;
+	}
+}
 
 .--dark{
+	.header__langswitcher .active{
+		color: $primary-dark;
+	}
 	.spacer__text{
 		&:before, &:after{
 			background-color: $white;
-		}
-		&:hover, &:focus{
-			color: $primary-dark;
-			&:before, &:after{
-				background-color: $primary-dark;
-			}
 		}
 	}
 
@@ -118,6 +144,14 @@
 }
 
 
+@media screen and (max-width: 1440px) {
+	.links__list{
+		left: -210px;
+	}
+	.list__item{
+		margin: 0 20px;
+	}
+}
 
 
 @media screen and (max-width: 425px){

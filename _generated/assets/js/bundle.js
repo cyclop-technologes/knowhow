@@ -333,14 +333,8 @@ $('.submit__btn').click(function(event) {
 // dark mode
 
 $('.switcher').click(function(event) {
-	switcher.play();
 	$('.mode').toggleClass('--dark');
 });
-
-
-const wobbleSwitcher = setInterval(()=> {
-	wobble.play();
-}, 8000)
 
 const wobble = anime({
 	targets: '.switcher',

@@ -2,11 +2,11 @@
 	header: {
 		header_title: 'KnowHow Digital Agency',
 		description: 'Как минимум вторая твоя победа в жизни',
-		keywords: '',
-		$image_type: 'image',
-		type: 'web-site',
+		keywords: 'digital agency',
 		url: 'https://www.kh.agency',
-		image: '/remote/direct_uploads/1552653682_image.png',
+		type: 'web-site',
+		// $image_type: 'image',
+		// image: '/remote/	direct_uploads/1552653682_image.png',
 		media_links: {
 			behance: 'https://www.behance.net/knowhow_agency',
 			youtube: 'https://www.youtube.com/channel/UCoiQ60XWelq-9zlJeT3r46Q',
@@ -17,6 +17,10 @@
 		email: 'hello@kh.agency',
 		phone: '+7 918 99 77 000',
 		address: 'Россия, г. Краснодар, ул.кубанская набережная 37/12',
+	},
+	banner: {
+		$title_type: 'quill',
+		title: ''
 	},
 	forms: {
 		title: 'Начать проект',
@@ -36,15 +40,15 @@
 					},
 					{
 						name: 'ГАЙДЛАЙН',
-						price: 100000
+						price: '100000'
 					},
 					{
 						name: 'НЕЙМИНГ',
-						price: 50000
+						price: '50000'
 					},
 					{
 						name: 'КОПИРАЙТИНГ',
-						price: 500
+						price: '500'
 					}
 				],
 			},
@@ -54,19 +58,19 @@
 				subitems: [
 					{
 						name: 'ИНТЕГРАЦИИ',
-						price: 50000
+						price: '50000'
 					},
 					{
 						name: 'ПРОМОРОЛИКИ',
-						price: 20000
+						price: '20000'
 					},
 					{
 						name: 'ПОЛНОЦЕННЫЕ СЮЖЕТЫ',
-						price: 200000
+						price: '200000'
 					},
 					{
 						name: 'КАНАЛ ПОД КЛЮЧ',
-						price: 320000
+						price: '320000'
 					}
 				],
 			},
@@ -76,15 +80,15 @@
 				subitems: [
 					{
 						name: 'САЙТ',
-						price: 30000
+						price: '30000'
 					},
 					{
 						name: 'ПРИЛОЖЕНИЕ',
-						price: 300000
+						price: '300000'
 					},
 					{
 						name: 'CRM',
-						price: 150000
+						price: '150000'
 					}
 				],
 			},
@@ -94,19 +98,19 @@
 				subitems: [
 					{
 						name: 'SMM-ПРОДВИЖЕНИЕ',
-						price: 10000
+						price: '10000'
 					},
 					{
 						name: 'SEO-ПРОДВИЖЕНИЕ',
-						price: 30000
+						price: '30000'
 					},
 					{
 						name: 'КОНТЕНТ-МАРКЕТИНГ',
-						price: 50000
+						price: '50000'
 					},
 					{
 						name: 'КОНТЕКСТНАЯ РЕКЛАМА',
-						price: 30000
+						price: '30000'
 					}
 				],
 			},

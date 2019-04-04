@@ -151,13 +151,11 @@
 }
 
 .progressfill{
-	width: 27px;
-	height: 27px;
-	background-color: #fff;
-	border-radius: 100%;
+	width: 46px;
+	height: 46px;
 	position: absolute;
-	top: 2px;
-	left: 2px;
+	top: -7px;
+	left: -7px;
 	transition: all 0.3s ease-in-out;
 }
 
