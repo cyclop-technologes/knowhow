@@ -254,7 +254,7 @@
 
 
 
-		h1{
+		.title-item{
 			margin-bottom: 36px;
 			position: relative;
 			margin-top: 13px;
@@ -307,10 +307,11 @@
 	}
 	.banner__title{
 		margin: 45px 0 125px 12px;
-		h1{
+		font-size: 80px;
+		.title-item{
 			margin-top: 0px;
 			margin-bottom: 0;
-			font-size: 80px;
+
 			line-height: 75px;
 		}
 		h4{
