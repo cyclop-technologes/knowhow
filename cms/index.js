@@ -71,6 +71,15 @@
 	forms: {
 		project_title: 'анатомия вашей компании',
 		title: 'Начать проект',
+		placeholders: {
+			name: 'имя',
+			email: 'E-mail',
+			phone: 'номер телефона',
+			company: 'название компании',
+			$name_en: 'Name',
+			$phone_en: 'Phone number',
+			$company_en: 'Company name'
+		},
 		subtitle: 'Cпасибо за проявленный интерес к нашей работе. Пожалуйста, заполните форму ниже,\n и мы свяжемся с вами для уточнения деталей в течение одного рабочего дня.',
 		items: {
 			branding: {
