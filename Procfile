@@ -1,1 +1,1 @@
-web: npm i && enduro start
+web: enduro start
