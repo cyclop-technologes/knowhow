@@ -21,7 +21,6 @@
 		"normalize-scss": "^7.0.1",
 		"query-string": "^6.4.2",
 		"trello": "^0.9.1",
-		"utf8": "^3.0.0",
 		"vinyl-source-stream": "^2.0.0",
 		"watchify": "^3.11.1"
 	},
