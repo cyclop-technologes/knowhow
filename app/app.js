@@ -14,25 +14,39 @@ local_app.prototype.init = function (app) {
   const bodyParser = require('body-parser');
   const trello = new Trello("35ac1c7df19c10d6faf944741f579c1d", "e5c1c4e21dab120dae2c38e8bcad6bd3948d24e7ec1da3c91e80b22efbff0459");
   const listId = "5c8f6f746cf27f4cf7baf4f8";
+  const { parse } = require('query-string');
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
+  // app.use(bodyParser.json());
+  // app.use(bodyParser.urlencoded({ extended: false }));
 
   app.post('/api/lead', function(req, res) {
+    let jsonString = ''
 
-    console.log(req.body);
-    let cardHead = `${req.body.name} ${req.body.price}`;
-    let cardBody = `${req.body.name}; \x0A ${req.body.email}; \x0A ${req.body.phone}; \x0A ${req.body.company} \x0A ${req.body.description} \x0A ${req.body.price} \x0A items: \x0A ${req.body.items}`;
-    trello.addCard(cardHead, cardBody, listId, function (error, trelloCard) {
-      if (error) {
-        console.log('Could not add card:', error);
-        res.send(error);
-      }
-      else {
-        console.log('Added card:', trelloCard);
-        res.send(trelloCard);
-      }
-    });
+		req.on('data', function (chunk) {
+
+			jsonString += chunk
+		})
+
+		req.on('end', function () {
+			jsonString = parse(jsonString);
+
+      let body = jsonString;
+      console.log(body);
+
+      let cardHead = `${body.name} ${body.price}rub`;
+      let cardBody = `${body.name}; \x0A ${body.email}; \x0A ${body.phone}; \x0A ${body.company} \x0A ${body.description} \x0A ${body.price}rub \x0A items: \x0A ${body.items}`;
+      trello.addCard(cardHead, cardBody, listId, function (error, trelloCard) {
+        if (error) {
+          console.log('Could not add card:', error);
+          res.json(error);
+        }
+        else {
+          console.log('Added card:', trelloCard);
+          res.json(trelloCard);
+        }
+      });
+    })
+
   });
 }
 

@@ -30,19 +30,17 @@
 			</svg>
 		</a></div>
 		<div data-aos="fade-down" data-aos-delay="200" class="header__spacer">
-			<a href="#forms-block" class="spacer__text">хочу шедевр</a>
-			<a href="#" class="spacer__text">хочу прайс</a>
+			<a href="#forms-block" class="spacer__text">{{header_buttons.to_form}}</a>
+			<a href="#" class="spacer__text">{{header_buttons.price}}</a>
 		</div>
 		<div data-aos="fade-down" data-aos-delay="400" class="header__links">
 			<div class="header__langswitcher">
-				<a href="#" class="langswich-item switch-lang">eng</a><span class="langswich-item separator">/</span><span class="langswich-item active-lang active">rus</span>
+				<a href="en" class="langswich-item switch-lang {{#if is_culture}}active{{/if}}">eng</a><span class="langswich-item separator">/</span><a href="ru" class="langswich-item active-lang {{#unless is_culture}}active{{/unless}}">rus</a>
 			</div>
 			<ul class="links__list">
-				<li class="list__item"><a target="_blank" href="{{media_links.instagram}}">instagram</a></li>
-				<li class="list__item"><a target="_blank" href="{{media_links.facebook}}">facebook</a></li>
-				<li class="list__item"><a target="_blank" href="{{media_links.vk}}">vk</a></li>
-				<li class="list__item"><a target="_blank" href="{{media_links.behance}}">behance</a></li>
-				<li class="list__item"><a target="_blank" href="{{media_links.youtube}}">youtube</a></li>
+				{{#each media_links}}
+					<li class="list__item"><a target="_blank" href="{{this}}">{{@key}}</a></li>
+				{{/each}}
 			</ul>
 		</div>
 	</div>

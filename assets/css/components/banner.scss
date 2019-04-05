@@ -139,7 +139,11 @@
 		transform: rotate(360deg);
 	}
 }
-
+.title-item{
+	p{
+		margin: 0;
+	}
+}
 
 .dark-title{
 	display: none;

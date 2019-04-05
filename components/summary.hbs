@@ -1,8 +1,6 @@
 <section id="summary" class="summary">
-	<p class="summary__subtitle --uppercase">Когда-то давно Микеланджело вооружился инструментами
-		<br>и создал из глыбы мрамора произведение искусства — «Давида».
-		<br>Скульптор даже пренебрег логикой и исказил пропорции человеческого тела,
-		<br>чтобы достичь большей художественной выразительности.</p>
+	{{#with banner}}
+	<p class="summary__subtitle --uppercase">{{{breaklines summary_top_title}}}</p>
 
 	<div class="summary__container">
 		<div class="summary__background">
@@ -10,26 +8,25 @@
 		</div>
 
 		<div class="wrapper summary__top-title --rubrica">
-			<span class="large">мы</span> как <span class="large filling-line"><i class="line"></i><span>микеланджело</span></span>,
-			<br>но <span class="large filling-line"><i class="line"></i><span>в digital-сфере</span></span>:
-			<br>извлекаем шедевр из бесформенной глыбы
+			{{{title}}}
 		</div>
 		<div class="wrapper summary__mid-title">
-			<p>Мы не стремимся все объяснить с точки зрения логики.</p>
+			<p>{{summary_bottom_title}}</p>
 		</div>
 		<div class="wrapper summary__footer-title">
 			<div class="footer-title__container">
 				<div data-aos="fade-left" class="footer-title__logo-bg">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 431.3 234.78"><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M55.35,156.88v73.85H0V157.91A64.73,64.73,0,0,1,6.29,129.4a72.07,72.07,0,0,1,16.86-22.54,80,80,0,0,1,53.2-20.24H276.12V72.71a12.77,12.77,0,0,0-12.77-12.77H12.88V0h249a70.72,70.72,0,0,1,28.36,5.9A79.61,79.61,0,0,1,331,45.38a65.71,65.71,0,0,1,6.29,28.36v157H275.81V144.11H68.12A12.77,12.77,0,0,0,55.35,156.88Z"/><circle class="cls-2" cx="400.14" cy="203.61" r="31.17"/></g></g></svg>
 				</div>
-				<header data-aos="fade-right" class="footer-title__header --rubrica --italic">мы знаем, как создать <span class="--undeline">продукт</span>,
-					<br><span class="--undeline">вызывающий</span> целый спектр <span class="--undeline">эмоций</span>.
+				<header data-aos="fade-right" class="footer-title__header --rubrica --italic">{{{footer}}}</span>
 				</header>
-				<footer data-aos="fade-right" class="footer-title__footer">Ведь эмоции важнее.</footer>
+				<footer data-aos="fade-right" class="footer-title__footer">{{footer_subtitle}}</footer>
 			</div>
 		</div>
 
 	</div>
+
+	{{/with}}
 	<div class="to-bottom-arrows">
 		<a href="#video">
 			<svg width="38px" height="48px" viewBox="0 0 103 129" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

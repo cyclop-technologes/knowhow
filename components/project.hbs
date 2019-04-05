@@ -1,13 +1,14 @@
 <section class="project">
 	<div class="wrapper project__container">
-		<div class="project__title">анатомия вашей компании</div>
-
+		{{#with forms}}
+		<div class="project__title">{{project_title}}</div>
+		{{/with}}
 		{{>sculpture-img}}
 
 	</div>
 
 	<footer class="project__footer">
 		<img class="--bright-wave" src="assets/img/wave.png" alt="">
-		<img class="--dark-wave" src="assets/img/wave-dark.png" alt="">		
+		<img class="--dark-wave" src="assets/img/wave-dark.png" alt="">
 	</footer>
 </section>

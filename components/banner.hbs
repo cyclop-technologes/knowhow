@@ -10,18 +10,27 @@
 			<video id="popup-video-mob" src="../assets/img/popup-mob.mp4" autoplay="true" muted="muted" playsInline></video>
 		</div>
 	</div>
-
+	{{#with home}}
 	 <div class="banner__wrapper wrapper">
 	 	<div class="banner__title">
-	 		<h1 class="--rubrica-title">
-				<span class="bright-title"><span class="--italic">ПЛЕВАТЬ<br/>НА ЛОГИКУ</span><br/>ШЕДЕВР<br/>СОЗДАЮТ<br/>ЭМОЦИИ</span>
-				<span class="dark-title"><span class="--italic">ПЛЕВАТЬ<br/>НА ЛОГИКУ</span><br/>МИРОМ<br/>ПРАВЯТ<br/>ЭМОЦИИ</span>
-			</h1>
-	 		<h4 class="--avente-subtitle-big">А ЭМОЦИИ СОЗДАЕМ <a href="#summary" class="--primary-color --italic">МЫ</a></h4>
-
+	 		<div class="--rubrica-title">
+				{{#each titles}}
+				<div class="--uppercase title-item {{@key}}-title">{{{this}}}</div>
+				{{/each}}
+			</div>
+			{{/with}}
+			{{#with header}}
+				{{#unless is_culture}}
+	 				<h4 class="--avente-subtitle-big">А ЭМОЦИИ СОЗДАЕМ <a href="#summary" class="--primary-color --italic">МЫ</a></h4>
+				{{/unless}}
+				{{#if is_culture}}
+					<h4 class="--avente-subtitle-big">We create <a href="#summary" class="--primary-color --italic">emotions</a></h4>
+				{{/if}}
+			{{/with}}
+			{{#with home}}
 			<div class="switch">
 				{{>switcher}}
-				<div class="switch__text">включи эмоции</div>
+				<div class="switch__text">{{switch_text}}</div>
 			</div>
 	 	</div>
 	 	<div class="banner__head">
@@ -31,15 +40,13 @@
 	 		<div class="head-img"></div>
 	 	</div>
 	 </div>
+	 {{/with}}
 	 <div class="banner__mob-content wrapper banner__toform-btn">
-	 	<div class="toform-btn__btn"><a href="#forms-block">хочу шедевр</a></div>
-	 	<p class="banner__mob-text">Когда-то давно Микеланджело
-			<br/>вооружился инструментами
-			<br/>и создал из глыбы мрамора
-			<br/>произведение искусства — «Давида».
-			<br/>Скульптор даже пренебрег логикой и
-			<br/>исказил пропорции человеческого тела,
-			<br/>чтобы достичь большей художественной
-			<br/>выразительности.</p>
+		 {{#with header}}
+	 	<div class="toform-btn__btn"><a href="#forms-block">{{header_buttons.to_form}}</a></div>
+		{{/with}}
+		{{#with banner}}
+	 	<p class="banner__mob-text">{{{breaklines summary_top_title}}}</p>
+		{{/with}}
 	 </div>
 </section>
