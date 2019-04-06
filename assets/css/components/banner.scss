@@ -170,11 +170,11 @@
 		}
 
 	}
-	.bright-title{
+	.light-title{
 		display: none;
 	}
 	.dark-title{
-		display: inline;
+		display: block;
 	}
 	color: $white;
 	.banner{
@@ -315,7 +315,7 @@
 			line-height: 75px;
 		}
 		h4{
-		    letter-spacing: 3.17px;
+		  letter-spacing: 3.17px;
 			font-size: 12px;
 		}
 	}
