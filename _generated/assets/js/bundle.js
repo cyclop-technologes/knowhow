@@ -358,9 +358,11 @@ const isVideoShowed = window.localStorage.getItem('isVideoShowed');
 const video = document.getElementById('popup-video');
 
 if (isVideoShowed) {
-	$('.banner__popup').fadeOut(400);
+	// $('.banner__popup').fadeOut(400);
 	video.pause();
 }else {
+	video.play();
+	$('.banner__popup').fadeIn(400);
 	$('body').css('overflow', 'hidden');
 	$('.close-btn').hide().delay(4000).fadeIn(400);
 	$('.close-btn').click(function(event) {
@@ -377,6 +379,8 @@ video.onended = function() {
 }
 
 
+
+
 // coockies alert
 
 const isAlertShowed = window.localStorage.getItem('isAlertShowed');
@@ -389,7 +393,7 @@ if (!isAlertShowed) {
 	});
 }
 
-},{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":12,"jquery-validation":10}],4:[function(require,module,exports){
+},{"./scroll.js":4,"./smooth-scroll.js":5,"./viewport.js":6,"animejs":7,"aos":8,"imask":9,"jquery":11,"jquery-validation":10}],4:[function(require,module,exports){
 let $topTitle = $(".summary__top-title");
 let $midTitle = $('.summary__mid-title')
 let $sculpture = {
@@ -18095,6 +18099,4 @@ if ( !noGlobal ) {
 return jQuery;
 } );
 
-},{}],12:[function(require,module,exports){
-arguments[4][11][0].apply(exports,arguments)
-},{"dup":11}]},{},[3]);
+},{}]},{},[3]);

@@ -31,7 +31,7 @@
 	}
 	.sculpture-dark{
 		display: none;
-	}	
+	}
 }
 .sculpture{
 	display: block;
@@ -69,7 +69,7 @@
 
 .sctulpture__block{
 	transition: 0.5s ease-in-out;
-	
+
 }
 
 .sculpture__description{
@@ -98,7 +98,7 @@
 
 
 // 	&:hover{
-// // 
+// //
 // 		animation: rotation 0.6s linear infinite;
 // 	}
 }
@@ -130,7 +130,7 @@
 		left: 23px;
 		background-color: $black;
 	}
-	
+
 }
 .item-index{
 	transform-origin: 50% 50%;
@@ -165,10 +165,10 @@
 		&:not(:last-child):after{
 			background-color: $white;
 		}
-		
+
 	}
 	.item-index{
-		color: $white;		
+		color: $white;
 	}
 
 	.--bright-wave{
@@ -213,7 +213,11 @@
 	}
 }
 
-
+@media screen and (max-width: 1200px) {
+	.project__navbar{
+		right: 0;
+	}
+}
 @media screen and (max-width: 768px) {
 	.project__navbar{
 		display: none;

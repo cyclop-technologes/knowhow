@@ -53,7 +53,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + alias4(((helper = (helper = helpers.textarea__title || (depth0 != null ? depth0.textarea__title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"textarea__title","hash":{},"data":data}) : helper)))
     + "</div>\n				<p><textarea class=\"form-input\" id=\"description\" name=\"text\"></textarea></p>\n			</div>\n			<div class=\"forms__privacy\">\n				<p>"
     + ((stack1 = (helpers.breaklines || (depth0 && depth0.breaklines) || alias2).call(alias1,(depth0 != null ? depth0.privacy : depth0),{"name":"breaklines","hash":{},"data":data})) != null ? stack1 : "")
-    + "</p>\n				<p><a href=\""
+    + "</p>\n				<p><a target=\"_blank\" href=\""
     + alias4(alias5(((stack1 = (depth0 != null ? depth0.privacy_link : depth0)) != null ? stack1.link : stack1), depth0))
     + "\">"
     + alias4(alias5(((stack1 = (depth0 != null ? depth0.privacy_link : depth0)) != null ? stack1.text : stack1), depth0))

@@ -20,7 +20,7 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
 },"5":function(container,depth0,helpers,partials,data) {
     return "	 				<h4 class=\"--avente-subtitle-big\">А ЭМОЦИИ СОЗДАЕМ <a href=\"#summary\" class=\"--primary-color --italic\">МЫ</a></h4>\n";
 },"7":function(container,depth0,helpers,partials,data) {
-    return "					<h4 class=\"--avente-subtitle-big\">We create <a href=\"#summary\" class=\"--primary-color --italic\">emotions</a></h4>\n";
+    return "					<h4 class=\"--avente-subtitle-big\">WE CREATE <a href=\"#summary\" class=\"--primary-color --italic\">EMOTIONS</a></h4>\n";
 },"9":function(container,depth0,helpers,partials,data) {
     var stack1, helper;
 

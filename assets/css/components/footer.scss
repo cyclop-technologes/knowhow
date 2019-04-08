@@ -45,7 +45,8 @@
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 20px;
-	width: 300px;
+	width: 100%;
+	max-width: 300px;
 	a{
 		display: block;
 		.fillible{
@@ -136,10 +137,10 @@
 	}
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 768px){
 	.footer__container{
 		grid-template-columns: 1fr;
-		padding-bottom: 20px;
+		padding: 20px;
 	}
 
 	.footer__item{
@@ -150,5 +151,8 @@
 	}
 	.footer__mail{
 		order: 3;
+	}
+	.address{
+		text-align: center;
 	}
 }

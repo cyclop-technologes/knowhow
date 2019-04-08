@@ -45,7 +45,7 @@
 
 
 .play-btn{
-	width: 150px;
+	width: 120px;
 	height: auto;
 
 	path{
@@ -153,7 +153,10 @@
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+	.to-bottom-arrows{
+		display: none;
+	}
 	.video-sect__hand{
 		display: none;
 	}

@@ -35,18 +35,18 @@
 			$price_en: 'Wanna price'
 		},
 		is_culture: false,
-		$is_culture_en: true,
+		$is_culture_en: true
 	},
 	home: {
 		titles: {
 			$light_type: 'quill',
-			light: '<p>ПЛЕВАТЬ</p><p><em>НА ЛОГИКУ</em></p><p>ШЕДЕВР</p><p>СОЗДАЮТ</p><p>ЭМОЦИИ</p>',
+			light: '<p><em>ПЛЕВАТЬ</em></p><p><em>НА ЛОГИКУ</em></p><p>ШЕДЕВР</p><p>СОЗДАЮТ</p><p>ЭМОЦИИ</p>',
 			$dark_type: 'quill',
-			dark: '<p>ПЛЕВАТЬ</p><p><em>НА ЛОГИКУ</em></p><p>МИРОМ</p><p>ПРАВЯТ</p><p>ЭМОЦИИ</p>',
+			dark: '<p><em>ПЛЕВАТЬ</em></p><p><em>НА ЛОГИКУ</em></p><p>МИРОМ</p><p>ПРАВЯТ</p><p>ЭМОЦИИ</p>',
 			$light_control_path: '/brick/enduro_quill/quill_control',
 			$dark_control_path: '/brick/enduro_quill/quill_control',
-			$dark_en: '<p>Who cares </p><p><em>about logic</em></p><p>Emotions are</p><p>what creates</p><p>masterpiece</p>',
-			$light_en: '<p>Who cares </p><p><em>about logic</em></p><p>Emotions are</p><p>what creates</p><p>masterpiece</p>'
+			$dark_en: '<p><em>Who cares</em></p><p><em>about logic</em></p><p>Emotions are</p><p>what creates</p><p>masterpiece</p>',
+			$light_en: '<p><em>Who cares </em></p><p><em>about logic</em></p><p>Emotions are</p><p>what creates</p><p>masterpiece</p>'
 		},
 		switch_text: 'включи эмоции',
 		$switch_text_en: 'turn on emotions'
@@ -63,7 +63,7 @@
 		$title_control_path: '/brick/enduro_quill/quill_control',
 		$footer_control_path: '/brick/enduro_quill/quill_control',
 		$title_en: '<p><em class="ql-size-huge">We </em><em class="ql-size-large">are</em><em class="ql-size-huge"> </em><strong class="ql-size-huge"><em>Michelangelos</em></strong><em class="ql-size-huge"> </em></p><p><em class="ql-size-large">of the</em><em class="ql-size-huge"> </em><strong class="ql-size-huge"><em>Digital sphere</em></strong></p><p><em class="ql-size-large">We discover a masterpiece inside </em></p><p><em class="ql-size-large">a formless block of stone</em></p>',
-		$footer_en: '<p>We know how to create a <u>product</u> </p><p><u>that</u> evokes a whole range of <u>emotions</u></p>',
+		$footer_en: '<p>We know how to create a <u>product </u></p><p><u>that evokes</u> a whole range of <u>emotions</u></p>',
 		$summary_top_title_en: 'A long time ago, Michelangelo armed himself with tools\nand created a work of art – "David" – from a block of marble.\n The sculptor even neglected logic and distorted the proportions\nof the human body in order to achieve greater artistic expression.',
 		$summary_bottom_title_en: 'We don’t try to logically explain every detail',
 		$footer_subtitle_en: 'Because emotions are what is important'
@@ -209,7 +209,8 @@
 		privacy: 'Нажимая кнопку «Отправить», вы соглашаетесь (вам просто некуда деваться)\nс длинным текстом, который вы не собираетесь читать',
 		privacy_link: {
 			text: 'Политика конфиденциальности НОУ ХАУ',
-			link: '#',
+			$link_type: 'file',
+			link: '/remote/direct_uploads/1554739664_privacy_policy.pdf',
 			$text_en: 'the KNOW HOW Privacy Policy',
 			$link_en: '#'
 		},
@@ -223,6 +224,6 @@
 		$textarea__title_en: 'Describe your project'
 	},
 	meta: {
-		last_edited: 1554493460
+		last_edited: 1554739671
 	}
 })

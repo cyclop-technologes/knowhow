@@ -144,8 +144,8 @@
 	position: relative;
 	box-sizing: border-box;
 	background: $gray;
-	box-shadow: inset -3px -2px 0 rgba(0, 0, 0, 0.04);
-	height: 32px;
+	height: 16px;
+	box-shadow: inset -1px 3px 0 rgba(0, 0, 0, 0.04);
 	border-radius: 16px;
 	margin: 0 auto;
 }
@@ -154,7 +154,7 @@
 	width: 46px;
 	height: 46px;
 	position: absolute;
-	top: -7px;
+	top: -15px;
 	left: -7px;
 	transition: all 0.3s ease-in-out;
 }
@@ -176,7 +176,7 @@
 	text-transform: uppercase;
 	margin: 50px 0;
 	line-height: 1.5;
-	letter-spacing: 3.6px;
+	letter-spacing: 3.5px;
 	a{
 		color: $black;
 		text-decoration: none;
@@ -309,6 +309,9 @@
 		}
 	}
 
+	.forms__privacy{
+		letter-spacing: 1.5px;
+	}
 
 	.--dark{
 		.block__img{
