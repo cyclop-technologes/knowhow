@@ -5,12 +5,16 @@
 	background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 36%,#d3d3d3 83%,#fafafa 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, #ffffff 0%,#ffffff 36%,#d3d3d3 83%,#fafafa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
+
+	overflow: hidden;
+}
+
+.banner__grid{
 	padding-bottom: 130px;
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 50px 1fr;
 	box-sizing: border-box;
-	overflow: hidden;
 }
 
 
@@ -56,6 +60,7 @@
 
 .banner__wrapper{
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -156,6 +161,12 @@
 }
 
 .--dark {
+
+	.list__item{
+		a{
+			color: $white;
+		}
+	}
 	.switcher{
 		cursor: pointer;
 
@@ -224,9 +235,23 @@
 	}
 	.banner__mob-content{
 		background: url(../img/head-dark.png) top right no-repeat;
-		background-size: 345px;
-		background-position: 205px -5px;
+		background-size: 475px;
+    background-position: 131px -48px;
 	}
+}
+
+.links__list{
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	transform-origin: right top;
+  transform: rotate(90deg);
+	right: 30px;
+	bottom: 30px;
+	position: absolute;
+	opacity: 0.4;
+	z-index: 2;
 }
 
 
@@ -239,6 +264,9 @@
 }
 @media screen and (max-width: 1440px){
 
+	.list__item{
+		margin: 0 20px;
+	}
 
 	.--dark{
 		.head-img{
@@ -248,7 +276,7 @@
 		}
 	}
 
-	.banner{
+	.banner__grid{
 		grid-template-rows: 70px 1fr;
 	}
 	.head-img{
@@ -259,9 +287,6 @@
 		height: 680px;
 	}
 	.banner__title{
-
-
-
 		.title-item{
 			margin-bottom: 36px;
 			position: relative;
@@ -324,14 +349,14 @@
 	#popup-video-mob{
 		display: block;
 	}
-	.banner{
+	.banner__grid{
 		padding-bottom: 75px;
 	}
 	.banner__wrapper{
 		position: relative;
 	}
 	.banner__title{
-		margin: 50px 0 125px 12px;
+		margin: 50px 0 50px 12px;
 		.title-item{
 			font-size: 70px;
 			margin-top: 0px;
@@ -404,7 +429,7 @@
 		position: relative;
 	}
 	.banner__mob-text{
-		margin: 130px 0px;
+		padding: 130px 0px;
 		width: 240px;
 		line-height: 2;
 		letter-spacing: 0.8px;

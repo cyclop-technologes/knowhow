@@ -1,52 +1,53 @@
 <section class="banner">
-	{{>header}}
 
-	<div class="banner__popup">
-		<button class="close-btn"><img src="assets/img/close-button.svg"></button>
-		<div class="popup__container">
-			<video id="popup-video" preload="auto" autoplay="true" muted="muted" playsInline>
-				<source type="video/mp4" src="assets/img/popup.mp4"></source>
-			</video>
-			<video id="popup-video-mob" src="../assets/img/popup-mob.mp4" autoplay="true" muted="muted" playsInline></video>
-		</div>
-	</div>
-	{{#with home}}
-	 <div class="banner__wrapper wrapper">
-	 	<div class="banner__title">
-	 		<div class="--rubrica-title">
-				{{#each titles}}
-				<div class="--uppercase title-item {{@key}}-title">{{{this}}}</div>
-				{{/each}}
-			</div>
-			{{/with}}
+
+  <div class="banner__popup">
+    <button class="close-btn"><img src="assets/img/close-button.svg"></button>
+    <div class="popup__container">
+      <video id="popup-video" preload="auto" autoplay="true" muted="muted" playsInline>
+        <source type="video/mp4" src="assets/img/popup.mp4"></source>
+      </video>
+      <video id="popup-video-mob" src="../assets/img/popup-mob.mp4" autoplay="true" muted="muted" playsInline></video>
+    </div>
+  </div>
+  <div class="banner__grid">
+		  {{>header}}
+		<div class="banner__wrapper wrapper">
 			{{#with header}}
-				{{#unless is_culture}}
-	 				<h4 class="--avente-subtitle-big">А ЭМОЦИИ СОЗДАЕМ <a href="#summary" class="--primary-color --italic">МЫ</a></h4>
-				{{/unless}}
-				{{#if is_culture}}
-					<h4 class="--avente-subtitle-big">WE CREATE <a href="#summary" class="--primary-color --italic">EMOTIONS</a></h4>
-				{{/if}}
-			{{/with}}
-			{{#with home}}
-			<div class="switch">
-				{{>switcher}}
-				<div class="switch__text">{{switch_text}}</div>
+			<ul class="links__list">
+				{{#each media_links}}
+				<li class="list__item"><a target="_blank" href="{{this}}">{{@key}}</a></li>
+				{{/each}}
+			</ul>
+			{{/with}} {{#with home}}
+			<div class="banner__title">
+				<div class="--rubrica-title">
+					{{#each titles}}
+					<div class="--uppercase title-item {{@key}}-title">{{{this}}}</div>
+					{{/each}}
+				</div>
+				{{/with}} {{#with header}} {{#unless is_culture}}
+				<h4 class="--avente-subtitle-big">А ЭМОЦИИ СОЗДАЕМ <a href="#summary" class="--primary-color --italic">МЫ</a></h4> {{/unless}} {{#if is_culture}}
+				<h4 class="--avente-subtitle-big">WE CREATE <a href="#summary" class="--primary-color --italic">EMOTIONS</a></h4> {{/if}} {{/with}} {{#with home}}
+				<div class="switch">
+					{{>switcher}}
+					<div class="switch__text">{{switch_text}}</div>
+				</div>
 			</div>
-	 	</div>
-	 	<div class="banner__head">
-	 		<div class="canvas-bg">
-	 			<canvas height="810px" id="canvas"></canvas>
-	 		</div>
-	 		<div class="head-img"></div>
-	 	</div>
-	 </div>
-	 {{/with}}
-	 <div class="banner__mob-content wrapper banner__toform-btn">
-		 {{#with header}}
-	 	<div class="toform-btn__btn"><a href="#forms-block">{{header_buttons.to_form}}</a></div>
-		{{/with}}
-		{{#with banner}}
-	 	<p class="banner__mob-text">{{{breaklines summary_top_title}}}</p>
-		{{/with}}
-	 </div>
+			<div class="banner__head">
+				<div class="canvas-bg">
+					<canvas height="810px" id="canvas"></canvas>
+				</div>
+				<div class="head-img"></div>
+			</div>
+			{{/with}}
+		</div>
+  </div>
+  <div class="banner__mob-content wrapper banner__toform-btn">
+    {{#with header}}
+    <div class="toform-btn__btn"><a href="#forms-block">{{header_buttons.to_form}}</a></div>
+    {{/with}} {{#with banner}}
+    <p class="banner__mob-text">{{{breaklines summary_top_title}}}</p>
+    {{/with}}
+  </div>
 </section>
