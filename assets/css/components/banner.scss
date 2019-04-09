@@ -207,8 +207,8 @@
 		}
 	}
 	.head-img{
-		background: transparent url('../img/head-dark.png') 166px 60px no-repeat;
-		background-size: 586px;
+		background: transparent url('../img/head-dark.png') 40px 0px no-repeat;
+		background-size: 800px;
 	}
 	#canvas{
 		visibility: hidden;
@@ -242,8 +242,8 @@
 
 	.--dark{
 		.head-img{
-			background-size: 378px;
-			background-position: 72px 44px;
+			background-size: 560px;
+			background-position: -18px 3px;
 			height: 680px;
 		}
 	}
