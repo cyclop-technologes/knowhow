@@ -26,7 +26,7 @@
 		$url_en: 'https://knowhow.agency',
 		$type_en: 'site',
 		$email_en: 'hello@kh.agency',
-		$phone_en: '+7 918 99 77 000',
+		$phone_en: '',
 		$address_en: 'Russian Federation, Krasnodar, Kubanskaya Naberezhnaya str. 37/12',
 		header_buttons: {
 			to_form: 'хочу шедевр',
@@ -226,6 +226,6 @@
 		$textarea__title_en: 'Describe your project'
 	},
 	meta: {
-		last_edited: 1554889170
+		last_edited: 1554889635
 	}
 })
