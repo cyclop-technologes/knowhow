@@ -1,7 +1,7 @@
 ({
 	header: {
 		header_title: 'KnowHow Digital Agency',
-		description: 'Как минимум вторая твоя победа в жизни',
+		description: 'Диджитал-агентство. Создаем шедевры для вашего бизнеса: брендинг, продакшн, IT, маркетинг.',
 		keywords: 'digital agency',
 		url: 'https://knowhow.agency',
 		type: 'web-site',
@@ -21,7 +21,7 @@
 		phone: '+7 918 99 77 000',
 		address: 'Россия, г. Краснодар, ул.кубанская набережная 37/12',
 		$header_title_en: 'KnowHow Digital Agency',
-		$description_en: 'Как минимум вторая твоя победа в жизни',
+		$description_en: 'Диджитал-агентство. Создаем шедевры для вашего бизнеса: брендинг, продакшн, IT, маркетинг.',
 		$keywords_en: 'digital agency',
 		$url_en: 'https://knowhow.agency',
 		$type_en: 'site',
@@ -226,6 +226,6 @@
 		$textarea__title_en: 'Describe your project'
 	},
 	meta: {
-		last_edited: 1554889635
+		last_edited: 1554892394
 	}
 })
