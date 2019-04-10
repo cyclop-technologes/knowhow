@@ -142,20 +142,37 @@
 	width: 715px;
 	max-width: 100%;
 	position: relative;
+
+	margin: 0 auto;
+}
+.porgerssline{
+	position: absolute;
+	width: 100%;
 	box-sizing: border-box;
 	background: $gray;
 	height: 16px;
 	box-shadow: inset -1px 3px 0 rgba(0, 0, 0, 0.04);
 	border-radius: 16px;
-	margin: 0 auto;
+	top: 0;
+	left: 0;
+	overflow: hidden;
 }
-
+.porgerssline__fill{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: $primary;
+	box-shadow: inset -1px 3px 0 rgba(0, 0, 0, 0.04);
+	transition: 0.3s ease-in-out;
+}
 .progressfill{
 	width: 46px;
 	height: 46px;
 	position: absolute;
 	top: -15px;
-	left: -7px;
+	left: 0;
+	transform: translateX(-50%);
 	transition: all 0.3s ease-in-out;
 }
 
@@ -199,9 +216,12 @@
 	.forms{
 		background: $gray-darknest;
 	}
-	.progressbar{
+	.porgerssline{
 		background-color: #5d5d5d;
 		box-shadow: inset -3px -2px 0 rgba(0, 0, 0, 0.11);
+	}
+	.porgerssline__fill{
+		background-color: $primary-dark;
 	}
 	.submit__btn{
 		background-color: $primary-dark;

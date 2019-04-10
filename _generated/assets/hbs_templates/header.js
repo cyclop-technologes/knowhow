@@ -5,7 +5,9 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.is_culture : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.program(4, data, 0),"data":data})) != null ? stack1 : "")
     + "		</a></div>\n		<div data-aos=\"fade-down\" data-aos-delay=\"200\" class=\"header__spacer\">\n			<a href=\"#forms-block\" class=\"spacer__text\">"
     + alias3(alias2(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.to_form : stack1), depth0))
-    + "</a>\n			<a href=\"#\" class=\"spacer__text\">"
+    + "</a>\n			<a target=\"_blank\" href=\""
+    + alias3(alias2(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.price_link : stack1), depth0))
+    + "\" class=\"spacer__text\">"
     + alias3(alias2(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.price : stack1), depth0))
     + "</a>\n		</div>\n		<div data-aos=\"fade-down\" data-aos-delay=\"400\" class=\"header__links\">\n			<div class=\"header__langswitcher\">\n				<a href=\"en\" class=\"langswich-item switch-lang "
     + ((stack1 = helpers["if"].call(alias1,(depth0 != null ? depth0.is_culture : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")

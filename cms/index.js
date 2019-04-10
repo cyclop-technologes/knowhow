@@ -31,6 +31,8 @@
 		header_buttons: {
 			to_form: 'хочу шедевр',
 			price: 'хочу прайс',
+			$price_link_type: 'file',
+			price_link: '/remote/direct_uploads/1554889165_knowhow-price.pdf',
 			$to_form_en: 'Wanna masterpiece',
 			$price_en: 'Wanna price'
 		},
@@ -224,6 +226,6 @@
 		$textarea__title_en: 'Describe your project'
 	},
 	meta: {
-		last_edited: 1554739671
+		last_edited: 1554889170
 	}
 })

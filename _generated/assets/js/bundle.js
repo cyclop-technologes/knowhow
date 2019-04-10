@@ -266,11 +266,8 @@ $('.checkbox-item').click(function(event) {
 	let k = sum / price;
 	let progress = 100 / k;
 
-	$('.progressfill').css({
-		left: progress.toString() + '%',
-		transform: 'translateX(-' + progress.toString() + '%)'
-	});
-
+	$('.progressfill').css('left', progress.toString() + '%');
+	$('.porgerssline__fill').css('width', progress.toString() + '%')
 	$('.progressbar__totalamount').html(price)
 });
 
