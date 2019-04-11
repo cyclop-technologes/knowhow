@@ -70,7 +70,11 @@
 		</div>
 		<div data-aos="fade-down" data-aos-delay="400" class="header__links">
 			<div class="header__langswitcher">
-				<a href="en" class="langswich-item switch-lang {{#if is_culture}}active{{/if}}">eng</a><span class="langswich-item separator">/</span><a href="ru" class="langswich-item active-lang {{#unless is_culture}}active{{/unless}}">rus</a>
+				{{#if is_culture}}
+				<a href="ru" class="langswich-item switch-lang"><span class="active">eng</span> / rus</a>
+				{{else}}
+				<a href="en" class="langswich-item switch-lang">eng / <span class="active">rus</span></a>
+				{{/if}}
 			</div>
 		</div>
 	</div>

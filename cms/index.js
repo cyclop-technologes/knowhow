@@ -93,31 +93,31 @@
 						name: 'ЛОГОТИП',
 						price: '80000',
 						$name_en: 'Logo',
-						$price_en: '80000'
+						$price_en: '1500'
 					},
 					{
 						name: 'БРЕНДБУК',
 						price: '120000',
 						$name_en: 'Brand Book',
-						$price_en: '120000'
+						$price_en: '2000'
 					},
 					{
 						name: 'ГАЙДЛАЙН',
 						price: '100000',
 						$name_en: 'Guideline',
-						$price_en: '100000'
+						$price_en: '1600'
 					},
 					{
 						name: 'НЕЙМИНГ',
 						price: '50000',
 						$name_en: 'Naming',
-						$price_en: '50000'
+						$price_en: '800'
 					},
 					{
 						name: 'КОПИРАЙТИНГ',
 						price: '500',
 						$name_en: 'Copywriting',
-						$price_en: '500'
+						$price_en: '10'
 					}
 				],
 				$name_en: 'Branding'
@@ -129,25 +129,25 @@
 						name: 'ИНТЕГРАЦИИ',
 						price: '50000',
 						$name_en: 'Integration',
-						$price_en: '50000'
+						$price_en: '1000'
 					},
 					{
 						name: 'ПРОМОРОЛИКИ',
 						price: '20000',
 						$name_en: 'Promo Video',
-						$price_en: '20000'
+						$price_en: '500'
 					},
 					{
 						name: 'ПОЛНОЦЕННЫЕ СЮЖЕТЫ',
 						price: '200000',
 						$name_en: 'Full-fledged plots',
-						$price_en: '200000'
+						$price_en: '3500'
 					},
 					{
 						name: 'КАНАЛ ПОД КЛЮЧ',
 						price: '320000',
 						$name_en: 'Turnkey channel',
-						$price_en: '320000'
+						$price_en: '5000'
 					}
 				],
 				$name_en: 'Prodaction'
@@ -159,19 +159,19 @@
 						name: 'САЙТ',
 						price: '30000',
 						$name_en: 'Site',
-						$price_en: '30000'
+						$price_en: '500'
 					},
 					{
 						name: 'ПРИЛОЖЕНИЕ',
 						price: '300000',
 						$name_en: 'Mobile App',
-						$price_en: '300000'
+						$price_en: '5000'
 					},
 					{
 						name: 'CRM',
 						price: '150000',
 						$name_en: 'CRM',
-						$price_en: '150000'
+						$price_en: '2500'
 					}
 				],
 				$name_en: 'It'
@@ -183,25 +183,25 @@
 						name: 'SMM-ПРОДВИЖЕНИЕ',
 						price: '10000',
 						$name_en: 'SMM promotion',
-						$price_en: '10000'
+						$price_en: '200'
 					},
 					{
 						name: 'SEO-ПРОДВИЖЕНИЕ',
 						price: '30000',
 						$name_en: 'SEO promotion',
-						$price_en: '30000'
+						$price_en: '500'
 					},
 					{
 						name: 'КОНТЕНТ-МАРКЕТИНГ',
 						price: '50000',
 						$name_en: 'Content marketing',
-						$price_en: '50000'
+						$price_en: '800'
 					},
 					{
 						name: 'КОНТЕКСТНАЯ РЕКЛАМА',
 						price: '30000',
 						$name_en: 'Contextual advertising',
-						$price_en: '30000'
+						$price_en: '500'
 					}
 				],
 				$name_en: 'Marketing'

@@ -41,13 +41,11 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
 },"5":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "				<p class=\"wrapper progressbar__amount\">"
-    + ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.is_culture : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "")
-    + " <span class=\"progressbar__totalamount\">0</span>&#8381;</p>\n";
+  return ((stack1 = helpers["if"].call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.is_culture : depth0),{"name":"if","hash":{},"fn":container.program(6, data, 0),"inverse":container.program(8, data, 0),"data":data})) != null ? stack1 : "");
 },"6":function(container,depth0,helpers,partials,data) {
-    return "from";
+    return "				<p class=\"wrapper progressbar__amount\">from $<span class=\"progressbar__totalamount\">0</span></p>	\n";
 },"8":function(container,depth0,helpers,partials,data) {
-    return "от";
+    return "				<p class=\"wrapper progressbar__amount\">от <span class=\"progressbar__totalamount\">0</span>&#8381;</p>\n";
 },"10":function(container,depth0,helpers,partials,data) {
     var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression, alias5=container.lambda;
 

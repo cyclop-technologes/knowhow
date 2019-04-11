@@ -396,7 +396,11 @@
 				</div>
 				{{/with}}
 				{{#with header}}
-				<p class="wrapper progressbar__amount">{{#if is_culture}}from{{else}}от{{/if}} <span class="progressbar__totalamount">0</span>&#8381;</p>
+				{{#if is_culture}}
+				<p class="wrapper progressbar__amount">from $<span class="progressbar__totalamount">0</span></p>	
+				{{else}}
+				<p class="wrapper progressbar__amount">от <span class="progressbar__totalamount">0</span>&#8381;</p>
+				{{/if}}
 				{{/with}}
 				{{#with forms}}
 			</div>
