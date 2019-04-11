@@ -83,6 +83,8 @@
 			$company_en: 'Company name'
 		},
 		subtitle: 'Cпасибо за проявленный интерес к нашей работе. Пожалуйста, заполните форму ниже,\n и мы свяжемся с вами для уточнения деталей в течение одного рабочего дня.',
+		checkboxes_subtitle: 'Отметьте необходимое',
+		$checkboxes_subtitle_en: 'Select options you are interested in',
 		items: {
 			branding: {
 				name: 'брендинг',

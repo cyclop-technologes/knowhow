@@ -13,7 +13,9 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + alias4(alias5(((stack1 = (depth0 != null ? depth0.placeholders : depth0)) != null ? stack1.phone : stack1), depth0))
     + "\" type=\"tel\">\n				<input required id=\"company-name\" class=\"inputs__input form-input\" placeholder=\""
     + alias4(alias5(((stack1 = (depth0 != null ? depth0.placeholders : depth0)) != null ? stack1.company : stack1), depth0))
-    + "\" type=\"text\">\n			</div>\n\n			<div class=\"forms__checkboxes\">\n\n				<div class=\"checkboxes__title forms__subtitle\">отметьте необходимое</div>\n\n				<div class=\"checkboxes__blocks\">\n"
+    + "\" type=\"text\">\n			</div>\n\n			<div class=\"forms__checkboxes\">\n\n				<div class=\"checkboxes__title forms__subtitle\">"
+    + alias4(((helper = (helper = helpers.checkboxes_subtitle || (depth0 != null ? depth0.checkboxes_subtitle : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"checkboxes_subtitle","hash":{},"data":data}) : helper)))
+    + "</div>\n\n				<div class=\"checkboxes__blocks\">\n"
     + ((stack1 = helpers.each.call(alias1,(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "				</div>\n\n\n			</div>\n\n			<div class=\"forms__progressbar\">\n				<div class=\"forms__subtitle progressbar__title\">"
     + alias4(((helper = (helper = helpers.progressbar_title || (depth0 != null ? depth0.progressbar_title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"progressbar_title","hash":{},"data":data}) : helper)))
