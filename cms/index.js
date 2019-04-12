@@ -32,9 +32,10 @@
 			to_form: 'хочу шедевр',
 			price: 'хочу прайс',
 			$price_link_type: 'file',
-			price_link: '/remote/direct_uploads/1554889165_knowhow-price.pdf',
+			price_link: '/remote/direct_uploads/1555083624_price-list-ru.pdf',
 			$to_form_en: 'Wanna masterpiece',
-			$price_en: 'Wanna price'
+			$price_en: 'Wanna price',
+			$price_link_en: '/remote/direct_uploads/1555083631_price-list-en.pdf'
 		},
 		is_culture: false,
 		$is_culture_en: true
@@ -228,6 +229,6 @@
 		$textarea__title_en: 'Describe your project'
 	},
 	meta: {
-		last_edited: 1554892394
+		last_edited: 1555083634
 	}
 })

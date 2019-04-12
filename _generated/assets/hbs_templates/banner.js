@@ -47,10 +47,14 @@ define(["handlebars"], function(Handlebars) { return Handlebars.template({"1":fu
     + container.escapeExpression(((helper = (helper = helpers.switch_text || (depth0 != null ? depth0.switch_text : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"switch_text","hash":{},"data":data}) : helper)))
     + "</div>\n				</div>\n			</div>\n			<div class=\"banner__head\">\n				<div class=\"canvas-bg\">\n					<canvas height=\"810px\" id=\"canvas\"></canvas>\n				</div>\n				<div class=\"head-img\"></div>\n			</div>\n";
 },"14":function(container,depth0,helpers,partials,data) {
-    var stack1;
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
 
   return "    <div class=\"toform-btn__btn\"><a href=\"#forms-block\">"
-    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.to_form : stack1), depth0))
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.to_form : stack1), depth0))
+    + "</a></div>\n    <div class=\"toform-btn__btn\"><a target=\"_blank\" href=\""
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.price_link : stack1), depth0))
+    + "\">"
+    + alias2(alias1(((stack1 = (depth0 != null ? depth0.header_buttons : depth0)) != null ? stack1.price : stack1), depth0))
     + "</a></div>\n    ";
 },"16":function(container,depth0,helpers,partials,data) {
     var stack1;

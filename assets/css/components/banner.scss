@@ -226,6 +226,8 @@
 	}
 	.toform-btn__btn{
 
+
+
 		a{
 			color: $white;
 		}
@@ -402,6 +404,10 @@
 		display: inline-block;
 		position: relative;
 
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+
 		a{
 			color: $black;
 			text-decoration: none;
@@ -429,7 +435,7 @@
 		position: relative;
 	}
 	.banner__mob-text{
-		padding: 130px 0px;
+		padding: 50px 0px 130px;
 		width: 240px;
 		line-height: 2;
 		letter-spacing: 0.8px;
