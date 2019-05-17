@@ -351,36 +351,35 @@ const switcher = anime({
 
 // pop up
 
-const isVideoShowed = window.localStorage.getItem('isVideoShowed');
-const video = document.getElementById('popup-video');
-
-if (isVideoShowed) {
-	// $('.banner__popup').fadeOut(400);
-	video.pause();
-}else {
-	video.play();
-	$('.banner__popup').fadeIn(400);
-	$('body').css('overflow', 'hidden');
-	$('.close-btn').hide().delay(4000).fadeIn(400);
-	$('.close-btn').click(function(event) {
-		$('body').removeAttr('style');
-		$('.banner__popup').fadeOut(600);
-		video.pause();
-	});
-	window.localStorage.setItem('isVideoShowed', true);
-}
-
-video.onended = function() {
-	$('body').removeAttr('style');
-	$('.banner__popup').fadeOut(600);
-}
-
-
-
+// const isVideoShowed = window.localStorage.getItem('isVideoShowed');
+// const video = document.getElementById('popup-video');
+//
+// if (isVideoShowed) {
+// 	// $('.banner__popup').fadeOut(400);
+// 	video.pause();
+// }else {
+// 	video.play();
+// 	$('.banner__popup').fadeIn(400);
+// 	$('body').css('overflow', 'hidden');
+// 	$('.close-btn').hide().delay(4000).fadeIn(400);
+// 	$('.close-btn').click(function(event) {
+// 		$('body').removeAttr('style');
+// 		$('.banner__popup').fadeOut(600);
+// 		video.pause();
+// 	});
+// 	window.localStorage.setItem('isVideoShowed', true);
+// }
+//
+// video.onended = function() {
+// 	$('body').removeAttr('style');
+// 	$('.banner__popup').fadeOut(600);
+// }
 
 // coockies alert
 
 const isAlertShowed = window.localStorage.getItem('isAlertShowed');
+
+console.log(!isAlertShowed);
 
 if (!isAlertShowed) {
 	window.localStorage.setItem('isAlertShowed', true);
