@@ -2,6 +2,8 @@
 	background-color: $bg-gray;
 	padding: 20px 0px;
 	text-align: center;
+	position: relative;
+	z-index: 4;
 }
 
 .forms__title{
