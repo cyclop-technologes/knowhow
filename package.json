@@ -16,7 +16,7 @@
 		"enduro": "*",
 		"enduro_quill": "^1.0.6",
 		"imask": "^4.1.5",
-		"jquery": "^3.3.1",
+		"jquery": "^3.5.0",
 		"jquery-validation": "^1.19.0",
 		"normalize-scss": "^7.0.1",
 		"query-string": "^6.4.2",
